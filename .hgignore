@@ -1,0 +1,7 @@
+elpa/*
+el-get/*
+backup/*
+eshell/*
+session*
+auto-save-list/*
+tramp
