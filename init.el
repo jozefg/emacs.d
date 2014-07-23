@@ -11,10 +11,11 @@
 (require 'init-backups)  ; Configure how emacs autosaves/backups work
 (require 'init-my-keys)  ; The minor mode for all my key shortcuts
 (require 'init-mail)     ; Setup mu4e and smtpmail for gmail
+(require 'init-eshell)   ; Setup eshell
 (require 'init-font)     ; Source Code Pro
 (require 'init-helm)     ; Get Helm properly integrated
 (require 'init-colors)   ; Pretty color theme
 
 ;; Packages
 (require-package '2048-game)
-
+(require-package 'monky)
