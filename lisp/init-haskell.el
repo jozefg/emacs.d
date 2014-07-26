@@ -43,9 +43,4 @@
 
 (add-hook 'haskell-mode-hook 'set-compile-ghc)
 
- (defun rgrep-ghc (regexp)
-  (interactive (list (progn (grep-compute-defaults) (grep-read-regexp))))
-  (rgrep regexp "*hs" (concat ghc-location "/compiler/")))
-(global-set-key (kbd "M-c") 'rgrep-ghc)
-
 (provide 'init-haskell)
