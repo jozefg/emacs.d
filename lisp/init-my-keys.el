@@ -18,10 +18,26 @@
     (and (= oldpos (point))
          (beginning-of-line))))
 
-;; Require packages I use in keybindings
+(defun new-org-notes-buffer (name)
+  "Create an empty buffer with org-mode but no file"
+  (interactive (list
+		(read-string "Buffer Name (*notes*): " nil nil "*notes*")))
+  (let ((buf (generate-new-buffer name)))
+    ;; Setup the buffer
+    (with-current-buffer buf
+      (org-mode)
+      (insert "#+TITLE: Notes\n\n"))
+    ;; If we have multiple windows, switch and open notes
+    (other-window 1)
+    (switch-to-buffer buf)))
+	       
+  
+
+;; Require packages I use in keybindings, note that require-package is "idempotent"
 (require-package 'helm)
 (require-package 'org-journal)
 (require-package 'ag)
+
 ;; Minor mode for things I like
 (defvar my-keys-minor-mode-map (make-keymap) "my-keys-minor-mode keymap.")
 (define-key my-keys-minor-mode-map (kbd "C-w")   'clipboard-kill-region)
@@ -42,6 +58,8 @@
 (define-key my-keys-minor-mode-map (kbd "C-c m") 'mu4e)
 (define-key my-keys-minor-mode-map (kbd "C-c c") 'kill-useless-buffers)
 (define-key my-keys-minor-mode-map (kbd "C-c e") 'eshell)
+(define-key my-keys-minor-mode-map (kbd "C-c o") 'new-org-notes-buffer)
+
 
 
 (global-set-key (kbd "RET")   'newline-and-indent) ;; So this can be overrided
