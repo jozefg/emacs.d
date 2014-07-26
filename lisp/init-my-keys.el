@@ -1,14 +1,22 @@
-; Some useful functions I have keybindings for
+;; Some useful functions I have keybindings for
 (defun kill-useless-buffers ()
+  "Remove buffers that helm and org-todo-agenda generate in spades"
   (interactive "")
   (dolist (buffer (buffer-list))
     (when (or (string-match "^\*helm"       (buffer-name buffer))
               (string-match "^[0-9]+?\.org" (buffer-name buffer)))
       (kill-buffer buffer))))
 
-(defun get-dot-file ()
-  (interactive)
-  (find-file "~/.emacs"))
+(defun get-init-file (s)
+  "Grab the appropriate init-* file from my .emacs.d directory"
+  (interactive (list
+		(read-string "Init buffer (init.el): "
+			     nil
+			     nil
+			     "init.el")))
+  (if (string= s "init.el")
+      (find-file         "~/.emacs.d/init.el")
+      (find-file (concat "~/.emacs.d/lisp/" s))))
 
 (defun smart-beginning-of-line ()
   "Moves to first character that's not whitespace"
@@ -31,8 +39,6 @@
     (other-window 1)
     (switch-to-buffer buf)))
 	       
-  
-
 ;; Require packages I use in keybindings, note that require-package is "idempotent"
 (require-package 'helm)
 (require-package 'org-journal)
@@ -43,22 +49,23 @@
 (define-key my-keys-minor-mode-map (kbd "C-w")   'clipboard-kill-region)
 (define-key my-keys-minor-mode-map (kbd "\M-w")  'clipboard-kill-ring-save)
 (define-key my-keys-minor-mode-map (kbd "C-y")   'clipboard-yank)
-(define-key my-keys-minor-mode-map (kbd "C-c s") 'replace-string)
-(define-key my-keys-minor-mode-map (kbd "C-c r") 'replace-regexp)
 (define-key my-keys-minor-mode-map (kbd "C-a")   'smart-beginning-of-line)
 (define-key my-keys-minor-mode-map (kbd "C-j")   'backward-char)
-(define-key my-keys-minor-mode-map (kbd "C-c f") 'forward-sexp)
+(define-key my-keys-minor-mode-map (kbd "C-c a") 'ag-regexp)
 (define-key my-keys-minor-mode-map (kbd "C-c b") 'backward-sexp)
-(define-key my-keys-minor-mode-map (kbd "C-c g") 'helm-do-grep)
-(define-key my-keys-minor-mode-map (kbd "C-c t") 'org-todo-list)
-(define-key my-keys-minor-mode-map (kbd "C-c a") 'ag)
-(define-key my-keys-minor-mode-map (kbd "C-c f") 'ag-regexp)
-(define-key my-keys-minor-mode-map (kbd "C-c d") 'ag-dired-regexp)
-(define-key my-keys-minor-mode-map (kbd "C-c u") 'mu4e-update-mail-and-index)
-(define-key my-keys-minor-mode-map (kbd "C-c m") 'mu4e)
 (define-key my-keys-minor-mode-map (kbd "C-c c") 'kill-useless-buffers)
+(define-key my-keys-minor-mode-map (kbd "C-c d") 'ag-dired-regexp)
 (define-key my-keys-minor-mode-map (kbd "C-c e") 'eshell)
+(define-key my-keys-minor-mode-map (kbd "C-c f") 'forward-sexp)
+(define-key my-keys-minor-mode-map (kbd "C-c g") 'helm-do-grep)
+(define-key my-keys-minor-mode-map (kbd "C-c i") 'get-init-file)
+(define-key my-keys-minor-mode-map (kbd "C-c m") 'mu4e)
 (define-key my-keys-minor-mode-map (kbd "C-c o") 'new-org-notes-buffer)
+(define-key my-keys-minor-mode-map (kbd "C-c p") 'ag-projectregexp)
+(define-key my-keys-minor-mode-map (kbd "C-c r") 'replace-regexp)
+(define-key my-keys-minor-mode-map (kbd "C-c s") 'replace-string)
+(define-key my-keys-minor-mode-map (kbd "C-c t") 'org-todo-list)
+(define-key my-keys-minor-mode-map (kbd "C-c u") 'mu4e-update-mail-and-index)
 
 
 
