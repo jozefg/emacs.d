@@ -1,4 +1,5 @@
 (require-package 'haskell-mode)
+(require-package 'ghc) ;; ghc-mod
 (require 'haskell-cabal)
 
 (add-hook 'haskell-mode-hook 'turn-on-haskell-indentation)
@@ -22,7 +23,12 @@
  '(haskell-process-log t)
  '(haskell-process-show-debug-tips nil)
  '(haskell-process-type (quote cabal-repl)))
- 
+
+;; ghc-mod
+(autoload 'ghc-init "ghc" nil t)
+(autoload 'ghc-debug "ghc" nil t)
+(add-hook 'haskell-mode-hook (lambda () (ghc-init)))
+
 ;; GHC
 (setq ghc-location "~/ghc")
 (defun compile-ghc ()
