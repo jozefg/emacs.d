@@ -71,6 +71,7 @@
 (define-key my-keys-minor-mode-map (kbd "C-c s") 'replace-string)
 (define-key my-keys-minor-mode-map (kbd "C-c t") 'org-todo-list)
 (define-key my-keys-minor-mode-map (kbd "C-c u") 'mu4e-update-mail-and-index)
+(define-key my-keys-minor-mode-map (kbd "C-c v") 'monky-status)
 
 (define-minor-mode my-keys-minor-mode
   "A minor mode so that my key settings override annoying major modes."
