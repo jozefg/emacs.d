@@ -46,11 +46,16 @@
 
 ;; Minor mode for things I like
 (defvar my-keys-minor-mode-map (make-keymap) "my-keys-minor-mode keymap.")
-(define-key my-keys-minor-mode-map (kbd "C-w")   'clipboard-kill-region)
-(define-key my-keys-minor-mode-map (kbd "\M-w")  'clipboard-kill-ring-save)
-(define-key my-keys-minor-mode-map (kbd "C-y")   'clipboard-yank)
-(define-key my-keys-minor-mode-map (kbd "C-a")   'smart-beginning-of-line)
-(define-key my-keys-minor-mode-map (kbd "C-j")   'backward-char)
+
+;; Normal keybindings I override to be things I prefer
+(define-key my-keys-minor-mode-map (kbd "C-w") 'clipboard-kill-region)
+(define-key my-keys-minor-mode-map (kbd "M-w") 'clipboard-kill-ring-save)
+(define-key my-keys-minor-mode-map (kbd "C-y") 'clipboard-yank)
+(define-key my-keys-minor-mode-map (kbd "C-a") 'smart-beginning-of-line)
+(define-key my-keys-minor-mode-map (kbd "C-j") 'backward-char) ; ex-Vimmers hate me
+(define-key my-keys-minor-mode-map (kbd "C-;") 'hippie-expand)
+
+;; The C-c * series of commands, mostly helpful shortcuts
 (define-key my-keys-minor-mode-map (kbd "C-c a") 'ag-regexp)
 (define-key my-keys-minor-mode-map (kbd "C-c b") 'backward-sexp)
 (define-key my-keys-minor-mode-map (kbd "C-c c") 'kill-useless-buffers)
@@ -66,10 +71,6 @@
 (define-key my-keys-minor-mode-map (kbd "C-c s") 'replace-string)
 (define-key my-keys-minor-mode-map (kbd "C-c t") 'org-todo-list)
 (define-key my-keys-minor-mode-map (kbd "C-c u") 'mu4e-update-mail-and-index)
-
-
-
-(global-set-key (kbd "RET")   'newline-and-indent) ;; So this can be overrided
 
 (define-minor-mode my-keys-minor-mode
   "A minor mode so that my key settings override annoying major modes."

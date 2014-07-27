@@ -11,6 +11,7 @@
 (require 'init-org)      ; Setup org mode with nicities
 (require 'init-backups)  ; Configure how emacs autosaves/backups work
 (require 'init-my-keys)  ; The minor mode for all my key shortcuts
+(require 'init-hippie)   ; Configure hippie
 (require 'init-mail)     ; Setup mu4e and smtpmail for gmail
 (require 'init-eshell)   ; Setup eshell
 (require 'init-font)     ; Source Code Pro
