@@ -14,7 +14,7 @@
 (define-key haskell-mode-map (kbd "SPC") 'haskell-mode-contextual-space)
 
 (custom-set-variables
- '(haskell-process-log t) ; Note that this creates an extra buffer
+ '(haskell-process-log nil) ; Set to t to debug issues
  '(haskell-process-show-debug-tips nil)
  '(haskell-process-type 'cabal-repl))
 
