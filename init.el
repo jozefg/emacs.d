@@ -15,10 +15,10 @@
 (require 'init-mail)     ; Setup mu4e and smtpmail for gmail
 (require 'init-eshell)   ; Setup eshell
 (require 'init-font)     ; Source Code Pro
+(require 'init-vcs)      ; Initialization and configuration for all things VCS
 (require 'init-helm)     ; Get Helm properly integrated
 (require 'init-colors)   ; Pretty color theme
 (require 'init-startup)  ; Configure startup message and stuff like that
 
-;; Packages
+;; For some smiles
 (require-package '2048-game)
-(require-package 'monky)
