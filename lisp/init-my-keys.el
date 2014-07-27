@@ -5,6 +5,7 @@
   (dolist (buffer (buffer-list))
     (when (or (string-match "^\*helm"       (buffer-name buffer))
               (string-match "^[0-9]+?\.org" (buffer-name buffer)))
+              (string-match "\*monky"       (buffer-name buffer)))
       (kill-buffer buffer))))
 
 (defun get-init-file (s)
