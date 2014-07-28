@@ -19,6 +19,7 @@
 (define-key my-keys-minor-mode-map (kbd "C-c c") 'kill-useless-buffers)
 (define-key my-keys-minor-mode-map (kbd "C-c d") 'ag-dired-regexp)
 (define-key my-keys-minor-mode-map (kbd "C-c e") 'eshell)
+(define-key my-keys-minor-mode-map (kbd "C-c f") 'match-paren)
 (define-key my-keys-minor-mode-map (kbd "C-c g") 'helm-do-grep)
 (define-key my-keys-minor-mode-map (kbd "C-c i") 'get-init-file)
 (define-key my-keys-minor-mode-map (kbd "C-c m") 'mu4e)

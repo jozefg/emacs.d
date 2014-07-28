@@ -38,5 +38,12 @@
     ;; If we have multiple windows, switch and open notes
     (other-window 1)
     (switch-to-buffer buf)))
+
+(defun match-paren (arg)
+  "Go to the matching parenthesis."
+  (interactive "p")
+  (cond ((looking-at "\\s\(") (forward-list 1) (backward-char 1))
+        ((looking-at "\\s\)") (forward-char 1) (backward-list 1))
+        (t nil)))
 	       
 (provide 'init-util-fns)
