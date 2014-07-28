@@ -19,4 +19,5 @@
 (require 'init-helm)     ; Get Helm properly integrated
 (require 'init-colors)   ; Pretty color theme
 (require 'init-startup)  ; Configure startup message and stuff like that
+(require 'init-random)   ; Random packages with no configuration
 (require 'init-smiles)   ; Just stupid fun stuff
