@@ -39,6 +39,13 @@
     ;; If we have multiple windows, switch and open notes
     (other-window 1)
     (switch-to-buffer buf)))
+
+(defun goto-match-paren (arg)
+  "Go to the matching parenthesis if on parenthesis"
+  (interactive "p")
+  (cond ((looking-at "\\s\(") (forward-list 1) (backward-char 1))
+        ((looking-at "\\s\)") (forward-char 1) (backward-list 1))
+        (t nil)))
 	       
 ;; Require packages I use in keybindings, note that require-package is "idempotent"
 (require-package 'helm)
@@ -62,7 +69,7 @@
 (define-key my-keys-minor-mode-map (kbd "C-c c") 'kill-useless-buffers)
 (define-key my-keys-minor-mode-map (kbd "C-c d") 'ag-dired-regexp)
 (define-key my-keys-minor-mode-map (kbd "C-c e") 'eshell)
-(define-key my-keys-minor-mode-map (kbd "C-c f") 'forward-sexp)
+(define-key my-keys-minor-mode-map (kbd "C-c f") 'goto-match-paren)
 (define-key my-keys-minor-mode-map (kbd "C-c g") 'helm-do-grep)
 (define-key my-keys-minor-mode-map (kbd "C-c i") 'get-init-file)
 (define-key my-keys-minor-mode-map (kbd "C-c m") 'mu4e)
