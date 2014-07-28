@@ -34,7 +34,7 @@
 
 (define-minor-mode my-keys-minor-mode
   "A minor mode so that my key settings override annoying major modes."
-  t " my-keys" 'my-keys-minor-mode-map)
+  t " my-keys" 'my-keys-minor-mode-map) ; Note that this is global
 
 (my-keys-minor-mode 1) ; Run the damn thing
 
