@@ -19,6 +19,4 @@
 (require 'init-helm)     ; Get Helm properly integrated
 (require 'init-colors)   ; Pretty color theme
 (require 'init-startup)  ; Configure startup message and stuff like that
-
-;; For some smiles
-(require-package '2048-game)
+(require 'init-smiles)   ; Just stupid fun stuff

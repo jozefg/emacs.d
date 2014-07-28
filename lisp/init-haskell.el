@@ -24,6 +24,7 @@
 (add-hook 'haskell-mode-hook (lambda () (ghc-init)))
 
 (setq ghc-ghc-options '("-fno-warn-unused-do-bind" ; I really don't care about this one
+			"-fno-warn-name-shadowing" ; Or this one
 			"-Wall"))                  ; I care about the rest though
 
 ;; GHC hacking functions. If you don't play with GHC don't bother
