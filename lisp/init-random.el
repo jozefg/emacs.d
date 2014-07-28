@@ -6,4 +6,7 @@
 (require-package 'highlight-parentheses)
 (highlight-parentheses-mode 1)
 
+;; Delete highlighted regions like normal editors
+(delete-selection-mode 1)
+
 (provide 'init-random)
