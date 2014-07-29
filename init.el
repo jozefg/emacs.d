@@ -21,6 +21,7 @@
 (require 'init-colors)   ; Pretty color theme
 (require 'init-startup)  ; Configure startup message and stuff like that
 (require 'init-parens)   ; Pretty parens
+(require 'init-tabs)     ; Down with tabs
 (require 'init-random)   ; Random packages with no configuration
 (require 'init-delete)   ; Hungry delete mode
 (require 'init-smiles)   ; Just stupid fun stuff
