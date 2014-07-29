@@ -1,8 +1,7 @@
-;; Delete all whitespace in a group, not just one
-(require-package 'hungry-delete)
-(global-hungry-delete-mode)
-
 ;; Delete highlighted regions like normal editors
 (delete-selection-mode 1)
+
+;; Useful for large chunks of editing
+(require-package 'lorem-ipsum)
 
 (provide 'init-random)
