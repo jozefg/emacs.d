@@ -32,6 +32,8 @@
 (define-key my-keys-minor-mode-map (kbd "C-c u") 'mu4e-update-mail-and-index)
 (define-key my-keys-minor-mode-map (kbd "C-c v") 'monky-status)
 
+(global-set-key (kbd "RET") 'newline-and-indent)
+
 (define-minor-mode my-keys-minor-mode
   "A minor mode so that my key settings override annoying major modes."
   t " my-keys" 'my-keys-minor-mode-map) ; Note that this is global
