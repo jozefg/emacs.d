@@ -22,6 +22,7 @@
 (define-key my-keys-minor-mode-map (kbd "C-c f") 'match-paren)
 (define-key my-keys-minor-mode-map (kbd "C-c g") 'helm-do-grep)
 (define-key my-keys-minor-mode-map (kbd "C-c i") 'get-init-file)
+(define-key my-keys-minor-mode-map (kbd "C-c k") 'get-todo-file)
 (define-key my-keys-minor-mode-map (kbd "C-c m") 'mu4e)
 (define-key my-keys-minor-mode-map (kbd "C-c o") 'new-org-notes-buffer)
 (define-key my-keys-minor-mode-map (kbd "C-c p") 'ag-project-regexp)

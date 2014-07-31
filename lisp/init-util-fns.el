@@ -45,5 +45,11 @@
   (cond ((looking-at "\\s\(") (forward-list 1) (backward-char 1))
         ((looking-at "\\s\)") (forward-char 1) (backward-list 1))
         (t nil)))
+
+(defun get-todo-file (filename)
+  "Grab a todo file from my dropbox"
+  (interactive (list
+                (read-string "TODO name: ")))
+  (find-file (concat "~/Dropbox/todo/" filename ".org")))
 	       
 (provide 'init-util-fns)
