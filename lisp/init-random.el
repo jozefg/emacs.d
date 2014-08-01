@@ -4,4 +4,7 @@
 ;; Useful for large chunks of editing
 (require-package 'lorem-ipsum)
 
+;; For presenting org-files
+(require-package 'epresent)
+
 (provide 'init-random)
