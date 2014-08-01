@@ -5,6 +5,6 @@
 (require-package 'lorem-ipsum)
 
 ;; For presenting org-files
-(require-package 'epresent)
+(require-package 'org-present)
 
 (provide 'init-random)
