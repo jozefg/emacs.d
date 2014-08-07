@@ -7,4 +7,7 @@
 ;; For presenting org-files
 (require-package 'org-present)
 
+;; For JavaScript
+(require-package 'js2-mode)
+
 (provide 'init-random)
