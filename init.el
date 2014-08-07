@@ -7,6 +7,7 @@
 (require 'init-agda)     ; Setup Agda paths & highlighting
 (require 'init-idris)    ; Setup Idris + Helm integration
 (require 'init-markdown) ; Configure markdown
+(require 'init-latex)    ; Configure latex, preview pane and other niceness
 (require 'init-journal)  ; Get org-journal properly setup and integrated
 (require 'init-org)      ; Setup org mode with nicities
 (require 'init-backups)  ; Configure how emacs autosaves/backups work
