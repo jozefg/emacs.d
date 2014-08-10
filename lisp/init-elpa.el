@@ -18,12 +18,12 @@
 
 (el-get 'sync)
 
-(defun require-package (package &optional min-version)
-  "Install given PACKAGE, optionally requiring MIN-VERSION.
-If NO-REFRESH is non-nil, the available package lists will not be
-re-downloaded in order to locate PACKAGE."
-  (when (not (require package nil t))
-    (package-install package)
-    (require package)))
+(defun require-package (package &optional require-name)
+  (let ((req-name (if require-name
+                      require-name
+                      package)))
+    (when (not (require req-name nil t))
+      (package-install package)
+      (require req-name))))
 
 (provide 'init-elpa)

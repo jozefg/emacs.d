@@ -1,9 +1,7 @@
 ;; auctex is under the name auctex on elpa but provides
 ;; the symbol tex. No clue why.. but that's why I've
 ;; inlined require-package here.
-(when (not (require 'tex nil t))
-    (package-install 'auctex)
-    (require 'tex))
+(require-package 'auctex 'tex)
 
 (setq TeX-auto-save t)
 (setq TeX-parse-self t)
