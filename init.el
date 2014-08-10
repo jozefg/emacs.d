@@ -24,6 +24,6 @@
 (require 'init-parens)   ; Pretty parens
 (require 'init-tabs)     ; Down with tabs
 (require 'init-gpg)      ; For encrypting stuffs
-(require 'init-random)   ; Random packages with no configuration
 (require 'init-delete)   ; Hungry delete mode
+(require 'init-random)   ; Random packages with no configuration
 (require 'init-smiles)   ; Just stupid fun stuff
