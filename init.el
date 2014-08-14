@@ -6,6 +6,7 @@
 (require 'init-coq)      ; Proof General & Coq
 (require 'init-agda)     ; Setup Agda paths & highlighting
 (require 'init-idris)    ; Setup Idris + Helm integration
+(require 'init-js)       ; js-comint mode
 (require 'init-markdown) ; Configure markdown
 (require 'init-latex)    ; Configure latex, preview pane and other niceness
 (require 'init-journal)  ; Get org-journal properly setup and integrated
