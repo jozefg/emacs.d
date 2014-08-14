@@ -30,7 +30,7 @@
   "Create an empty buffer with org-mode but no file"
   (interactive (list
 		(read-string "Buffer Name (*notes*): " nil nil "*notes*")))
-  (let ((buf (generate-new-buffer (concat name ".org"))))
+  (let ((buf (generate-new-buffer name)))
     ;; Setup the buffer
     (with-current-buffer buf
       (org-mode)
