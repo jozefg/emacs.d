@@ -30,11 +30,11 @@
   "Create an empty buffer with org-mode but no file"
   (interactive (list
 		(read-string "Buffer Name (*notes*): " nil nil "*notes*")))
-  (let ((buf (generate-new-buffer name)))
+  (let ((buf (generate-new-buffer (concat name ".org"))))
     ;; Setup the buffer
     (with-current-buffer buf
       (org-mode)
-      (insert "#+TITLE: Notes\n\n"))
+      (insert "#+TITLE: " name "\n\n"))
     ;; If we have multiple windows, switch and open notes
     (other-window 1)
     (switch-to-buffer buf)))
