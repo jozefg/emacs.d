@@ -12,6 +12,7 @@
 (define-key my-keys-minor-mode-map (kbd "C-y") 'clipboard-yank)
 (define-key my-keys-minor-mode-map (kbd "C-a") 'smart-beginning-of-line)
 (define-key my-keys-minor-mode-map (kbd "C-j") 'backward-char) ; ex-Vimmers hate me
+(define-key my-keys-minor-mode-map (kbd "M-j") 'backward-word) ; For symmetry
 (define-key my-keys-minor-mode-map (kbd "C-;") 'hippie-expand)
 
 ;; The C-c * series of commands, mostly helpful shortcuts
