@@ -1,5 +1,3 @@
-(require agda-input) ;; Not on Melpa, gives Agda input method
-
 ;; Not sucky Agda highlighting
 (custom-set-faces
  '(agda2-highlight-datatype-face ((t (:foreground "deep sky blue" :weight bold))))
