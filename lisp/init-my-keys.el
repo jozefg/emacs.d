@@ -33,6 +33,8 @@
 (define-key my-keys-minor-mode-map (kbd "C-c t") 'org-todo-list)
 (define-key my-keys-minor-mode-map (kbd "C-c u") 'mu4e-update-mail-and-index)
 (define-key my-keys-minor-mode-map (kbd "C-c v") 'monky-status)
+(define-key my-keys-minor-mode-map (kbd "C-c w") 'org-agenda-list)
+
 
 (global-set-key (kbd "RET") 'newline-and-indent)
 
