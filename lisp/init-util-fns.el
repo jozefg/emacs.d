@@ -51,5 +51,15 @@
   (interactive (list
                 (read-string "TODO name: ")))
   (find-file (concat "~/Dropbox/todo/" filename ".org")))
-	       
+
+(defun rename-file-with-buffer (new-name)
+  "Rename a buffer and it's underlying file to a new name"
+  (interactive (list (read-string "Rename to: ")))
+  (let ((file (buffer-file-name))
+        (dir  (file-name-directory (buffer-file-name))))
+    (rename-file file (concat dir new-name))
+    (kill-buffer)
+    (find-file (concat dir new-name))))
+
+
 (provide 'init-util-fns)
