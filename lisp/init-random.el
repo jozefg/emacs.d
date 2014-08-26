@@ -13,4 +13,7 @@
 ;; For SML
 (require-package 'sml-mode)
 
+;; Pandoc!
+(require-package 'pandoc-mode)
+
 (provide 'init-random)
