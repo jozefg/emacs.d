@@ -4,6 +4,7 @@
 (require 'init-haskell)  ; Haskell
 (require 'init-python)   ; Python
 (require 'init-coq)      ; Proof General & Coq
+(require 'init-ocaml)    ; Nicer key bindings for Tuareg
 (require 'init-agda)     ; Setup Agda paths & highlighting
 (require 'init-idris)    ; Setup Idris + Helm integration
 (require 'init-js)       ; js-comint mode

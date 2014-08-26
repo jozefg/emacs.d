@@ -13,7 +13,4 @@
 ;; For SML
 (require-package 'sml-mode)
 
-;; For OCaml
-(require-package 'tuareg)
-
 (provide 'init-random)
