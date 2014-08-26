@@ -12,4 +12,6 @@
 
 ;; Previews are nice
 (require-package 'latex-preview-pane)
+(add-hook 'LaTeX-mode-hook 'latex-preview-pane-mode)
+
 (provide 'init-latex)
