@@ -12,6 +12,7 @@
       (string-match "^\*Warnings" buffer-name)
       (string-match "^\*Quail" buffer-name)
       (string-match "^\*Compilation" buffer-name)
+      (string-match "^\*monky" buffer-name)
       (string-match "^\*Help" buffer-name)
       (string-match "\*Calendar" buffer-name)))
 
