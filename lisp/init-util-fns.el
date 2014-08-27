@@ -1,11 +1,28 @@
+(defun all-displayed-windows ()
+  (interactive "")
+  (let ((displayed (list)))
+    (walk-windows (lambda (window)
+                    (push (window-buffer window)
+                          displayed)))
+    displayed))
+
+(defun usually-boring-p (buffer-name)
+  (or (string-match "^\*helm" buffer-name)
+      (string-match ".*\.org" buffer-name)
+      (string-match "^\*Warnings" buffer-name)
+      (string-match "^\*Quail" buffer-name)
+      (string-match "^\*Compilation" buffer-name)
+      (string-match "^\*Help" buffer-name)
+      (string-match "\*Calendar" buffer-name)))
+
 (defun kill-useless-buffers ()
   "Remove buffers that helm and org-todo-agenda generate in spades"
   (interactive "")
-  (dolist (buffer (buffer-list))
-    (when (or (string-match "^\*helm"       (buffer-name buffer))
-              (string-match "^[0-9]+?\.org" (buffer-name buffer))
-              (string-match "\*monky"       (buffer-name buffer)))
-      (kill-buffer buffer))))
+  (let ((displayed-buffers (all-displayed-windows)))
+    (dolist (buffer (buffer-list))
+      (when (and (usually-boring-p (buffer-name buffer))
+                 (not (member buffer displayed-buffers)))
+          (kill-buffer buffer)))))
 
 (defun get-init-file (s)
   "Grab the appropriate init-* file from my .emacs.d directory"
