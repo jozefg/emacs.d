@@ -14,8 +14,8 @@
 ;; Use opam switch to lookup ocamlmerlin binary
 (setq merlin-command 'opam)
 
-;; Instead of hippy expand, use Merlin!
-(define-key tuareg-mode-map (kbd "C-;") 'completion-at-point)
+;; Avoid carpal tunnel
+(define-key tuareg-mode-map (kbd "C-:") 'completion-at-point)
 
 
 (provide 'init-ocaml)
