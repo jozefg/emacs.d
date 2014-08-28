@@ -1,5 +1,4 @@
 (require 'tuareg)
-(define-key tuareg-mode-map (kbd "C-c C-l") 'tuareg-eval-buffer)
 
 ;; Merlin provides autocomplete, but it's an OCaml lib, so this
 ;; depends on it.
@@ -13,6 +12,7 @@
 
 ;; Avoid carpal tunnel
 (define-key tuareg-mode-map (kbd "C-:") 'completion-at-point)
+(define-key merlin-mode-map (kbd "C-c C-l") 'tuareg-eval-buffer)
 
 
 (provide 'init-ocaml)
