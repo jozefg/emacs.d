@@ -24,7 +24,6 @@
 (require 'init-colors)     ; Pretty color theme
 (require 'init-startup)    ; Configure startup message and stuff like that
 (require 'init-parens)     ; Pretty parens
-(require 'init-tabs)       ; Down with tabs
 (require 'init-whitespace) ; Judgemental highlighting!
 (require 'init-gpg)        ; For encrypting stuffs
 (require 'init-delete)     ; Hungry delete mode
