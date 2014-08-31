@@ -1,6 +1,8 @@
 (require-package 'color-theme)
 (require-package 'zenburn-theme)
 (require-package 'solarized-theme)
+(require-package 'monokai-theme)
+
 (setq color-theme-is-global t)
 (color-theme-initialize)
 
@@ -11,7 +13,8 @@
 (setq solarized-use-more-italic t)            ;; Use more italics
 (setq solarized-emphasize-indicators nil)     ;; Use less colors for indicators
 
+;(load-theme 'solarized-dark t)
 
-(load-theme 'solarized-dark t)
+(load-theme 'monokai t)
 
 (provide 'init-colors)
