@@ -1,4 +1,4 @@
-(require 'tuareg)
+(require-package 'tuareg)
 
 ;; Merlin provides autocomplete, but it's an OCaml lib, so this
 ;; depends on it.
