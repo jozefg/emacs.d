@@ -10,8 +10,18 @@
 (add-hook 'LaTeX-mode-hook 'turn-on-reftex)
 (setq TeX-PDF-mode t)
 
+
 ;; Previews are nice
 (require-package 'latex-preview-pane)
 (add-hook 'LaTeX-mode-hook 'latex-preview-pane-mode)
+
+;; Pass shell-escape everywhere
+(custom-set-variables
+ '(pdf-latex-command "~/.emacs.d/bin/latex"))
+
+(eval-after-load "tex"
+  '(setcdr (assoc "LaTeX" TeX-command-list)
+          '("%`%l%(mode) -shell-escape%' %t"
+          TeX-run-TeX nil (latex-mode doctex-mode) :help "Run LaTeX")))
 
 (provide 'init-latex)
