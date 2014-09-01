@@ -2,6 +2,10 @@
 (require-package 'ghc) ;; ghc-mod
 (require 'haskell-cabal)
 
+;; Add cabal-bin to load path.
+(setenv "PATH" (concat (getenv "PATH") ":~/.cabal/bin"))
+(setq exec-path (append exec-path '("~/.cabal/bin")))
+
 (add-hook 'haskell-mode-hook 'turn-on-haskell-indentation)
 (setq haskell-font-lock-symbols t)
 (add-hook 'haskell-mode-hook 'turn-on-haskell-doc-mode)
