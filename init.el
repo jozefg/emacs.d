@@ -18,6 +18,7 @@
 (require 'init-hippie)     ; Configure hippie
 (require 'init-mail)       ; Setup mu4e and smtpmail for gmail
 (require 'init-eshell)     ; Setup eshell
+(require 'init-browser)    ; Configure Emacs to use chrome
 (require 'init-font)       ; Source Code Pro
 (require 'init-vcs)        ; Initialization and configuration for all things VCS
 (require 'init-helm)       ; Get Helm properly integrated
