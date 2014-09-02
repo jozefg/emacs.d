@@ -7,6 +7,7 @@
 (require 'init-ocaml)      ; Nicer key bindings for Tuareg
 (require 'init-agda)       ; Setup Agda paths & highlighting
 (require 'init-idris)      ; Setup Idris + Helm integration
+(require 'init-rust)       ; Setup rust with a few helper keys
 (require 'init-js)         ; js-comint mode
 (require 'init-markdown)   ; Configure markdown
 (require 'init-latex)      ; Configure latex, preview pane and other niceness
