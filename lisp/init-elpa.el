@@ -1,13 +1,20 @@
-(require 'package)
+;; package-install
 
+(require 'package)
 (add-to-list 'package-archives
              '("melpa" . "http://melpa.milkbox.net/packages/") t)
 (add-to-list 'package-archives
-             '("melpa" . "http://melpa.milkbox.net/packages/"))
+               ("marmalade" . "http://marmalade-repo.org/packages/"))
+
 (package-initialize)
 
 (add-to-list 'load-path "~/.emacs.d/el-get/el-get")
 (add-to-list 'load-path "/usr/local/share/emacs/site-lisp/mu4e")
+
+(when (not package-archive-contents)
+  (package-refresh-contents))
+
+;; el-get
 
 (unless (require 'el-get nil 'noerror)
   (with-current-buffer
