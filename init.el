@@ -5,6 +5,7 @@
 (require 'init-python)     ; Python
 (require 'init-coq)        ; Proof General & Coq
 (require 'init-ocaml)      ; Nicer key bindings for Tuareg
+(require 'init-twelf)      ; Just shell out to load twelf-init.el
 (require 'init-agda)       ; Setup Agda paths & highlighting
 (require 'init-idris)      ; Setup Idris + Helm integration
 (require 'init-rust)       ; Setup rust with a few helper keys
