@@ -15,9 +15,9 @@ This isn't completely dependency free. It expects
  - proofgeneral   for `lisp/init-coq.el`
  - twelf          for `lisp/init-twelf.el`
 
-All of these are avaible with a good package manager (apt-get, pacman) or
-trivial to build and install on Linux. No guarentees about Windows, I've made
-no attempts at compatability.
+All of these are available with a good package manager (apt-get, pacman) or
+trivial to build and install on Linux. No guarantees about Windows, I've made
+no attempts at compatibility.
 
 Most of these files are independent of one another so if you don't
 have admin rights, you can comment out the appropriate line in `init.el`
