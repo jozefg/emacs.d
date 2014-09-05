@@ -14,6 +14,7 @@
 (define-key my-keys-minor-mode-map (kbd "C-j") 'backward-char) ; ex-Vimmers hate me
 (define-key my-keys-minor-mode-map (kbd "M-j") 'backward-word) ; For symmetry
 (define-key my-keys-minor-mode-map (kbd "C-x j") 'switch-to-buffer)
+(define-key my-keys-minor-mode-map (kbd "C-x C-j") 'list-buffers)
 (define-key my-keys-minor-mode-map (kbd "C-;") 'hippie-expand)
 
 ;; The C-c * series of commands, mostly helpful shortcuts
@@ -22,7 +23,6 @@
 (define-key my-keys-minor-mode-map (kbd "C-c d") 'ag-dired-regexp)
 (define-key my-keys-minor-mode-map (kbd "C-c e") 'eshell)
 (define-key my-keys-minor-mode-map (kbd "C-c f") 'match-paren)
-(define-key my-keys-minor-mode-map (kbd "C-c g") 'helm-do-grep)
 (define-key my-keys-minor-mode-map (kbd "C-c i") 'get-init-file)
 (define-key my-keys-minor-mode-map (kbd "C-c k") 'get-todo-file)
 (define-key my-keys-minor-mode-map (kbd "C-c m") 'mu4e)

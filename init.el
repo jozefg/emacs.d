@@ -9,8 +9,13 @@
 (require 'init-colors)     ; Pretty color theme
 (require 'init-eshell)     ; Setup eshell
 (require 'init-font)       ; Source Code Pro
-(require 'init-helm)       ; Get Helm properly integrated
 (require 'init-startup)    ; Configure startup message and stuff like that
+
+;; Buffer completetion and whatnot. Choose either ido or helm
+(defvar using-helm-or-ido 'ido
+  "Set to 'ido if we're using ido otherwise 'helm")
+(require 'init-interact)   ; Configure our interactive system, helm or ido
+
 
 ;; Make Emacs more like home
 (require 'init-util-fns)   ; Some useful functions I bind to keys
