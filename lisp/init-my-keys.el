@@ -2,16 +2,16 @@
 (defvar my-keys-minor-mode-map (make-keymap) "my-keys-minor-mode keymap.")
 
 ;; Normal keybindings I override to be things I prefer
-(define-key my-keys-minor-mode-map (kbd "C-w") 'clipboard-kill-region)
-(define-key my-keys-minor-mode-map (kbd "M-w") 'clipboard-kill-ring-save)
-(define-key my-keys-minor-mode-map (kbd "C-y") 'clipboard-yank)
-(define-key my-keys-minor-mode-map (kbd "C-a") 'smart-beginning-of-line)
-(define-key my-keys-minor-mode-map (kbd "C-j") 'backward-char) ; ex-Vimmers hate me
-(define-key my-keys-minor-mode-map (kbd "M-j") 'backward-word) ; For symmetry
-(define-key my-keys-minor-mode-map (kbd "C-x j") 'switch-to-buffer)
+(define-key my-keys-minor-mode-map (kbd "C-;")     'hippie-expand)
+(define-key my-keys-minor-mode-map (kbd "C-a")     'smart-beginning-of-line)
+(define-key my-keys-minor-mode-map (kbd "C-j")     'backward-char) ; ex-Vimmers hate me
+(define-key my-keys-minor-mode-map (kbd "C-w")     'clipboard-kill-region)
 (define-key my-keys-minor-mode-map (kbd "C-x C-j") 'list-buffers)
-(define-key my-keys-minor-mode-map (kbd "C-;") 'hippie-expand)
-(define-key my-keys-minor-mode-map (kbd "C-x O") 'last-window)
+(define-key my-keys-minor-mode-map (kbd "C-x O")   'last-window)
+(define-key my-keys-minor-mode-map (kbd "C-x j")   'switch-to-buffer)
+(define-key my-keys-minor-mode-map (kbd "C-y")     'clipboard-yank)
+(define-key my-keys-minor-mode-map (kbd "M-j")     'backward-word) ; For symmetry
+(define-key my-keys-minor-mode-map (kbd "M-w")     'clipboard-kill-ring-save)
 
 ;; The C-c * series of commands, mostly helpful shortcuts
 (define-key my-keys-minor-mode-map (kbd "C-c a") 'ag-regexp)
