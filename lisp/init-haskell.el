@@ -3,8 +3,8 @@
 (require 'haskell-cabal)
 
 ;; Add cabal-bin to load path.
-(setenv "PATH" (concat (getenv "PATH") ":~/.cabal/bin"))
-(setq exec-path (append exec-path '("~/.cabal/bin")))
+(setenv "PATH" (concat "~/.cabal/bin:" (getenv "PATH")))
+(setq exec-path (cons "~/.cabal/bin" exec-path ))
 
 (add-hook 'haskell-mode-hook 'turn-on-haskell-indentation)
 (setq haskell-font-lock-symbols t)
