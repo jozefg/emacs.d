@@ -1,8 +1,3 @@
-;; Require packages I use in keybindings, note that require-package is "idempotent"
-(require-package 'helm)
-(require-package 'org-journal)
-(require-package 'ag)
-
 ;; Minor mode for things I like
 (defvar my-keys-minor-mode-map (make-keymap) "my-keys-minor-mode keymap.")
 
