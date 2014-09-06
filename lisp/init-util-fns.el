@@ -1,3 +1,5 @@
+(setq lexical-binding t)
+
 (defun all-displayed-windows ()
   (interactive "")
   (let ((displayed (list)))
