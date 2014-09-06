@@ -1,8 +1,3 @@
-;; Require packages I use in keybindings, note that require-package is "idempotent"
-(require-package 'helm)
-(require-package 'org-journal)
-(require-package 'ag)
-
 ;; Minor mode for things I like
 (defvar my-keys-minor-mode-map (make-keymap) "my-keys-minor-mode keymap.")
 
@@ -16,13 +11,14 @@
 (define-key my-keys-minor-mode-map (kbd "C-x j") 'switch-to-buffer)
 (define-key my-keys-minor-mode-map (kbd "C-x C-j") 'list-buffers)
 (define-key my-keys-minor-mode-map (kbd "C-;") 'hippie-expand)
+(define-key my-keys-minor-mode-map (kbd "C-x O") 'last-window)
 
 ;; The C-c * series of commands, mostly helpful shortcuts
 (define-key my-keys-minor-mode-map (kbd "C-c a") 'ag-regexp)
 (define-key my-keys-minor-mode-map (kbd "C-c c") 'kill-useless-buffers)
 (define-key my-keys-minor-mode-map (kbd "C-c d") 'ag-dired-regexp)
 (define-key my-keys-minor-mode-map (kbd "C-c e") 'eshell)
-(define-key my-keys-minor-mode-map (kbd "C-c f") 'match-paren)
+(define-key my-keys-minor-mode-map (kbd "C-c f") 'find-file-at-point)
 (define-key my-keys-minor-mode-map (kbd "C-c i") 'get-init-file)
 (define-key my-keys-minor-mode-map (kbd "C-c k") 'get-todo-file)
 (define-key my-keys-minor-mode-map (kbd "C-c m") 'mu4e)

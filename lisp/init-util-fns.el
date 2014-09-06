@@ -83,5 +83,9 @@
     (kill-buffer)
     (find-file (concat dir new-name))))
 
+(defun last-window ()
+  (interactive "")
+  (other-window -1))
+
 
 (provide 'init-util-fns)
