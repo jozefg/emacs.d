@@ -1,5 +1,4 @@
 ;; package-install
-
 (require 'package)
 (add-to-list 'package-archives
              '("melpa" . "http://melpa.milkbox.net/packages/") t)
@@ -15,7 +14,6 @@
   (package-refresh-contents))
 
 ;; el-get
-
 (unless (require 'el-get nil 'noerror)
   (with-current-buffer
       (url-retrieve-synchronously
@@ -33,4 +31,11 @@
       (package-install package)
       (require req-name))))
 
-(provide 'init-elpa)
+(defun try-require (package)
+  (let ((res (ignore-errors (require package nil t))))
+    (when (not res)
+      (with-current-buffer "*scratch*"
+        (end-of-buffer)
+        (insert "Couldn't load " (symbol-name package) "\n")))))
+
+(provide 'init-package)
