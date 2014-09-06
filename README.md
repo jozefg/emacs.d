@@ -19,6 +19,6 @@ All of these are available with a good package manager (apt-get, pacman) or
 trivial to build and install on Linux. No guarantees about Windows, I've made
 no attempts at compatibility.
 
-Most of these files are independent of one another so if you don't
-have admin rights, you can comment out the appropriate line in `init.el`
-go from there.
+All these files are loaded so that if one fails to load the rest still
+will. This means that in theory you can just drop this in and
+magically end up with some subset of configuration.
