@@ -31,7 +31,10 @@
 (define-key my-keys-minor-mode-map (kbd "C-c u") 'mu4e-update-mail-and-index)
 (define-key my-keys-minor-mode-map (kbd "C-c v") 'monky-status)
 (define-key my-keys-minor-mode-map (kbd "C-c w") 'org-agenda-list)
-
+(define-key my-keys-minor-mode-map (kbd "C-c (") 'kill-parens)
+(define-key my-keys-minor-mode-map (kbd "C-c )") 'kill-parens)
+(define-key my-keys-minor-mode-map (kbd "C-c {") 'kill-braces)
+(define-key my-keys-minor-mode-map (kbd "C-c }") 'kill-braces)
 
 (global-set-key (kbd "RET") 'newline-and-indent)
 

@@ -19,6 +19,7 @@
 
 ;; Make Emacs more like home
 (try-require 'init-util-fns)   ; Some useful functions I bind to keys
+(try-require 'init-surround)   ; surround like mimicking
 (try-require 'init-my-keys)    ; The minor mode for all my key shortcuts
 
 ;; Minor modes
