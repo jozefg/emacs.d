@@ -87,5 +87,15 @@
   (interactive "")
   (other-window -1))
 
+(defun horizontal-to-vertical-split ()
+  (interactive "")
+  (other-window 1)
+  (let ((name (buffer-name)))
+    (delete-window)
+    (split-window-right)
+    (other-window 1)
+    (switch-to-buffer name)
+    (other-window 1)))
+
 
 (provide 'init-util-fns)
