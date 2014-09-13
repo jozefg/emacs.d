@@ -1,5 +1,3 @@
-(global-font-lock-mode 1)
-
 ;; Use source pro
 (when (window-system)
   (set-frame-font "Source Code Pro")
