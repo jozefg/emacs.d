@@ -7,8 +7,8 @@
 (setq exec-path (cons "~/.cabal/bin" exec-path ))
 
 (add-hook 'haskell-mode-hook 'turn-on-haskell-indentation)
-(setq haskell-font-lock-symbols t)
 (add-hook 'haskell-mode-hook 'turn-on-haskell-doc-mode)
+(add-hook 'haskell-mode-hook 'interactive-haskell-mode)
 
 (define-key haskell-cabal-mode-map (kbd "C-`") 'haskell-interactive-bring)
 (define-key haskell-cabal-mode-map (kbd "C-c C-k") 'haskell-interactive-mode-clear)
@@ -17,10 +17,14 @@
 (define-key haskell-mode-map (kbd "C-c C-i") 'haskell-process-do-info)
 (define-key haskell-mode-map (kbd "SPC") 'haskell-mode-contextual-space)
 
-(custom-set-variables
- '(haskell-process-log nil) ; Set to t to debug issues
- '(haskell-process-show-debug-tips nil)
- '(haskell-process-type 'cabal-repl))
+(setq haskell-font-lock-symbols t
+      haskell-process-suggest-remove-import-lines t
+      haskell-process-auto-import-loaded-modules t
+      haskell-process-log nil ; Set to t to debug issue
+      haskell-align-imports-pad-after-name t
+      haskell-doc-show-global-types t
+      haskell-process-show-debug-tips nil
+      haskell-process-type 'cabal-repl)
 
 ;; ghc-mod
 (autoload 'ghc-init "ghc" nil t)

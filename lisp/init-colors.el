@@ -14,7 +14,6 @@
 (setq solarized-emphasize-indicators nil)     ;; Use less colors for indicators
 
 ;(load-theme 'solarized-dark t)
-
 (load-theme 'monokai t)
 
 (provide 'init-colors)
