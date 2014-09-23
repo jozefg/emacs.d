@@ -10,9 +10,6 @@
 ;; For JavaScript
 (require-package 'js2-mode)
 
-;; For SML
-(require-package 'sml-mode)
-
 ;; Pandoc!
 (require-package 'pandoc-mode)
 

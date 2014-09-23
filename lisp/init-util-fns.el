@@ -97,5 +97,8 @@
     (switch-to-buffer name)
     (other-window 1)))
 
+(defun strip-text-properties(txt)
+  (set-text-properties 0 (length txt) nil txt)
+      txt)
 
 (provide 'init-util-fns)

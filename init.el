@@ -43,6 +43,7 @@
 (try-require 'init-ocaml)      ; Nicer key bindings for Tuareg
 (try-require 'init-python)     ; Python
 (try-require 'init-rust)       ; Setup rust with a few helper keys
+(try-require 'init-sml)        ; Setup sml with some helpers for 15-150
 
 ;; Theorem provers
 (try-require 'init-agda)       ; Setup Agda paths & highlighting
