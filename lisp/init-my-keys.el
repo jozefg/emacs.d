@@ -20,6 +20,7 @@
 (define-key my-keys-minor-mode-map (kbd "C-c d") 'ag-dired-regexp)
 (define-key my-keys-minor-mode-map (kbd "C-c e") 'eshell)
 (define-key my-keys-minor-mode-map (kbd "C-c f") 'find-file-at-point)
+(define-key my-keys-minor-mode-map (kbd "C-c g") 'goto-line)
 (define-key my-keys-minor-mode-map (kbd "C-c i") 'get-init-file)
 (define-key my-keys-minor-mode-map (kbd "C-c k") 'get-todo-file)
 (define-key my-keys-minor-mode-map (kbd "C-c m") 'mu4e)
