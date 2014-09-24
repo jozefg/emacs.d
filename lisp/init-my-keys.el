@@ -38,7 +38,7 @@
 (define-key my-keys-minor-mode-map (kbd "C-c )") 'kill-parens)
 (define-key my-keys-minor-mode-map (kbd "C-c {") 'kill-braces)
 (define-key my-keys-minor-mode-map (kbd "C-c }") 'kill-braces)
-
+(define-key my-keys-minor-mode-map (kbd "C-c SPC") 'ace-jump-mode)
 (global-set-key (kbd "RET") 'newline-and-indent)
 
 (define-minor-mode my-keys-minor-mode
