@@ -12,6 +12,7 @@
 (define-key my-keys-minor-mode-map (kbd "C-y")     'clipboard-yank)
 (define-key my-keys-minor-mode-map (kbd "M-j")     'backward-word) ; For symmetry
 (define-key my-keys-minor-mode-map (kbd "M-w")     'clipboard-kill-ring-save)
+(define-key my-keys-minor-mode-map (kbd "M-w")     'ace-jump-zap-up-to-char)
 
 ;; The C-c * series of commands, mostly helpful shortcuts
 (define-key my-keys-minor-mode-map (kbd "C-c a") 'ag-regexp)
