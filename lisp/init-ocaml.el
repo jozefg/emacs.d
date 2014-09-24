@@ -3,9 +3,9 @@
 
 (defun ocamlbuild (buffer)
   (interactive (list (buffer-name)))
-  (compile (concat "ocamlbuild "
+  (compile (concat "corebuild "
                    (substring buffer 0 -3)
-                   ".cmo")))
+                   ".cmx")))
 
 ;; Avoid carpal tunnel
 (define-key tuareg-mode-map (kbd "C-c C-c") 'ocamlbuild)
