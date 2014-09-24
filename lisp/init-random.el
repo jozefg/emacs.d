@@ -13,7 +13,8 @@
 ;; Pandoc!
 (require-package 'pandoc-mode)
 
-;; Better behavior for zapping
+;; Better behavior for moving
 (require-package 'ace-jump-zap)
+(require-package 'ace-jump-mode)
 
 (provide 'init-random)
