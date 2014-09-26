@@ -5,4 +5,6 @@
 (add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.md\\'"       . markdown-mode))
 
+(define-key markdown-mode-map (kbd "C-c C-w") 'count-words)
+
 (provide 'init-markdown)
