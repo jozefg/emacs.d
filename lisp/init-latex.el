@@ -1,6 +1,5 @@
 ;; auctex is under the name auctex on elpa but provides
-;; the symbol tex. No clue why.. but that's why I've
-;; inlined require-package here.
+;; the symbol tex. No clue why..
 (require-package 'auctex 'tex)
 
 (setq TeX-auto-save t)
@@ -19,10 +18,5 @@
 ;; Pass shell-escape everywhere
 (custom-set-variables
  '(pdf-latex-command "~/.emacs.d/bin/latex"))
-
-(eval-after-load "tex"
-  '(setcdr (assoc "LaTeX" TeX-command-list)
-          '("%`%l%(mode) -shell-escape%' %t"
-          TeX-run-TeX nil (latex-mode doctex-mode) :help "Run LaTeX")))
 
 (provide 'init-latex)
