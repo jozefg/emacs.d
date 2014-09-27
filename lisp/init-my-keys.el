@@ -12,33 +12,42 @@
 (define-key my-keys-minor-mode-map (kbd "C-y")     'clipboard-yank)
 (define-key my-keys-minor-mode-map (kbd "M-j")     'backward-word) ; For symmetry
 (define-key my-keys-minor-mode-map (kbd "M-w")     'clipboard-kill-ring-save)
-(define-key my-keys-minor-mode-map (kbd "M-w")     'ace-jump-zap-up-to-char)
+(define-key my-keys-minor-mode-map (kbd "M-z")     'ace-jump-zap-up-to-char)
 
-;; The C-c * series of commands, mostly helpful shortcuts
-(define-key my-keys-minor-mode-map (kbd "C-c a") 'ag-regexp)
-(define-key my-keys-minor-mode-map (kbd "C-c c") 'kill-useless-buffers)
-(define-key my-keys-minor-mode-map (kbd "C-c d") 'ag-dired-regexp)
-(define-key my-keys-minor-mode-map (kbd "C-c e") 'eshell)
-(define-key my-keys-minor-mode-map (kbd "C-c f") 'find-file-at-point)
-(define-key my-keys-minor-mode-map (kbd "C-c g") 'goto-line)
-(define-key my-keys-minor-mode-map (kbd "C-c i") 'get-init-file)
-(define-key my-keys-minor-mode-map (kbd "C-c k") 'get-todo-file)
-(define-key my-keys-minor-mode-map (kbd "C-c l") 'ace-jump-line-mode)
-(define-key my-keys-minor-mode-map (kbd "C-c m") 'mu4e)
-(define-key my-keys-minor-mode-map (kbd "C-c o") 'new-org-notes-buffer)
-(define-key my-keys-minor-mode-map (kbd "C-c p") 'ag-project-regexp)
-(define-key my-keys-minor-mode-map (kbd "C-c q") 'query-replace-regexp)
-(define-key my-keys-minor-mode-map (kbd "C-c r") 'replace-regexp)
-(define-key my-keys-minor-mode-map (kbd "C-c s") 'replace-string)
-(define-key my-keys-minor-mode-map (kbd "C-c t") 'org-todo-list)
-(define-key my-keys-minor-mode-map (kbd "C-c u") 'mu4e-update-mail-and-index)
-(define-key my-keys-minor-mode-map (kbd "C-c v") 'monky-status)
-(define-key my-keys-minor-mode-map (kbd "C-c w") 'org-agenda-list)
-(define-key my-keys-minor-mode-map (kbd "C-c (") 'kill-parens)
-(define-key my-keys-minor-mode-map (kbd "C-c )") 'kill-parens)
-(define-key my-keys-minor-mode-map (kbd "C-c {") 'kill-braces)
-(define-key my-keys-minor-mode-map (kbd "C-c }") 'kill-braces)
-(define-key my-keys-minor-mode-map (kbd "C-c SPC") 'ace-jump-mode)
+;; Overview of the C-c prefix
+;; C-c a * - Ag things
+;; C-c c   - Clean buffers
+;; C-c e   - Eshell
+;; C-c f * - File finding functions
+;; C-c g * - Go places
+;; C-c k * - Kill things structurally
+;; C-c m * - Mu4e things
+;; C-c o * - Org utilities
+;; C-c s * - Substitute text
+;; C-c v   - Version control for mercurial
+(define-key my-keys-minor-mode-map (kbd "C-c a d") 'ag-dired-regexp)
+(define-key my-keys-minor-mode-map (kbd "C-c a p") 'ag-project-regexp)
+(define-key my-keys-minor-mode-map (kbd "C-c a r") 'ag-regexp)
+(define-key my-keys-minor-mode-map (kbd "C-c c")   'kill-useless-buffers)
+(define-key my-keys-minor-mode-map (kbd "C-c e")   'eshell)
+(define-key my-keys-minor-mode-map (kbd "C-c f i") 'get-init-file)
+(define-key my-keys-minor-mode-map (kbd "C-c f k") 'get-todo-file)
+(define-key my-keys-minor-mode-map (kbd "C-c f o") 'new-org-notes-buffer)
+(define-key my-keys-minor-mode-map (kbd "C-c f p") 'find-file-at-point)
+(define-key my-keys-minor-mode-map (kbd "C-c g c") 'ace-jump-mode)
+(define-key my-keys-minor-mode-map (kbd "C-c g l") 'ace-jump-line-mode)
+(define-key my-keys-minor-mode-map (kbd "C-c g n") 'goto-line)
+(define-key my-keys-minor-mode-map (kbd "C-c k b") 'kill-braces)
+(define-key my-keys-minor-mode-map (kbd "C-c k p") 'kill-parens)
+(define-key my-keys-minor-mode-map (kbd "C-c m i") 'mu4e)
+(define-key my-keys-minor-mode-map (kbd "C-c m u") 'mu4e-update-mail-and-index)
+(define-key my-keys-minor-mode-map (kbd "C-c o t") 'org-todo-list)
+(define-key my-keys-minor-mode-map (kbd "C-c o w") 'org-agenda-list)
+(define-key my-keys-minor-mode-map (kbd "C-c s q") 'query-replace-regexp)
+(define-key my-keys-minor-mode-map (kbd "C-c s r") 'replace-regexp)
+(define-key my-keys-minor-mode-map (kbd "C-c s s") 'replace-string)
+(define-key my-keys-minor-mode-map (kbd "C-c v")   'monky-status)
+
 (global-set-key (kbd "RET") 'newline-and-indent)
 
 (define-minor-mode my-keys-minor-mode
