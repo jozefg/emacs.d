@@ -40,4 +40,10 @@
    mu4e-get-mail-command "offlineimap"   ;; or fetchmail, or ...
    mu4e-update-interval 300)             ;; update every 5 minutes
 
+(defun jump-to-mailbox ()
+  (interactive "")
+  (mu4e)
+  (mu4e~headers-jump-to-maildir "/INBOX"))
+
+
 (provide 'init-mail)

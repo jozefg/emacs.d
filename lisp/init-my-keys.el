@@ -39,7 +39,7 @@
 (define-key my-keys-minor-mode-map (kbd "C-c g n") 'goto-line)
 (define-key my-keys-minor-mode-map (kbd "C-c k b") 'kill-braces)
 (define-key my-keys-minor-mode-map (kbd "C-c k p") 'kill-parens)
-(define-key my-keys-minor-mode-map (kbd "C-c m i") 'mu4e)
+(define-key my-keys-minor-mode-map (kbd "C-c m i") 'jump-to-mailbox)
 (define-key my-keys-minor-mode-map (kbd "C-c m u") 'mu4e-update-mail-and-index)
 (define-key my-keys-minor-mode-map (kbd "C-c o t") 'org-todo-list)
 (define-key my-keys-minor-mode-map (kbd "C-c o w") 'org-agenda-list)
