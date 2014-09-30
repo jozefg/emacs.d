@@ -17,4 +17,10 @@
 (require-package 'ace-jump-zap)
 (require-package 'ace-jump-mode)
 
+;; Highlight the current line
+(global-hl-line-mode 1)
+
+;; Update buffers automatically
+(global-auto-revert-mode 1)
+
 (provide 'init-random)

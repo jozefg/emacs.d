@@ -15,5 +15,9 @@
             (define-key ido-completion-map (kbd "C-f") 'ido-next-match)
             (define-key ido-completion-map (kbd "C-l") 'ido-prev-match)))
 
+;; When we're using Ido
+(require-package 'icicles)
+(icy-mode 1)
+
 
 (provide 'init-ido)
