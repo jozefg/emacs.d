@@ -37,6 +37,7 @@
 (define-key my-keys-minor-mode-map (kbd "C-c g c") 'ace-jump-mode)
 (define-key my-keys-minor-mode-map (kbd "C-c g l") 'ace-jump-line-mode)
 (define-key my-keys-minor-mode-map (kbd "C-c g n") 'goto-line)
+(define-key my-keys-minor-mode-map (kbd "C-c g o") 'occur)
 (define-key my-keys-minor-mode-map (kbd "C-c k b") 'kill-braces)
 (define-key my-keys-minor-mode-map (kbd "C-c k p") 'kill-parens)
 (define-key my-keys-minor-mode-map (kbd "C-c m i") 'jump-to-mailbox)
