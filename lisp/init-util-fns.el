@@ -32,7 +32,7 @@
 (defun get-init-file (s)
   "Grab the appropriate init-* file from my .emacs.d directory"
   (interactive (list
-		(read-string "Init buffer (init.el): "
+		(read-string "Init buffer: "
 			     nil
 			     nil
 			     "init.el")))
@@ -100,5 +100,18 @@
 (defun strip-text-properties(txt)
   (set-text-properties 0 (length txt) nil txt)
       txt)
+
+(defun upload-buffer (buffer)
+  "Upload a file to transfer.sh and return the URL. Requires curl"
+  (interactive (list (current-buffer)))
+  (let* ((name (buffer-file-name buffer))
+         (command (concat "curl --silent --upload-file "
+                          name
+                          " http://transfer.sh/"
+                          (file-name-base name)))
+         (url (shell-command-to-string command)))
+    (message "Stored: %s" url)
+    (push url kill-ring)))
+
 
 (provide 'init-util-fns)
