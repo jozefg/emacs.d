@@ -29,7 +29,7 @@
 (try-require 'init-whitespace) ; Judgemental highlighting!
 
 ;; Tools in Emacs
-(try-require 'init-vcs)        ; Initialization and configuration for all things VCS
+(try-require 'init-vcs)        ; Configuration for all things VCS
 (try-require 'init-gpg)        ; For encrypting stuffs
 (try-require 'init-journal)    ; Get org-journal properly setup and integrated
 (try-require 'init-org)        ; Setup org mode with nicities
@@ -38,7 +38,7 @@
 ;; Language specifics
 (try-require 'init-haskell)    ; Haskell
 (try-require 'init-js)         ; js-comint mode
-(try-require 'init-latex)      ; Configure latex, preview pane and other niceness
+(try-require 'init-latex)      ; Configure latex, preview pane
 (try-require 'init-markdown)   ; Configure markdown
 (try-require 'init-ocaml)      ; Nicer key bindings for Tuareg
 (try-require 'init-python)     ; Python
