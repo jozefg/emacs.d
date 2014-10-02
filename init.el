@@ -34,6 +34,7 @@
 (try-require 'init-journal)    ; Get org-journal properly setup and integrated
 (try-require 'init-org)        ; Setup org mode with nicities
 (try-require 'init-mail)       ; Setup mu4e and smtpmail for gmail
+(try-require 'init-tree)       ; Setup a directory tree
 
 ;; Language specifics
 (try-require 'init-haskell)    ; Haskell
