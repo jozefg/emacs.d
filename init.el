@@ -42,6 +42,7 @@
 (try-require 'init-markdown)   ; Configure markdown
 (try-require 'init-ocaml)      ; Nicer key bindings for Tuareg
 (try-require 'init-python)     ; Python
+(try-require 'init-racket)     ; Racket for when I'm nostalgic
 (try-require 'init-rust)       ; Setup rust with a few helper keys
 (try-require 'init-sml)        ; Setup sml with some helpers for 15-150
 
