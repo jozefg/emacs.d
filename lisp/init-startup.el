@@ -7,6 +7,8 @@
 (toggle-scroll-bar -1)             ; No scroll bar
 (menu-bar-mode -1)                 ; No menu bar
 
+;(setq mode-line-format nil)        ; No modeline
+
 ;; A pretty modeline is worth every character
 (require-package 'dash) ; Implicit dependency for sml
 (require-package 'smart-mode-line)

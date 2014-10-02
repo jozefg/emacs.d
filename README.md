@@ -5,15 +5,19 @@ environment let me immediately begin working.
 
 This isn't completely dependency free. It expects
 
- - emacs > 24     for `lisp/init-melpa.el`, used everywhere
- - ag             for `lisp/init-my-keys.el`
- - coq + coq-mode for `lisp/init-coq.el`
- - ghc-mod        for `lisp/init-haskell.el`
- - merlin         for `lisp/init-ocaml.el`
- - mu4e           for `lisp/init-mail.el`
- - offlineimap    for `lisp/init-mail.el`
- - proofgeneral   for `lisp/init-coq.el`
- - twelf          for `lisp/init-twelf.el`
+<table>
+<tr> <th>Dependency</th><th>File</th> </tr> <tr>
+<tr> <td> emacs > 24     </td> <td> `lisp/init-melpa.el`   </td> </tr>
+<tr> <td> ag             </td> <td> `lisp/init-my-keys.el` </td> </tr>
+<tr> <td> coq + coq-mode </td> <td> `lisp/init-coq.el`     </td> </tr>
+<tr> <td> ghc-mod        </td> <td> `lisp/init-haskell.el` </td> </tr>
+<tr> <td> merlin         </td> <td> `lisp/init-ocaml.el`   </td> </tr>
+<tr> <td> mu4e           </td> <td> `lisp/init-mail.el`    </td> </tr>
+<tr> <td> offlineimap    </td> <td> `lisp/init-mail.el`    </td> </tr>
+<tr> <td> proofgeneral   </td> <td> `lisp/init-coq.el`     </td> </tr>
+<tr> <td> twelf          </td> <td> `lisp/init-twelf.el`   </td> </tr>
+</tr>
+</table>
 
 All of these are available with a good package manager (apt-get, pacman) or
 trivial to build and install on Linux. No guarantees about Windows, I've made
