@@ -7,7 +7,6 @@
 (toggle-scroll-bar -1)             ; No scroll bar
 (menu-bar-mode -1)                 ; No menu bar
 
-;(setq mode-line-format nil)        ; No modeline
 
 ;; A pretty modeline is worth every character
 (require-package 'dash) ; Implicit dependency for sml
@@ -17,5 +16,14 @@
 (sml/apply-theme 'respectful)
 
 (sml/setup) ; Pretty modeline
+
+;; Toggle modelines visibility
+(defvar mode-line-format-backup nil
+  "A private variable used to toggle the mode line")
+(defun toggle-mode-line ()
+  (interactive)
+  (let ((temp mode-line-format-backup))
+    (setq mode-line-format-backup mode-line-format)
+    (setq mode-line-format temp)))
 
 (provide 'init-startup)
