@@ -21,7 +21,7 @@
 (defun cheer-me-up ()
   "Open a random adorable picture"
   (interactive)
-  (shell-command "wget -q http://www.imgur.com/r/aww -O ~/Downloads/.aww")
+  (shell-command "wget -q http://www.imgur.com/r/aww -r -q -O ~/Downloads/.aww")
   (browse-url (get-next-cute))
   (delete-file "~/Downloads/.aww"))
 
