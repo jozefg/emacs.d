@@ -22,6 +22,7 @@
   (interactive)
   (shell-command "wget -q http://www.imgur.com/r/aww -r -q -O ~/Downloads/.aww")
   (browse-url (get-next-cute))
-  (delete-file "~/Downloads/.aww"))
+  (delete-file "~/Downloads/.aww")
+  (message ""))
 
 (provide 'init-smiles)
