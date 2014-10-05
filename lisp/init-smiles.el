@@ -2,7 +2,6 @@
 (require-package 'nyan-mode)
 (nyan-mode 1)
 
-
 ;; Sometimes you just need an adorable picture.
 (defun get-next-cute (&optional is-interact)
   "Grab the first /r/aww url from the aww page"
