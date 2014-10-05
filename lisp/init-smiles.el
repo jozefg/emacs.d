@@ -4,16 +4,10 @@
 
 
 ;; Sometimes you just need an adorable picture.
-(require-package 'wget)
-
-(defun download-aww ()
-  "Download the imgur page for /r/aww"
-  (interactive)
-  (wget "http://www.imgur.com/r/aww"))
-
 (defun get-next-cute (&optional is-interact)
   "Grab the first /r/aww url from the aww page"
   (interactive (list t))
+  (cdr (wget-get-wget-process))
   (let ((new-buffer (find-file "~/Downloads/aww"))
         (image-url  nil))
     (with-current-buffer new-buffer
@@ -23,14 +17,14 @@
             (strip-text-properties (match-string 0))))
     (kill-buffer new-buffer)
     (let ((full-url (concat "http://www.imgur.com/r/aww/" image-url)))
-      (if is-interact
-          (message "%s" full-url)
-          full-url))))
+      (when is-interact (message "%s" full-url))
+      full-url)))
 
 (defun cheer-me-up ()
   "Open a random adorable picture"
   (interactive)
-  (download-aww)
-  (browse-url (get-next-cute)))
+  (shell-command "wget -q http://www.imgur.com/r/aww")
+  (browse-url (get-next-cute))
+  (delete-file "~/Downloads/aww"))
 
 (provide 'init-smiles)
