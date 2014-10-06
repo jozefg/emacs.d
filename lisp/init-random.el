@@ -10,6 +10,9 @@
 ;; For JavaScript
 (require-package 'js2-mode)
 
+;; Lua is sometimes nice
+(require-package 'lua-mode)
+
 ;; Pandoc!
 (require-package 'pandoc-mode)
 
