@@ -3,9 +3,9 @@
 (nyan-mode 1)
 
 ;; Sometimes you just need an adorable picture.
-(defun get-next-cute (&optional is-interact)
+(defun get-next-cute ()
   "Grab the first /r/aww url from the aww page"
-  (interactive (list t))
+  (interactive)
   (let ((new-buffer (find-file "~/Downloads/.aww"))
         (image-url  nil))
     (with-current-buffer new-buffer
@@ -14,7 +14,7 @@
       (setq image-url (strip-text-properties (match-string 0))))
     (kill-buffer new-buffer)
     (let ((full-url (concat "http://www.imgur.com/r/aww/" image-url)))
-      (when is-interact (message "%s" full-url))
+      (when (called-interactively-p) (message "%s" full-url))
       full-url)))
 
 (defun cheer-me-up ()
