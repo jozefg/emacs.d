@@ -1,6 +1,5 @@
-;; I really like surround mode in Vim,
-;; These packages are cobbled together to emulate the features
-;; I liked.
+;; I really like surround mode in Vim, These packages are cobbled
+;; together to emulate the features I liked.
 
 ; We can now highlight a region and hit
 ; an opening delimeter to wrap it.
