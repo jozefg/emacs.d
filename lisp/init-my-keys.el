@@ -6,6 +6,7 @@
 (define-key my-keys-minor-mode-map (kbd "C-a")     'smart-beginning-of-line)
 (define-key my-keys-minor-mode-map (kbd "C-j")     'backward-char) ; ex-Vimmers hate me
 (define-key my-keys-minor-mode-map (kbd "C-o")     'toggle-tree)
+(define-key my-keys-minor-mode-map (kbd "C-v")     'toggle-monky)
 (define-key my-keys-minor-mode-map (kbd "C-w")     'clipboard-kill-region)
 (define-key my-keys-minor-mode-map (kbd "C-x C-j") 'list-buffers)
 (define-key my-keys-minor-mode-map (kbd "C-x O")   'last-window)
@@ -45,6 +46,7 @@
 (define-key my-keys-minor-mode-map (kbd "C-c m u") 'mu4e-update-mail-and-index)
 (define-key my-keys-minor-mode-map (kbd "C-c o t") 'org-todo-list)
 (define-key my-keys-minor-mode-map (kbd "C-c o w") 'org-agenda-list)
+(define-key my-keys-minor-mode-map (kbd "C-c o j") 'org-journal-new-entry)
 (define-key my-keys-minor-mode-map (kbd "C-c s q") 'query-replace-regexp)
 (define-key my-keys-minor-mode-map (kbd "C-c s r") 'replace-regexp)
 (define-key my-keys-minor-mode-map (kbd "C-c s s") 'replace-string)
