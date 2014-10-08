@@ -11,7 +11,6 @@
 (add-hook 'haskell-mode-hook 'interactive-haskell-mode)
 
 (define-key haskell-cabal-mode-map (kbd "C-`") 'haskell-interactive-bring)
-(define-key haskell-cabal-mode-map (kbd "C-c C-k") 'haskell-interactive-mode-clear)
 
 (define-key haskell-mode-map (kbd "C-c C-l") 'haskell-process-load-or-reload)
 (define-key haskell-mode-map (kbd "C-c C-i") 'haskell-process-do-info)
