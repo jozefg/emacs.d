@@ -1,6 +1,8 @@
 (require-package 'monky)
 (require-package 'magit)
 
+(setq monky-process-type 'cmdserver)
+
 (defun toggle-monky ()
   (interactive)
   (let ((buf (monky-find-status-buffer)))
