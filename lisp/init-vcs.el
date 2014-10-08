@@ -4,7 +4,12 @@
 (defun toggle-monky ()
   (interactive)
   (let ((buf (monky-find-status-buffer)))
-    (if buf (kill-buffer buf)
-      (monky-status))))
+    (if (not buf) (monky-status)
+      (progn
+        (walk-windows
+         (lambda (win)
+           (when (eq (window-buffer win) buf)
+             (delete-window win))))
+        (kill-buffer buf)))))
 
 (provide 'init-vcs)
