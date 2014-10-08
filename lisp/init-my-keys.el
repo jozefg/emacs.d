@@ -57,6 +57,7 @@
 (define-key my-keys-minor-mode-map (kbd "C-c w p") 'windmove-up)
 
 (global-set-key (kbd "RET") 'newline-and-indent)
+(put 'downcase-region 'disabled nil)
 
 (define-minor-mode my-keys-minor-mode
   "A minor mode so that my key settings override annoying major modes."
