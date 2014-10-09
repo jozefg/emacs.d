@@ -20,6 +20,8 @@
 ;; Toggle modelines visibility
 (defvar mode-line-format-backup nil
   "A private variable used to toggle the mode line")
+(make-variable-buffer-local 'mode-line-format-backup)
+
 (defun toggle-mode-line ()
   (interactive)
   (let ((temp mode-line-format-backup))
