@@ -2,18 +2,11 @@
 (require-package 'ghc) ;; ghc-mod
 (require 'haskell-cabal)
 
-;; Add cabal-bin to load path.
-(setenv "PATH" (concat "~/.cabal/bin:" (getenv "PATH")))
-(setq exec-path (cons "~/.cabal/bin" exec-path ))
-
 (add-hook 'haskell-mode-hook 'turn-on-haskell-indentation)
 (add-hook 'haskell-mode-hook 'turn-on-haskell-doc-mode)
 (add-hook 'haskell-mode-hook 'interactive-haskell-mode)
 
-(define-key haskell-cabal-mode-map (kbd "C-`") 'haskell-interactive-bring)
-
 (define-key haskell-mode-map (kbd "C-c C-l") 'haskell-process-load-or-reload)
-(define-key haskell-mode-map (kbd "C-c C-i") 'haskell-process-do-info)
 (define-key haskell-mode-map (kbd "SPC") 'haskell-mode-contextual-space)
 
 (setq haskell-font-lock-symbols t
@@ -30,9 +23,16 @@
 (autoload 'ghc-debug "ghc" nil t)
 (add-hook 'haskell-mode-hook (lambda () (ghc-init)))
 
-(setq ghc-ghc-options '("-fno-warn-unused-do-bind" ; I really don't care about this one
+(setq ghc-ghc-options '("-fno-warn-unused-do-bind" ; I really don't
+                                                   ; care about this
+                                                   ; one
 			"-fno-warn-name-shadowing" ; Or this one
-			"-Wall"))                  ; I care about the rest though
+			"-Wall"))                  ; I care about the
+                                                   ; rest though
+
+(define-key haskell-mode-map (kbd "C-c C-i") 'ghc-show-info)
+(define-key haskell-mode-map (kbd "C-c C-t") 'ghc-show-type)
+(define-key haskell-mode-map (kbd "C-c C-c") 'ghc-case-split)
 
 ;; GHC hacking functions. If you don't play with GHC don't bother
 ;; Mostly shamelessly stolen from wiki
