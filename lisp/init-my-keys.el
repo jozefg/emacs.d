@@ -2,7 +2,7 @@
 (defvar my-keys-minor-mode-map (make-keymap) "my-keys-minor-mode keymap.")
 
 ;; Normal keybindings I override to be things I prefer
-(define-key my-keys-minor-mode-map (kbd "C-;")     'hippie-expand)
+(define-key my-keys-minor-mode-map (kbd "C-;")     'ace-jump-mode)
 (define-key my-keys-minor-mode-map (kbd "C-a")     'smart-beginning-of-line)
 (define-key my-keys-minor-mode-map (kbd "C-j")     'backward-char) ; ex-Vimmers hate me
 (define-key my-keys-minor-mode-map (kbd "C-o")     'toggle-tree)
