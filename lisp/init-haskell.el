@@ -19,6 +19,12 @@
       haskell-process-type 'cabal-repl)
 
 ;; ghc-mod
+(add-to-list 'exec-path "~/.cabal/bin/")
+(setenv "PATH" (concat "~/.cabal/bin:/usr/local/bin" (getenv "PATH")))
+
+(add-to-list 'exec-path "/usr/bin/local/") ; For GHC
+exec-path
+
 (autoload 'ghc-init "ghc" nil t)
 (autoload 'ghc-debug "ghc" nil t)
 (add-hook 'haskell-mode-hook (lambda () (ghc-init)))
@@ -29,10 +35,13 @@
 			"-fno-warn-name-shadowing" ; Or this one
 			"-Wall"))                  ; I care about the
                                                    ; rest though
-
-(define-key haskell-mode-map (kbd "C-c C-i") 'ghc-show-info)
-(define-key haskell-mode-map (kbd "C-c C-t") 'ghc-show-type)
-(define-key haskell-mode-map (kbd "C-c C-c") 'ghc-case-split)
+(eval-after-load
+ 'haskell-mode
+ '(progn
+    (message "Trying to load")
+    (define-key haskell-mode-map (kbd "C-c C-i") 'ghc-show-info)
+    (define-key haskell-mode-map (kbd "C-c C-t") 'ghc-show-type)
+    (define-key haskell-mode-map (kbd "C-c C-c") 'ghc-case-split)))
 
 ;; GHC hacking functions. If you don't play with GHC don't bother
 ;; Mostly shamelessly stolen from wiki
