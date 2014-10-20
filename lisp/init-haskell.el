@@ -23,6 +23,12 @@
       haskell-process-type 'cabal-repl)
 
 ;; ghc-mod
+(add-to-list 'exec-path "~/.cabal/bin/")
+(setenv "PATH" (concat "~/.cabal/bin:/usr/local/bin" (getenv "PATH")))
+
+(add-to-list 'exec-path "/usr/bin/local/") ; For GHC
+exec-path
+
 (autoload 'ghc-init "ghc" nil t)
 (autoload 'ghc-debug "ghc" nil t)
 (add-hook 'haskell-mode-hook 'ghc-init)
