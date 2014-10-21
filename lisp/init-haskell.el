@@ -1,6 +1,10 @@
 (require-package 'haskell-mode)
 (require-package 'ghc) ;; ghc-mod
+
+;; haskell-mode drags in a log of extra modes
 (require 'haskell-cabal)
+(require 'haskell-interactive-mode)
+
 
 (add-hook 'haskell-mode-hook 'turn-on-haskell-indentation)
 (add-hook 'haskell-mode-hook 'turn-on-haskell-doc-mode)
@@ -22,3 +26,8 @@
 (autoload 'ghc-init "ghc" nil t)
 (autoload 'ghc-debug "ghc" nil t)
 (add-hook 'haskell-mode-hook 'ghc-init)
+
+(define-key interactive-haskell-mode-map (kbd "C-c C-t") 'ghc-show-type)
+(define-key interactive-haskell-mode-map (kbd "C-c C-i") 'ghc-show-info)
+
+(provide 'init-haskell)
