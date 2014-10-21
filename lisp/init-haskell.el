@@ -30,4 +30,5 @@
 (define-key interactive-haskell-mode-map (kbd "C-c C-t") 'ghc-show-type)
 (define-key interactive-haskell-mode-map (kbd "C-c C-i") 'ghc-show-info)
 
+(setq ghc-insert-key (kbd "C-c t"))
 (provide 'init-haskell)
