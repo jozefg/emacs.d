@@ -6,9 +6,9 @@
 (add-hook 'haskell-mode-hook 'turn-on-haskell-doc-mode)
 (add-hook 'haskell-mode-hook 'interactive-haskell-mode)
 
-(define-key haskell-mode-map (kbd "C-c C-l") 'haskell-process-load-or-reload)
 (define-key haskell-mode-map (kbd "SPC") 'haskell-mode-contextual-space)
 
+; Default configurations
 (setq haskell-font-lock-symbols t
       haskell-process-suggest-remove-import-lines t
       haskell-process-auto-import-loaded-modules t
@@ -21,17 +21,7 @@
 ;; ghc-mod
 (autoload 'ghc-init "ghc" nil t)
 (autoload 'ghc-debug "ghc" nil t)
-(add-hook 'haskell-mode-hook (lambda () (ghc-init)))
-
-(setq ghc-ghc-options '("-fno-warn-unused-do-bind" ; I really don't
-                                                   ; care about this
-                                                   ; one
-			"-fno-warn-name-shadowing" ; Or this one
-			"-Wall"))                  ; I care about the
-                                                   ; rest though
-
-(define-key haskell-mode-map (kbd "C-c i") 'ghc-show-info)
-(define-key haskell-mode-map (kbd "C-c t") 'ghc-show-type)
+(add-hook 'haskell-mode-hook 'ghc-init)
 
 ;; GHC hacking functions. If you don't play with GHC don't bother
 ;; Mostly shamelessly stolen from wiki
