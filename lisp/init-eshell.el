@@ -1,3 +1,5 @@
+(setenv "EDITOR" "emacsclient")
+
 ;; clear the buffer in eshell
 (defun eshell/clear ()
   "clear the eshell buffer."
