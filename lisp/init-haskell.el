@@ -22,22 +22,3 @@
 (autoload 'ghc-init "ghc" nil t)
 (autoload 'ghc-debug "ghc" nil t)
 (add-hook 'haskell-mode-hook 'ghc-init)
-
-;; GHC hacking functions. If you don't play with GHC don't bother
-;; Mostly shamelessly stolen from wiki
-(setq ghc-location "~/ghc")
-(defun compile-ghc ()
-  (interactive)
-  (let ((compile-command (if (boundp 'ghc-compile)
-                             (concat "cd " ghc-location "; " ghc-compile)
-                             (concat "cd " ghc-location "/ghc; make 2"))))
-    (compile compile-command))
-  (set-buffer "*compilation*")
-  (setq default-directory ghc-location))
-
-(defun set-compile-ghc ()
-  (local-set-key (kbd "C-q") 'compile-ghc))
-
-(add-hook 'haskell-mode-hook 'set-compile-ghc)
-
-(provide 'init-haskell)
