@@ -30,9 +30,8 @@
 			"-Wall"))                  ; I care about the
                                                    ; rest though
 
-(define-key haskell-mode-map (kbd "C-c C-i") 'ghc-show-info)
-(define-key haskell-mode-map (kbd "C-c C-t") 'ghc-show-type)
-(define-key haskell-mode-map (kbd "C-c C-c") 'ghc-case-split)
+(define-key haskell-mode-map (kbd "C-c i") 'ghc-show-info)
+(define-key haskell-mode-map (kbd "C-c t") 'ghc-show-type)
 
 ;; GHC hacking functions. If you don't play with GHC don't bother
 ;; Mostly shamelessly stolen from wiki
