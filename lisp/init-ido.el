@@ -1,9 +1,9 @@
 (require 'ido) ;; Preincluded
+(require-package 'flx-ido)
 
 (ido-mode t)
 (ido-everywhere t)
-
-(setq ido-enable-flex-matching t)
+(flx-ido-mode 1)
 
 ;; Note this requires emacs > 24
 (require-package 'ido-ubiquitous)
@@ -14,10 +14,5 @@
             (define-key ido-completion-map [up] 'previous-history-element)
             (define-key ido-completion-map (kbd "C-f") 'ido-next-match)
             (define-key ido-completion-map (kbd "C-l") 'ido-prev-match)))
-
-;; When we're using Ido
-(require-package 'icicles)
-(icy-mode 1)
-
 
 (provide 'init-ido)
