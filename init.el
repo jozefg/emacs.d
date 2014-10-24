@@ -9,7 +9,7 @@
 (try-require 'init-colors)     ; Pretty color theme
 (try-require 'init-eshell)     ; Setup eshell
 (try-require 'init-font)       ; Source Code Pro
-(try-require 'init-server)     ; Setup eshell
+(try-require 'init-server)     ; Setup server
 (try-require 'init-startup)    ; Configure startup message and stuff like that
 
 ;; Buffer completetion and whatnot. Choose either ido or helm
