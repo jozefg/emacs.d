@@ -14,18 +14,8 @@
 
 (setq sml/no-confirm-load-theme t) ; Shhhh
 (sml/apply-theme 'respectful)
-
 (sml/setup) ; Pretty modeline
 
-;; Toggle modelines visibility
-(defvar mode-line-format-backup nil
-  "A private variable used to toggle the mode line")
-(make-variable-buffer-local 'mode-line-format-backup)
-
-(defun toggle-mode-line ()
-  (interactive)
-  (let ((temp mode-line-format-backup))
-    (setq mode-line-format-backup mode-line-format)
-    (setq mode-line-format temp)))
+(setq gc-cons-threshold 20000000)
 
 (provide 'init-startup)
