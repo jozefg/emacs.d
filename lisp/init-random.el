@@ -1,3 +1,6 @@
+;; Can't leave home without it
+(require-package 'cl)
+
 ;; Delete highlighted regions like normal editors
 (delete-selection-mode 1)
 
