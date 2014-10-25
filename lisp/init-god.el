@@ -11,4 +11,4 @@
 (define-key god-local-mode-map (kbd "i") 'god-local-mode)
 (define-key god-local-mode-map (kbd "<backspace>") 'backward-kill-word)
 
-(provide 'god-mode)
+(provide 'init-god)
