@@ -26,4 +26,7 @@
 ;; Update buffers automatically
 (global-auto-revert-mode 1)
 
+;; Expand region is lovely
+(require-package 'expand-region)
+
 (provide 'init-random)
