@@ -28,7 +28,6 @@
 (try-require 'init-hippie)     ; Configure hippie
 (try-require 'init-delete)     ; Hungry delete mode
 (try-require 'init-whitespace) ; Judgemental highlighting!
-(try-require 'init-god)        ; No more RSI
 
 ;; Tools in Emacs
 (try-require 'init-vcs)        ; Configuration for all things VCS
