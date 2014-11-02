@@ -9,6 +9,7 @@
 (define-key my-keys-minor-mode-map (kbd "C-o")      'toggle-tree)
 (define-key my-keys-minor-mode-map (kbd "C-v")      'toggle-monky)
 (define-key my-keys-minor-mode-map (kbd "C-w")      'clipboard-kill-region)
+(define-key my-keys-minor-mode-map (kbd "C-x C-e")  'eval-replace-sexp)
 (define-key my-keys-minor-mode-map (kbd "C-x C-j")  'list-buffers)
 (define-key my-keys-minor-mode-map (kbd "C-x O")    'last-window)
 (define-key my-keys-minor-mode-map (kbd "C-x j")    'switch-to-buffer)

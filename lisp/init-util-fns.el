@@ -113,5 +113,12 @@
     (message "Stored: %s" url)
     (push url kill-ring)))
 
+(defun eval-replace-sexp (u)
+    (interactive "P")
+    (let ((value (eval (preceding-sexp))))
+      (if u
+        (progn (kill-sexp -1)
+               (insert (format "%S" value)))
+        (message "%S" value))))
 
 (provide 'init-util-fns)
