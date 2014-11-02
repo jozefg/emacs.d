@@ -16,7 +16,6 @@
 (define-key my-keys-minor-mode-map (kbd "M-j")      'backward-word) ; For symmetry
 (define-key my-keys-minor-mode-map (kbd "M-w")      'clipboard-kill-ring-save)
 (define-key my-keys-minor-mode-map (kbd "M-z")      'ace-jump-zap-up-to-char)
-(define-key my-keys-minor-mode-map (kbd "<escape>") 'god-local-mode)
 
 ;; Overview of the C-c prefix
 ;; C-c a * - Ag things
