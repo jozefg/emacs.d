@@ -53,10 +53,6 @@
 (define-key my-keys-minor-mode-map (kbd "C-c s r") 'replace-regexp)
 (define-key my-keys-minor-mode-map (kbd "C-c s s") 'replace-string)
 (define-key my-keys-minor-mode-map (kbd "C-c v")   'monky-status)
-(define-key my-keys-minor-mode-map (kbd "C-c w f") 'windmove-right)
-(define-key my-keys-minor-mode-map (kbd "C-c w j") 'windmove-left)
-(define-key my-keys-minor-mode-map (kbd "C-c w n") 'windmove-down)
-(define-key my-keys-minor-mode-map (kbd "C-c w p") 'windmove-up)
 
 (global-set-key (kbd "RET") 'newline-and-indent)
 (put 'downcase-region 'disabled nil)
