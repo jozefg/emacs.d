@@ -3,7 +3,7 @@
 
 ;; Normal keybindings I override to be things I prefer
 (define-key my-keys-minor-mode-map (kbd "C-;")      'ace-jump-mode)
-(define-key my-keys-minor-mode-map (kbd "C-=")      'er/expand-region)
+(define-key my-keys-minor-mode-map (kbd "C-.")      'er/expand-region)
 (define-key my-keys-minor-mode-map (kbd "C-a")      'smart-beginning-of-line)
 (define-key my-keys-minor-mode-map (kbd "C-j")      'backward-char) ; ex-Vimmers hate me
 (define-key my-keys-minor-mode-map (kbd "C-o")      'toggle-tree)
