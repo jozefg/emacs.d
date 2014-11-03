@@ -48,32 +48,6 @@
     (and (= oldpos (point))
          (beginning-of-line))))
 
-(defun new-org-notes-buffer (name)
-  "Create an empty buffer with org-mode but no file"
-  (interactive (list
-		(read-string "Buffer Name (*notes*): " nil nil "*notes*")))
-  (let ((buf (generate-new-buffer name)))
-    ;; Setup the buffer
-    (with-current-buffer buf
-      (org-mode)
-      (insert "#+TITLE: " name "\n\n"))
-    ;; If we have multiple windows, switch and open notes
-    (other-window 1)
-    (switch-to-buffer buf)))
-
-(defun match-paren (arg)
-  "Go to the matching parenthesis."
-  (interactive "p")
-  (cond ((looking-at "\\s\(") (forward-list 1) (backward-char 1))
-        ((looking-at "\\s\)") (forward-char 1) (backward-list 1))
-        (t nil)))
-
-(defun get-todo-file (filename)
-  "Grab a todo file from my dropbox"
-  (interactive (list
-                (read-string "TODO name: ")))
-  (find-file (concat "~/Dropbox/todo/" filename ".org")))
-
 (defun rename-file-with-buffer (new-name)
   "Rename a buffer and it's underlying file to a new name"
   (interactive (list (read-string "Rename to: ")))
@@ -97,9 +71,8 @@
     (switch-to-buffer name)
     (other-window 1)))
 
-(defun strip-text-properties(txt)
-  (set-text-properties 0 (length txt) nil txt)
-      txt)
+(defun strip-text-properties (txt)
+  (set-text-properties 0 (length txt) nil txt) txt)
 
 (defun upload-buffer (buffer)
   "Upload a file to transfer.sh and return the URL. Requires curl"
