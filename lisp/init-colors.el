@@ -2,6 +2,7 @@
 (require-package 'zenburn-theme)
 (require-package 'solarized-theme)
 (require-package 'monokai-theme)
+(require-package 'moe-theme)
 
 (setq color-theme-is-global t)
 (color-theme-initialize)
@@ -14,7 +15,8 @@
 (setq solarized-emphasize-indicators nil)     ;; Use less colors for indicators
 
 ;(load-theme 'solarized-dark t)
-(load-theme 'monokai t)
+;(load-theme 'monokai t)
+(load-theme 'moe-dark t)
 
 ;; If we're living in th eterminal, we really don't want
 ;; a color theme.
