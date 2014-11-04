@@ -38,7 +38,7 @@
 			     "init.el")))
   (if (string= s "init.el")
       (find-file         "~/.emacs.d/init.el")
-      (find-file (concat "~/.emacs.d/lisp/" s))))
+      (find-file (concat "~/.emacs.d/init/" s))))
 
 (defun smart-beginning-of-line ()
   "Moves to first character that's not whitespace"
