@@ -1,4 +1,4 @@
-(add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
+(add-to-list 'load-path (expand-file-name "init" user-emacs-directory))
 
 ;; Package management, needed elsewhere
 (require 'init-package)        ; Packaging
