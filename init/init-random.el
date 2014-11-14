@@ -29,4 +29,7 @@
 ;; Expand region is lovely
 (require-package 'expand-region)
 
+;; Toml for Rust
+(require-package 'toml-mode)
+
 (provide 'init-random)
