@@ -5,3 +5,5 @@ eshell/*
 session*
 auto-save-list/*
 tramp
+ac-comphist.dat
+url/*
