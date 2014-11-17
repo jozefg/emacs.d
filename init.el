@@ -3,6 +3,9 @@
 ;; Package management, needed elsewhere
 (require 'init-package)        ; Packaging
 
+;; Personal information, used in other places
+(try-require 'init-personal)
+
 ;; General utilities
 (try-require 'init-backups)    ; Configure how emacs autosaves/backups work
 (try-require 'init-browser)    ; Configure Emacs to use chrome

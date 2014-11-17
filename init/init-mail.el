@@ -1,5 +1,6 @@
-(require 'mu4e) ;; No fancy require since this requires downloading and building mu and mu4e
-                ;; The path for this is added in init-elpa
+(require 'mu4e) ;; No fancy require since this requires downloading
+                ;; and building mu and mu4e The path for this is added
+                ;; in init-elpa
 
 ;; default
 (setq mu4e-maildir "~/Maildir")
@@ -17,19 +18,15 @@
 
 (setq mu4e-get-mail-command "offlineimap")
 (setq
-   user-mail-address "jozefg@cmu.edu"
-   user-full-name  "Danny Gratzer"
-   mu4e-compose-signature
-    (concat
-      "Cheers\n"
-      "Danny Gratzer\n"))
+   user-mail-address my-email
+   user-full-name  my-name)
 
 (require 'smtpmail)
 (setq message-send-mail-function 'smtpmail-send-it
    starttls-use-gnutls t
    smtpmail-starttls-credentials '(("smtp.gmail.com" 587 nil nil))
    smtpmail-auth-credentials
-     '(("smtp.gmail.com" 587 "danny.gratzer@gmail.com" nil))
+     '(("smtp.gmail.com" 587 my-smtp-server nil))
    smtpmail-default-smtp-server "smtp.gmail.com"
    smtpmail-smtp-server "smtp.gmail.com"
    smtpmail-smtp-service 587)
