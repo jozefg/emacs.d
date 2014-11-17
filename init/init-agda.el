@@ -10,7 +10,7 @@
 ;; Load path and default faces
 (custom-set-variables
  '(agda2-highlight-face-groups (quote default-faces))
- '(agda2-include-dirs (quote ("." "/home/jozefg/agda-stdlib/src"))))
+ `(agda2-include-dirs (quote ("." ,(expand-file-name "~/agda-stdlib/src")))))
 
 
 (put 'erase-buffer 'disabled nil)
