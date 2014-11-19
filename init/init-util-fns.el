@@ -94,4 +94,14 @@
                (insert (format "%S" value)))
         (message "%S" value))))
 
+(defun eww-view-buffer ()
+  "View a buffer with eww"
+  (interactive)
+  (if buffer-file-name
+      (eww-open-file buffer-file-name)
+    (progn
+      (let ((temp-file (make-temp-file "view.html")))
+        (append-to-file 1 (buffer-size) temp-file)
+        (eww-open-file temp-file)))))
+
 (provide 'init-util-fns)
