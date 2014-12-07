@@ -16,7 +16,7 @@
 (add-hook 'LaTeX-mode-hook 'latex-preview-pane-mode)
 
 ;; Pass shell-escape everywhere
-(custom-set-variables
- '(pdf-latex-command "~/.emacs.d/bin/latex"))
+;(custom-set-variables
+; '(pdf-latex-command "~/.emacs.d/bin/latex"))
 
 (provide 'init-latex)

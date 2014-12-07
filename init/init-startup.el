@@ -8,6 +8,7 @@
 (setq initial-major-mode 'org-mode) ; Start with org mode
 (tool-bar-mode -1)                  ; No toolbars
 (toggle-scroll-bar -1)              ; No scroll bar
+(setq scroll-conservatively 100)    ; Scroll smoothly
 (menu-bar-mode -1)                  ; No menu bar
 
 ;; A pretty modeline is worth every character
