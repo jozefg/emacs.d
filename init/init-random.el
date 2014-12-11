@@ -32,4 +32,7 @@
 ;; Toml for Rust
 (require-package 'toml-mode)
 
+;; Elm mode
+(require-package 'elm-mode)
+
 (provide 'init-random)
