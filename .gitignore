@@ -2,6 +2,7 @@ elpa/*
 el-get/*
 backup/*
 eshell/*
+.sx/*
 session*
 auto-save-list/*
 tramp
