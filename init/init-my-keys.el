@@ -3,6 +3,7 @@
 
 ;; Normal keybindings I override to be things I prefer
 (define-key my-keys-minor-mode-map (kbd "C-;")     'ace-jump-mode)
+(define-key my-keys-minor-mode-map (kbd "C-,")     'company-complete)
 (define-key my-keys-minor-mode-map (kbd "C-.")     'er/expand-region)
 (define-key my-keys-minor-mode-map (kbd "C-a")     'smart-beginning-of-line)
 (define-key my-keys-minor-mode-map (kbd "C-j")     'backward-char) ; ex-Vimmers hate me
@@ -19,7 +20,6 @@
 
 ;; Overview of the C-c prefix
 ;; C-c a * - Ag things
-;; C-c c   - Clean buffers
 ;; C-c e   - Eshell
 ;; C-c f * - File finding functions
 ;; C-c g * - Go places
@@ -31,7 +31,6 @@
 (define-key my-keys-minor-mode-map (kbd "C-c a d") 'ag-dired-regexp)
 (define-key my-keys-minor-mode-map (kbd "C-c a p") 'ag-project-regexp)
 (define-key my-keys-minor-mode-map (kbd "C-c a r") 'ag-regexp)
-(define-key my-keys-minor-mode-map (kbd "C-c c")   'company-complete)
 (define-key my-keys-minor-mode-map (kbd "C-c e")   'eshell)
 (define-key my-keys-minor-mode-map (kbd "C-c f i") 'get-init-file)
 (define-key my-keys-minor-mode-map (kbd "C-c f k") 'get-todo-file)
