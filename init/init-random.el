@@ -35,4 +35,8 @@
 ;; Elm mode
 (require-package 'elm-mode)
 
+;; Git gutter
+(require-package 'git-gutter)
+(global-git-gutter-mode)
+
 (provide 'init-random)
