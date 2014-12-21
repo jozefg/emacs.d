@@ -31,7 +31,7 @@
 (define-key my-keys-minor-mode-map (kbd "C-c a d") 'ag-dired-regexp)
 (define-key my-keys-minor-mode-map (kbd "C-c a p") 'ag-project-regexp)
 (define-key my-keys-minor-mode-map (kbd "C-c a r") 'ag-regexp)
-(define-key my-keys-minor-mode-map (kbd "C-c c")   'kill-useless-buffers)
+(define-key my-keys-minor-mode-map (kbd "C-c c")   'company-complete)
 (define-key my-keys-minor-mode-map (kbd "C-c e")   'eshell)
 (define-key my-keys-minor-mode-map (kbd "C-c f i") 'get-init-file)
 (define-key my-keys-minor-mode-map (kbd "C-c f k") 'get-todo-file)
