@@ -33,6 +33,7 @@
 (try-require 'init-whitespace) ; Judgemental highlighting!
 
 ;; Tools in Emacs
+(try-require 'init-ag)         ; Ag in emacs
 (try-require 'init-vcs)        ; Configuration for all things VCS
 (try-require 'init-gpg)        ; For encrypting stuffs
 (try-require 'init-journal)    ; Get org-journal properly setup and integrated
