@@ -10,8 +10,6 @@
 (add-hook 'haskell-mode-hook 'turn-on-haskell-doc-mode)
 (add-hook 'haskell-mode-hook 'interactive-haskell-mode)
 
-(define-key haskell-mode-map (kbd "SPC") 'haskell-mode-contextual-space)
-
 ; Default configurations
 (setq haskell-font-lock-symbols t
       haskell-process-suggest-remove-import-lines t
