@@ -22,4 +22,10 @@
 ;; Ensure that Emacs doesn't pause often for GC
 (setq gc-cons-threshold 20000000)
 
+;; Shorten the prompts to y or n.
+(defalias 'yes-or-no-p 'y-or-n-p)
+
+;; Never use dialog boxes
+(setq use-dialog-box nil)
+
 (provide 'init-startup)
