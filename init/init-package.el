@@ -13,12 +13,9 @@
   (package-refresh-contents))
 
 (defun require-package (package &optional require-name)
-  (let ((req-name (if require-name
-                      require-name
-                      package)))
-    (when (not (require req-name nil t))
-      (package-install package)
-      (require req-name))))
+  (when (not (package-installed-p package))
+    (package-install package))
+  (require (or require-name package)))
 
 (defun try-require (package)
   (let ((res (ignore-errors (require package nil t))))
