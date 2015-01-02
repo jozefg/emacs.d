@@ -37,7 +37,6 @@
 (try-require 'init-ag)         ; Ag in emacs
 (try-require 'init-vcs)        ; Configuration for all things VCS
 (try-require 'init-gpg)        ; For encrypting stuffs
-(try-require 'init-journal)    ; Get org-journal properly setup and integrated
 (try-require 'init-org)        ; Setup org mode with nicities
 (try-require 'init-mail)       ; Setup mu4e and smtpmail for gmail
 (try-require 'init-tree)       ; Setup a directory tree

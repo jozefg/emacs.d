@@ -46,7 +46,7 @@
 (define-key my-keys-minor-mode-map (kbd "C-c m u") 'mu4e-update-mail-and-index)
 (define-key my-keys-minor-mode-map (kbd "C-c o t") 'org-todo-list)
 (define-key my-keys-minor-mode-map (kbd "C-c o w") 'org-agenda-list)
-(define-key my-keys-minor-mode-map (kbd "C-c o j") 'org-journal-new-entry)
+(define-key my-keys-minor-mode-map (kbd "C-c o c") 'org-capture)
 (define-key my-keys-minor-mode-map (kbd "C-c s q") 'query-replace-regexp)
 (define-key my-keys-minor-mode-map (kbd "C-c s r") 'replace-regexp)
 (define-key my-keys-minor-mode-map (kbd "C-c s s") 'replace-string)
