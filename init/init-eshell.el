@@ -1,5 +1,6 @@
 (setenv "EDITOR" "emacsclient")
 (setenv "PAGER" "cat")
+(setenv "PATH" (concat "~/.nix-profile/bin:" (getenv "PATH")))
 
 ;; clear the buffer in eshell
 (defun eshell/clear ()
