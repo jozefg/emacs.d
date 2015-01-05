@@ -1,5 +1,4 @@
 (require-package 'haskell-mode)
-(require-package 'ghc) ;; ghc-mod
 
 ;; haskell-mode drags in a log of extra modes
 (require 'haskell-cabal)
@@ -20,18 +19,9 @@
       haskell-process-show-debug-tips nil
       haskell-process-type 'cabal-repl)
 
-;; ghc-mod
 (add-to-list 'exec-path "~/.cabal/bin/")
 (setenv "PATH" (concat "~/.cabal/bin:/usr/local/bin" (getenv "PATH")))
 
 (add-to-list 'exec-path "/usr/bin/local/") ; For GHC
 
-(autoload 'ghc-init "ghc" nil t)
-(autoload 'ghc-debug "ghc" nil t)
-(add-hook 'haskell-mode-hook 'ghc-init)
-
-(define-key interactive-haskell-mode-map (kbd "C-c C-t") 'ghc-show-type)
-(define-key interactive-haskell-mode-map (kbd "C-c C-i") 'ghc-show-info)
-
-(setq ghc-insert-key (kbd "C-c t"))
 (provide 'init-haskell)
