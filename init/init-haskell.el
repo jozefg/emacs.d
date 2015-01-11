@@ -1,4 +1,5 @@
 (require-package 'haskell-mode)
+(require-package 'ghc)
 
 ;; haskell-mode drags in a log of extra modes
 (require 'haskell-cabal)
@@ -23,5 +24,10 @@
 (setenv "PATH" (concat "~/.cabal/bin:/usr/local/bin" (getenv "PATH")))
 
 (add-to-list 'exec-path "/usr/bin/local/") ; For GHC
+
+(autoload 'ghc-init "ghc" nil t)
+(autoload 'ghc-debug "ghc" nil t)
+(add-hook 'haskell-mode-hook 'ghc-init)
+
 
 (provide 'init-haskell)
