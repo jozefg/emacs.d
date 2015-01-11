@@ -12,4 +12,6 @@
 
 (global-whitespace-mode 1) ; Judgement everywhere.
 
+(setq require-final-newline t)
+
 (provide 'init-whitespace)
