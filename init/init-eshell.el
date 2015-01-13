@@ -1,5 +1,6 @@
 (setenv "EDITOR" "emacsclient")
 (setenv "PAGER" "cat")
+(setenv "GPGKEY" my-gpg-key)
 (setenv "PATH" (concat "~/.nix-profile/bin:" (getenv "PATH")))
 
 ;; clear the buffer in eshell
