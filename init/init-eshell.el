@@ -2,6 +2,7 @@
 (setenv "PAGER" "cat")
 (setenv "GPGKEY" my-gpg-key)
 (setenv "PATH" (concat "~/.nix-profile/bin:" (getenv "PATH")))
+(setenv "LD_LIBRARY_PATH" (concat "/usr/local/lib:" (getenv "LD_LIBRARY_PATH")))
 
 ;; clear the buffer in eshell
 (defun eshell/clear ()
