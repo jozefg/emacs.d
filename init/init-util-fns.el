@@ -104,4 +104,24 @@
         (append-to-file 1 (buffer-size) temp-file)
         (eww-open-file temp-file)))))
 
+(defun set-transient-bindings (binds)
+  "Create a function to set a temporary keymap that will override
+   all keys but vanish as soon as a key is pressed that doesn't
+   belong in it. Particularly useful for things like zooming.
+   Input should be a list of (keybinding . function)"
+
+  (let ((keymap (make-sparse-keymap)))
+    ; Setup the keymap
+    (mapc (lambda (p) (define-key keymap (car p) (cdr p)))
+          binds)
+    (lambda () (set-transient-map keymap t))))
+
+(defun bind-after-call (binds fun)
+  "Create a function to setup a keymap after calling a function"
+  (let ((setup-keymap (set-transient-bindings binds)))
+    (lambda (arg)
+      (interactive "p")
+      (funcall fun p)
+      (setup-keymap))))
+
 (provide 'init-util-fns)
