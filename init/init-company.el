@@ -5,8 +5,8 @@
 (define-global-minor-mode global-selective-company-mode company-mode
   (lambda ()
     (when (not (member major-mode '(idris-mode
-                                    inactive-minibuffer
-                                    Eshell)))
+                                    minibuffer-inactive-mode
+                                    eshell-mode)))
       (company-mode))))
 
 (add-hook 'after-init-hook 'global-selective-company-mode)
