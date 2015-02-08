@@ -1,5 +1,15 @@
 (require-package 'company)
-(add-hook 'after-init-hook 'global-company-mode)
+
+;; We want to avoid company mode in Idris because it makes things
+;; unbearably slow.
+(define-global-minor-mode global-selective-company-mode company-mode
+  (lambda ()
+    (when (not (member major-mode '(idris-mode
+                                    inactive-minibuffer
+                                    Eshell)))
+      (company-mode))))
+
+(add-hook 'after-init-hook 'global-selective-company-mode)
 
 ;; Require the company backends I like. This goes here so it can be
 ;; turned on and off all at once.

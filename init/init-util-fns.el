@@ -118,10 +118,11 @@
 
 (defun bind-after-call (binds fun)
   "Create a function to setup a keymap after calling a function"
-  (let ((setup-keymap (set-transient-bindings binds)))
-    (lambda (arg)
-      (interactive "p")
-      (funcall fun p)
+  (lexical-let ((setup-keymap (set-transient-bindings binds))
+        (f fun))
+    (lambda ()
+      (interactive "")
+      (funcall f)
       (setup-keymap))))
 
 (provide 'init-util-fns)
