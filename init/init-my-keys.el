@@ -14,6 +14,7 @@
 (define-key my-keys-minor-mode-map (kbd "C-x O")   'last-window)
 (define-key my-keys-minor-mode-map (kbd "C-x j")   'switch-to-buffer)
 (define-key my-keys-minor-mode-map (kbd "C-y")     'clipboard-yank)
+(define-key my-keys-minor-mode-map (kbd "M-p")     'ace-window)
 (define-key my-keys-minor-mode-map (kbd "M-j")     'backward-word) ; For symmetry
 (define-key my-keys-minor-mode-map (kbd "M-w")     'clipboard-kill-ring-save)
 (define-key my-keys-minor-mode-map (kbd "M-z")     'ace-jump-zap-up-to-char)
