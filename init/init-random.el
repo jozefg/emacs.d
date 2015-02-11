@@ -41,4 +41,8 @@
 (require-package 'git-gutter)
 (global-git-gutter-mode)
 
+;; Anzu mode
+(require-package 'anzu)
+(global-anzu-mode 1)
+
 (provide 'init-random)
