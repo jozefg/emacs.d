@@ -7,14 +7,13 @@
 (define-key my-keys-minor-mode-map (kbd "C-.")     'er/expand-region)
 (define-key my-keys-minor-mode-map (kbd "C-a")     'smart-beginning-of-line)
 (define-key my-keys-minor-mode-map (kbd "C-j")     'backward-char) ; ex-Vimmers hate me
-(define-key my-keys-minor-mode-map (kbd "C-o")     'toggle-tree)
+(define-key my-keys-minor-mode-map (kbd "C-o")     'ace-window)
 (define-key my-keys-minor-mode-map (kbd "C-w")     'clipboard-kill-region)
 (define-key my-keys-minor-mode-map (kbd "C-x C-e") 'eval-replace-sexp)
 (define-key my-keys-minor-mode-map (kbd "C-x C-j") 'list-buffers)
 (define-key my-keys-minor-mode-map (kbd "C-x O")   'last-window)
 (define-key my-keys-minor-mode-map (kbd "C-x j")   'switch-to-buffer)
 (define-key my-keys-minor-mode-map (kbd "C-y")     'clipboard-yank)
-(define-key my-keys-minor-mode-map (kbd "M-p")     'ace-window)
 (define-key my-keys-minor-mode-map (kbd "M-j")     'backward-word) ; For symmetry
 (define-key my-keys-minor-mode-map (kbd "M-w")     'clipboard-kill-ring-save)
 (define-key my-keys-minor-mode-map (kbd "M-z")     'ace-jump-zap-up-to-char)
