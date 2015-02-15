@@ -36,7 +36,6 @@
 (define-key my-keys-minor-mode-map (kbd "C-c f i") 'get-init-file)
 (define-key my-keys-minor-mode-map (kbd "C-c f k") 'get-todo-file)
 (define-key my-keys-minor-mode-map (kbd "C-c f p") 'find-file-at-point)
-(define-key my-keys-minor-mode-map (kbd "C-c g c") 'ace-jump-mode)
 (define-key my-keys-minor-mode-map (kbd "C-c g l") 'ace-jump-line-mode)
 (define-key my-keys-minor-mode-map (kbd "C-c g n") 'goto-line)
 (define-key my-keys-minor-mode-map (kbd "C-c g o") 'occur)
