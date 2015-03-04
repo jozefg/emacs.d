@@ -15,5 +15,6 @@
 ;; turned on and off all at once.
 (require-package 'company-ghc)
 (require-package 'company-math)
+(require-package 'company-coq)
 
 (provide 'init-company)
