@@ -45,6 +45,6 @@
 (defun mu4e-kill-lock ()
   "offlineimap will sometimes leave a lock file lying around that annoys me"
   (interactive "")
-  (remove-file "~/.offlineimap/Gmail.lock"))
+  (delete-file "~/.offlineimap/Gmail.lock"))
 
 (provide 'init-mail)
