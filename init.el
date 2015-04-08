@@ -43,6 +43,7 @@
 (try-require 'init-tree)       ; Setup a directory tree
 
 ;; Language specifics
+(try-require 'init-elisp)      ; Random utilities for elisp
 (try-require 'init-haskell)    ; Haskell
 (try-require 'init-js)         ; js-comint mode
 (try-require 'init-latex)      ; Configure latex, preview pane
