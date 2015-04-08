@@ -16,7 +16,7 @@
 (require-package 'smart-mode-line)
 
 (setq sml/no-confirm-load-theme t) ; Shhhh
-(sml/apply-theme 'auto)
+(sml/apply-theme 'dark)
 (sml/setup) ; Pretty modeline
 
 ;; Ensure that Emacs doesn't pause often for GC
@@ -24,9 +24,6 @@
 
 ;; Shorten the prompts to y or n.
 (defalias 'yes-or-no-p 'y-or-n-p)
-
-;; Stick backups in a sane place
-(setq backup-directory-alist '(("." . "~/.emacs.d/backups")))
 
 ;; Never use dialog boxes
 (setq use-dialog-box nil)
