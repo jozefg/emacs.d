@@ -39,4 +39,7 @@
 (require-package 'anzu)
 (global-anzu-mode 1)
 
+;; My stuff
+(require-package 'wiki-summary)
+
 (provide 'init-random)
