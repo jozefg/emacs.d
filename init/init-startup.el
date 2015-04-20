@@ -11,6 +11,9 @@
 (setq scroll-conservatively 100)    ; Scroll smoothly
 (menu-bar-mode -1)                  ; No menu bar
 
+(add-hook 'after-make-frame-functions
+          (lambda (x) (toggle-scroll-bar -1)))
+
 ;; A pretty modeline is worth every character
 (require-package 'dash) ; Implicit dependency for sml
 (require-package 'smart-mode-line)

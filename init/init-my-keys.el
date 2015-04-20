@@ -40,6 +40,7 @@
 (define-key my-keys-minor-mode-map (kbd "C-c g n") 'goto-line)
 (define-key my-keys-minor-mode-map (kbd "C-c g o") 'occur)
 (define-key my-keys-minor-mode-map (kbd "C-c k b") 'kill-braces)
+(define-key my-keys-minor-mode-map (kbd "C-c k f") 'delete-frame)
 (define-key my-keys-minor-mode-map (kbd "C-c k p") 'kill-parens)
 (define-key my-keys-minor-mode-map (kbd "C-c m i") 'jump-to-mailbox)
 (define-key my-keys-minor-mode-map (kbd "C-c m u") 'mu4e-update-mail-and-index)
