@@ -34,6 +34,10 @@
 ;; Elm mode
 (require-package 'elm-mode)
 
+;; Purescript mode
+(require-package 'purescript-mode)
+(add-hook 'purescript-mode-hook 'purescript-identation-mode)
+
 ;; Git gutter
 (require-package 'git-gutter)
 (global-git-gutter-mode)
