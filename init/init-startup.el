@@ -7,12 +7,9 @@
 (setq initial-scratch-message nil)  ; No message in scratch buffer
 (setq initial-major-mode 'org-mode) ; Start with org mode
 (tool-bar-mode -1)                  ; No toolbars
-(toggle-scroll-bar -1)              ; No scroll bar
+(scroll-bar-mode -1)                ; No scroll bar
 (setq scroll-conservatively 100)    ; Scroll smoothly
 (menu-bar-mode -1)                  ; No menu bar
-
-(add-hook 'after-make-frame-functions
-          (lambda (x) (toggle-scroll-bar -1)))
 
 ;; A pretty modeline is worth every character
 (require-package 'dash) ; Implicit dependency for sml
