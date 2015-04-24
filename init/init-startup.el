@@ -5,7 +5,6 @@
 ;; Configure Emacs's initial configuration
 (setq inhibit-startup-message t)    ; No startup banner
 (setq initial-scratch-message nil)  ; No message in scratch buffer
-(setq initial-major-mode 'org-mode) ; Start with org mode
 (tool-bar-mode -1)                  ; No toolbars
 (scroll-bar-mode -1)                ; No scroll bar
 (setq scroll-conservatively 100)    ; Scroll smoothly
