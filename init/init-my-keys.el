@@ -18,6 +18,10 @@
 (define-key my-keys-minor-mode-map (kbd "M-w")     'clipboard-kill-ring-save)
 (define-key my-keys-minor-mode-map (kbd "M-z")     'ace-jump-zap-up-to-char)
 
+(when (eq using-helm-or-ido 'ido)
+  (define-key my-keys-minor-mode-map (kbd "M-x") 'smex))
+
+
 ;; Overview of the C-c prefix
 ;; C-c a * - Ag things
 ;; C-c e   - Eshell

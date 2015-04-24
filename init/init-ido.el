@@ -9,6 +9,10 @@
 (require-package 'ido-ubiquitous)
 (ido-ubiquitous-mode t)
 
+;; Since we're using ido and not helm, make M-x not awful
+(require-package 'smex)
+(smex-initialize)
+
 (add-hook 'ido-setup-hook
           (lambda ()
             (define-key ido-completion-map [up] 'previous-history-element)
