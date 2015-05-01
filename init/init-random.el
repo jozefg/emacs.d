@@ -46,6 +46,9 @@
 (require-package 'anzu)
 (global-anzu-mode 1)
 
+;; For writing
+(require-package 'olivetti)
+
 ;; My stuff
 (require-package 'wiki-summary)
 
