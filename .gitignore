@@ -12,3 +12,4 @@ abbrev_defs
 bookmarks
 backups/
 smex-items
+.mc-lists.el

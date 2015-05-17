@@ -49,6 +49,9 @@
 ;; For writing
 (require-package 'olivetti)
 
+;; Multiple cursors ala Sublime
+(require-package 'multiple-cursors)
+
 ;; My stuff
 (require-package 'wiki-summary)
 
