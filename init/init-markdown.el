@@ -31,8 +31,14 @@
   (interactive)
   (apply-to-paragraphs 'fill-paragraph))
 
+(defun indent-code-block (begin end)
+  (interactive "r")
+  (save-excursion
+    (replace-regexp "^" "    " nil begin end)))
+
 (define-key markdown-mode-map (kbd "C-c C-w") 'count-words)
 (define-key markdown-mode-map (kbd "C-c C-j") 'unfill-buffer)
 (define-key markdown-mode-map (kbd "C-c C-f") 'fill-buffer)
+(define-key markdown-mode-map (kbd "C-c C-i") 'indent-code-block)
 
 (provide 'init-markdown)
