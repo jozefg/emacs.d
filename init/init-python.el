@@ -3,5 +3,14 @@
 (setq python-python-command    "python3")
 
 (require-package 'pyflakes)
+(require-package 'pydoc)
+
+(defun pydoc-symbol-at-point (s)
+  (interactive (list
+                (read-string (concat "Name of thing (" (word-at-point) "): ")
+                             ""
+                             nil
+                             (word-at-point))))
+  (pydoc s))
 
 (provide 'init-python)
