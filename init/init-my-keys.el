@@ -17,6 +17,8 @@
 (define-key my-keys-minor-mode-map (kbd "M-j")     'backward-word) ; For symmetry
 (define-key my-keys-minor-mode-map (kbd "M-w")     'clipboard-kill-ring-save)
 (define-key my-keys-minor-mode-map (kbd "M-z")     'ace-jump-zap-up-to-char)
+(define-key my-keys-minor-mode-map (kbd "M-0")     'corral-parentheses-forward)
+(define-key my-keys-minor-mode-map (kbd "M-9")     'corral-parentheses-backward)
 
 (when (eq using-helm-or-ido 'ido)
   (define-key my-keys-minor-mode-map (kbd "M-x") 'smex))

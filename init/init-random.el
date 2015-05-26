@@ -52,6 +52,14 @@
 ;; Multiple cursors ala Sublime
 (require-package 'multiple-cursors)
 
+;; For CL
+(require-package 'slime)
+(setq inferior-lisp-program "/usr/bin/clisp")
+
+;; Nicer parenthesis handling
+(require-package 'corral)
+(setq corral-preserve-point t)
+
 ;; My stuff
 (require-package 'wiki-summary)
 
