@@ -2,6 +2,7 @@
 
 ;; Death to tabs.
 (setq-default indent-tabs-mode nil)
+(setq-default x-stretch-cursor t)
 (setq tab-stop-list (number-sequence 4 120 4))
 
 ;; No trailing space either!

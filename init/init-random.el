@@ -4,9 +4,6 @@
 ;; Delete highlighted regions like normal editors
 (delete-selection-mode 1)
 
-;; Why oh why is the default 70?
-(setq-default fill-column 80)
-
 ;; Useful for large chunks of editing
 (require-package 'lorem-ipsum)
 
