@@ -7,7 +7,7 @@
 
 (require 'god-mode-isearch)
 (define-key isearch-mode-map (kbd "<escape>") 'god-mode-isearch-activate)
-(define-key god-local-mode-isearch-map (kbd "<escape>")
+(define-key god-mode-isearch-map (kbd "<escape>")
   'god-mode-isearch-disable)
 
 (add-to-list 'god-exempt-major-modes 'eshell-mode)
@@ -17,7 +17,9 @@
         (if (or god-local-mode buffer-read-only)
             'box
           'bar))
-  (negate-nyan-cat))
+  (if god-local-mode
+      (inverse-nyan-cat)
+    (original-nyan-cat)))
 
 (add-hook 'god-local-mode-hook 'indicate-god-mode)
 

@@ -2,15 +2,27 @@
 (require-package 'nyan-mode)
 (nyan-mode 1)
 
-(setq +nyan-cat-image-backup+ "~/.emacs.d/nyan-imgs/nyan.xpm"
-      +nyan-rainbow-image-backup+ "~/.emacs.d/nyan-imgs/rainbow.xpm"
-      +nyan-outerspace-image-backup+ "~/.emacs.d/nyan-imgs/outerspace.xpm")
+(setq +nyan-cat-image-inverse+        "~/.emacs.d/nyan-imgs/nyan.xpm"
+      +nyan-rainbow-image-inverse+    "~/.emacs.d/nyan-imgs/rainbow.xpm"
+      +nyan-outerspace-image-inverse+ "~/.emacs.d/nyan-imgs/outerspace.xpm")
+(setq +nyan-cat-image-backup+        (concat +nyan-directory+ "img/nyan.xpm")
+      +nyan-rainbow-image-backup+    (concat +nyan-directory+ "img/rainbow.xpm")
+      +nyan-outerspace-image-backup+ (concat +nyan-directory+ "img/outerspace.xpm"))
 
-(defun negate-nyan-cat ()
+(defun original-nyan-cat ()
   (interactive)
-  (swap '((+nyan-cat-image+        . +nyan-cat-image-backup+)
-          (+nyan-rainbow-image+    . +nyan-rainbow-image-backup+)
-          (+nyan-outerspace-image+ . +nyan-outerspace-image-backup+)))
+  (setq +nyan-cat-image+        +nyan-cat-image-backup+
+        +nyan-rainbow-image+    +nyan-rainbow-image-backup+
+        +nyan-outerspace-image+ +nyan-outerspace-image-backup+)
+
+  (nyan-mode -1)
+  (nyan-mode 1))
+
+(defun inverse-nyan-cat ()
+  (interactive)
+  (setq +nyan-cat-image+        +nyan-cat-image-inverse+
+        +nyan-rainbow-image+    +nyan-rainbow-image-inverse+
+        +nyan-outerspace-image+ +nyan-outerspace-image-inverse+)
 
   (nyan-mode -1)
   (nyan-mode 1))
