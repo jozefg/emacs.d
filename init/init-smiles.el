@@ -2,6 +2,14 @@
 (require-package 'nyan-mode)
 (nyan-mode 1)
 
+(defun negate-nyan-cat ()
+  (interactive)
+  (setq +nyan-cat-image+ "~/.emacs.d/nyan-imgs/nyan.xpm"
+        +nyan-rainbow-image+ "~/.emacs.d/nyan-imgs/rainbow.xpm"
+        +nyan-outerspace-image+ "~/.emacs.d/nyan-imgs/outerspace.xpm")
+  (nyan-mode -1)
+  (nyan-mode 1))
+
 ;; Sometimes you just need an adorable picture.
 (defun get-next-cute ()
   "Grab the first /r/aww url from the aww page"
