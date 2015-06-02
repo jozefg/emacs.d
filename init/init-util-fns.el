@@ -125,4 +125,11 @@
       (funcall f)
       (setup-keymap))))
 
+(defun swap (symbol-list)
+  "Takes a list of symbols and swaps the values in the"
+  (dolist (p symbol-list)
+    (let ((backup (eval (car p))))
+      (set (car p) (eval (cdr p)))
+      (set (cdr p) backup))))
+
 (provide 'init-util-fns)

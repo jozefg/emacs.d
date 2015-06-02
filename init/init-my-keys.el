@@ -10,7 +10,7 @@
 (define-key my-keys-minor-mode-map (kbd "C-j")      'backward-char) ; ex-Vimmers hate me
 (define-key my-keys-minor-mode-map (kbd "C-o")      'ace-window)
 (define-key my-keys-minor-mode-map (kbd "C-w")      'clipboard-kill-region)
-(define-key my-keys-minor-mode-map (kbd "C-x C-e")  'eval-replace-exp)
+(define-key my-keys-minor-mode-map (kbd "C-x C-e")  'eval-replace-sexp)
 (define-key my-keys-minor-mode-map (kbd "C-x C-j")  'list-buffers)
 (define-key my-keys-minor-mode-map (kbd "C-x O")    'last-window)
 (define-key my-keys-minor-mode-map (kbd "C-x j")    'switch-to-buffer)

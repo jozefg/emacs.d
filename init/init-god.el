@@ -1,5 +1,6 @@
 ;; For my poor pinky
 (require-package 'god-mode)
+(god-mode-all)
 
 (define-key god-local-mode-map (kbd "z") 'repeat)
 (define-key god-local-mode-map (kbd "i") 'god-local-mode)
