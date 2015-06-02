@@ -1,6 +1,5 @@
 ;; For my poor pinky
 (require-package 'god-mode)
-(global-set-key (kbd "<escape>") 'god-mode-all)
 
 (define-key god-local-mode-map (kbd "z") 'repeat)
 (define-key god-local-mode-map (kbd "i") 'god-local-mode)
@@ -11,5 +10,12 @@
 
 (add-to-list 'god-exempt-major-modes 'eshell-mode)
 
+(defun my-update-cursor ()
+  (setq cursor-type (if (or god-local-mode buffer-read-only)
+                        'box
+                      'bar)))
+
+(add-hook 'god-mode-enabled-hook 'my-update-cursor)
+(add-hook 'god-mode-disabled-hook 'my-update-cursor)
 
 (provide 'init-god)

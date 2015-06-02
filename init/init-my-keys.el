@@ -2,23 +2,24 @@
 (defvar my-keys-minor-mode-map (make-keymap) "my-keys-minor-mode keymap.")
 
 ;; Normal keybindings I override to be things I prefer
-(define-key my-keys-minor-mode-map (kbd "C-;")     'ace-jump-mode)
-(define-key my-keys-minor-mode-map (kbd "C-,")     'company-complete)
-(define-key my-keys-minor-mode-map (kbd "C-.")     'er/expand-region)
-(define-key my-keys-minor-mode-map (kbd "C-a")     'smart-beginning-of-line)
-(define-key my-keys-minor-mode-map (kbd "C-j")     'backward-char) ; ex-Vimmers hate me
-(define-key my-keys-minor-mode-map (kbd "C-o")     'ace-window)
-(define-key my-keys-minor-mode-map (kbd "C-w")     'clipboard-kill-region)
-(define-key my-keys-minor-mode-map (kbd "C-x C-e") 'eval-replace-sexp)
-(define-key my-keys-minor-mode-map (kbd "C-x C-j") 'list-buffers)
-(define-key my-keys-minor-mode-map (kbd "C-x O")   'last-window)
-(define-key my-keys-minor-mode-map (kbd "C-x j")   'switch-to-buffer)
-(define-key my-keys-minor-mode-map (kbd "C-y")     'clipboard-yank)
-(define-key my-keys-minor-mode-map (kbd "M-j")     'backward-word) ; For symmetry
-(define-key my-keys-minor-mode-map (kbd "M-w")     'clipboard-kill-ring-save)
-(define-key my-keys-minor-mode-map (kbd "M-z")     'ace-jump-zap-up-to-char)
-(define-key my-keys-minor-mode-map (kbd "M-0")     'corral-parentheses-forward)
-(define-key my-keys-minor-mode-map (kbd "M-9")     'corral-parentheses-backward)
+(define-key my-keys-minor-mode-map (kbd "<escape>") 'god-mode-all)
+(define-key my-keys-minor-mode-map (kbd "C-;")      'ace-jump-mode)
+(define-key my-keys-minor-mode-map (kbd "C-,")      'company-complete)
+(define-key my-keys-minor-mode-map (kbd "C-.")      'er/expand-region)
+(define-key my-keys-minor-mode-map (kbd "C-a")      'smart-beginning-of-line)
+(define-key my-keys-minor-mode-map (kbd "C-j")      'backward-char) ; ex-Vimmers hate me
+(define-key my-keys-minor-mode-map (kbd "C-o")      'ace-window)
+(define-key my-keys-minor-mode-map (kbd "C-w")      'clipboard-kill-region)
+(define-key my-keys-minor-mode-map (kbd "C-x C-e")  'eval-replace-exp)
+(define-key my-keys-minor-mode-map (kbd "C-x C-j")  'list-buffers)
+(define-key my-keys-minor-mode-map (kbd "C-x O")    'last-window)
+(define-key my-keys-minor-mode-map (kbd "C-x j")    'switch-to-buffer)
+(define-key my-keys-minor-mode-map (kbd "C-y")      'clipboard-yank)
+(define-key my-keys-minor-mode-map (kbd "M-j")      'backward-word) ; For symmetry
+(define-key my-keys-minor-mode-map (kbd "M-w")      'clipboard-kill-ring-save)
+(define-key my-keys-minor-mode-map (kbd "M-z")      'ace-jump-zap-up-to-char)
+(define-key my-keys-minor-mode-map (kbd "M-0")      'corral-parentheses-forward)
+(define-key my-keys-minor-mode-map (kbd "M-9")      'corral-parentheses-backward)
 
 (when (eq using-helm-or-ido 'ido)
   (define-key my-keys-minor-mode-map (kbd "M-x") 'smex))
