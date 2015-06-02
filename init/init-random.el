@@ -57,6 +57,9 @@
 (require-package 'corral)
 (setq corral-preserve-point t)
 
+;; Restore window configurations
+(winner-mode)
+
 ;; My stuff
 (require-package 'wiki-summary)
 
