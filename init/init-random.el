@@ -39,6 +39,11 @@
 (require-package 'git-gutter)
 (global-git-gutter-mode)
 
+;; Highlight the symbol under the point
+(require-package 'highlight-symbol)
+(add-hook 'prog-mode-hook (lambda () (highlight-symbol-mode)))
+(setq highlight-symbol-on-navigation-p t)
+
 ;; Anzu mode
 (require-package 'anzu)
 (global-anzu-mode 1)
