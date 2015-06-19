@@ -34,8 +34,8 @@
   (let ((new-buffer (find-file "~/Downloads/.aww"))
         (image-url  nil))
     (with-current-buffer new-buffer
-      (search-forward "href=\"/r/aww/")
-      (looking-at "[a-zA-Z0-9]*")
+      (while (not (looking-at "[a-zA-Z0-9]*[0-9][a-zA-Z0-9]*"))
+        (search-forward "href=\"/r/aww/"))
       (setq image-url (strip-text-properties (match-string 0))))
     (kill-buffer new-buffer)
     (let ((full-url (concat "http://www.imgur.com/r/aww/" image-url)))
@@ -44,8 +44,8 @@
 
 (defun cheer-me-up ()
   "Open a random adorable picture"
+  (interactive)
   (save-excursion
-    (interactive)
     (shell-command "wget -q http://www.imgur.com/r/aww -r -q -O ~/Downloads/.aww")
     (browse-url (get-next-cute))
     (delete-file "~/Downloads/.aww")
