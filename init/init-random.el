@@ -68,6 +68,10 @@
 ;; Restore window configurations
 (winner-mode)
 
+;; JonPRL
+(require-package 'jonprl-mode)
+(setq jonprl-path "~/jonprl/bin/jonprl")
+
 ;; My stuff
 (require-package 'wiki-summary)
 
