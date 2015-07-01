@@ -1,3 +1,6 @@
+(load-file (let ((coding-system-for-read 'utf-8))
+                (shell-command-to-string "agda-mode locate")))
+
 ;; Not sucky Agda highlighting
 (custom-set-faces
  '(agda2-highlight-datatype-face ((t (:foreground "deep sky blue" :weight bold))))
@@ -8,18 +11,12 @@
  '(agda2-highlight-record-face ((t (:foreground "deep sky blue")))))
 
 ;; Load path and default faces
-(custom-set-variables
- '(agda2-highlight-face-groups (quote default-faces))
- `(agda2-include-dirs (quote ("." ,(expand-file-name "~/agda-stdlib/src")))))
+(setq-default agda2-include-dirs
+              `("." ,(expand-file-name "~/agda-stdlib/src")))
 
 
 (put 'erase-buffer 'disabled nil)
 (put 'upcase-region 'disabled nil)
-
-
-(load-file (let ((coding-system-for-read 'utf-8))
-                (shell-command-to-string "agda-mode locate")))
-
 
 
 (provide 'init-agda)

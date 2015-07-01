@@ -21,6 +21,9 @@
 ;; Ensure that Emacs doesn't pause often for GC
 (setq gc-cons-threshold 20000000)
 
+;; Make sure to allow newlines
+(setq require-final-newline t)
+
 ;; Shorten the prompts to y or n.
 (defalias 'yes-or-no-p 'y-or-n-p)
 

@@ -1,4 +1,5 @@
 (require-package 'sml-mode)
+(add-to-list 'auto-mode-alist '(".*\\.fun" . sml-mode))
 
 (defun query-sml (string)
   (with-current-buffer "*sml*"

@@ -69,8 +69,12 @@
 (winner-mode)
 
 ;; JonPRL
+(require-package 'yasnippet)
 (require-package 'jonprl-mode)
-(setq jonprl-path "~/jonprl/bin/jonprl")
+
+(setq jonprl-path "~/jonprl/compiler/bin/jonprl")
+(add-to-list 'exec-path "/home/jozefg/jonprl/compiler/bin/")
+(setenv "PATH" (concat "/home/jozefg/jonprl/compiler/bin:" (getenv "PATH")))
 
 ;; My stuff
 (require-package 'wiki-summary)
