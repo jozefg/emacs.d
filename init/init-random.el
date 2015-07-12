@@ -76,6 +76,9 @@
 (add-to-list 'exec-path "/home/jozefg/jonprl/compiler/bin/")
 (setenv "PATH" (concat "/home/jozefg/jonprl/compiler/bin:" (getenv "PATH")))
 
+(add-hook 'jonprl-mode-hook 'yas-minor-mode)
+(add-hook 'jonprl-mode-hook 'eldoc-mode)
+
 ;; My stuff
 (require-package 'wiki-summary)
 
