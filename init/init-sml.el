@@ -1,5 +1,6 @@
 (require-package 'sml-mode)
 (add-to-list 'auto-mode-alist '(".*\\.fun" . sml-mode))
+(setq sml-indent-level 2)
 
 (defun query-sml (string)
   (with-current-buffer "*sml*"

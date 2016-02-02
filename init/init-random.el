@@ -68,9 +68,14 @@
 ;; Restore window configurations
 (winner-mode)
 
-;; JonPRL
+;; Yasnippet
 (require-package 'yasnippet)
+(setq yas-triggers-in-field t)
+
+;; JonPRL
 (require-package 'jonprl-mode)
+(add-hook 'jonprl-mode-hook 'yas-minor-mode)
+(add-hook 'jonprl-mode-hook 'eldoc-mode)
 
 (setq jonprl-path "~/jonprl/compiler/bin/jonprl")
 (add-to-list 'exec-path "/home/jozefg/jonprl/compiler/bin/")

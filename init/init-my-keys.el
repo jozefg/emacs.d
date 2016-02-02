@@ -41,7 +41,6 @@
 (define-key my-keys-minor-mode-map (kbd "C-c c")   'compile)
 (define-key my-keys-minor-mode-map (kbd "C-c e")   'eshell)
 (define-key my-keys-minor-mode-map (kbd "C-c f i") 'get-init-file)
-(define-key my-keys-minor-mode-map (kbd "C-c f k") 'get-todo-file)
 (define-key my-keys-minor-mode-map (kbd "C-c f p") 'find-file-at-point)
 (define-key my-keys-minor-mode-map (kbd "C-c g l") 'ace-jump-line-mode)
 (define-key my-keys-minor-mode-map (kbd "C-c g n") 'goto-line)
@@ -52,17 +51,16 @@
 (define-key my-keys-minor-mode-map (kbd "C-c n")   'highlight-symbol-next)
 (define-key my-keys-minor-mode-map (kbd "C-c m i") 'jump-to-mailbox)
 (define-key my-keys-minor-mode-map (kbd "C-c m u") 'mu4e-update-mail-and-index)
-(define-key my-keys-minor-mode-map (kbd "C-c o t") 'org-todo-list)
-(define-key my-keys-minor-mode-map (kbd "C-c o w") 'org-agenda-list)
-(define-key my-keys-minor-mode-map (kbd "C-c o c") 'org-capture)
+
 (define-key my-keys-minor-mode-map (kbd "C-c p")   'highlight-symbol-prev)
 (define-key my-keys-minor-mode-map (kbd "C-c s q") 'query-replace-regexp)
 (define-key my-keys-minor-mode-map (kbd "C-c s r") 'replace-regexp)
 (define-key my-keys-minor-mode-map (kbd "C-c s s") 'replace-string)
-(define-key my-keys-minor-mode-map (kbd "C-c v")   'monky-status)
+(define-key my-keys-minor-mode-map (kbd "C-c v")   'magit-status)
 
 (global-set-key (kbd "RET") 'newline-and-indent)
 (put 'downcase-region 'disabled nil)
+(put 'narrow-to-region 'disabled nil)
 
 (define-minor-mode my-keys-minor-mode
   "A minor mode so that my key settings override annoying major modes."
