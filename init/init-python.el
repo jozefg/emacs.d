@@ -4,6 +4,7 @@
 
 (require-package 'pyflakes)
 (require-package 'pydoc)
+(require-package 'pep8)
 
 (defun pydoc-symbol-at-point (s)
   (interactive (list
