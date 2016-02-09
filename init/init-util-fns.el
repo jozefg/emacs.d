@@ -1,4 +1,7 @@
 (setq lexical-binding t)
+(require-package 's)
+(require-package 'dash)
+(require-package 'f)
 
 (defun all-displayed-windows ()
   (interactive "")
