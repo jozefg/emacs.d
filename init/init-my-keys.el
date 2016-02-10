@@ -30,6 +30,7 @@
 ;; C-c e   - Eshell
 ;; C-c f * - File finding functions
 ;; C-c g * - Go places
+;; C-c l * - Move in a lisp like fashion (by balanced expression)
 ;; C-c k * - Kill things structurally
 ;; C-c m * - Mu4e things
 ;; C-c o * - Org utilities
@@ -48,6 +49,10 @@
 (define-key my-keys-minor-mode-map (kbd "C-c k b") 'kill-braces)
 (define-key my-keys-minor-mode-map (kbd "C-c k f") 'delete-frame)
 (define-key my-keys-minor-mode-map (kbd "C-c k p") 'kill-parens)
+(define-key my-keys-minor-mode-map (kbd "C-c l f") 'forward-sexp)
+(define-key my-keys-minor-mode-map (kbd "C-c l j") 'backward-sexp)
+(define-key my-keys-minor-mode-map (kbd "C-c l n") 'down-list)
+(define-key my-keys-minor-mode-map (kbd "C-c l p") 'up-list)
 (define-key my-keys-minor-mode-map (kbd "C-c n")   'highlight-symbol-next)
 (define-key my-keys-minor-mode-map (kbd "C-c m i") 'jump-to-mailbox)
 (define-key my-keys-minor-mode-map (kbd "C-c m u") 'mu4e-update-mail-and-index)
