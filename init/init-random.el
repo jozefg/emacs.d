@@ -16,6 +16,10 @@
 ;; Lua is sometimes nice
 (require-package 'lua-mode)
 
+;; Make scheme coding much more fun
+(require-package 'geiser)
+(add-hook 'scheme-mode 'geiser-mode)
+
 ;; Pandoc!
 (require-package 'pandoc-mode)
 
