@@ -1,5 +1,6 @@
 (require-package 'monky)
 (require-package 'magit)
+(setq magit-last-seen-setup-instructions "1.4.0")
 
 (setq monky-process-type 'cmdserver)
 
