@@ -1,14 +1,18 @@
 (require-package 'haskell-mode)
-(require-package 'ghc)
+(require-package 'hindent)
 
 ;; haskell-mode drags in a log of extra modes
 (require 'haskell-cabal)
 (require 'haskell-interactive-mode)
+(require 'haskell-font-lock)
+(require 'haskell-debug)
+(require 'haskell)
 
 
 (add-hook 'haskell-mode-hook 'turn-on-haskell-indentation)
 (add-hook 'haskell-mode-hook 'turn-on-haskell-doc-mode)
 (add-hook 'haskell-mode-hook 'interactive-haskell-mode)
+(add-hook 'haskell-mode-hook #'hindent-mode)
 
 ; Default configurations
 (setq haskell-font-lock-symbols t
@@ -18,16 +22,12 @@
       haskell-align-imports-pad-after-name t
       haskell-doc-show-global-types t
       haskell-process-show-debug-tips nil
-      haskell-process-type 'cabal-repl)
+      haskell-process-type 'cabal-repl
+      haskell-process-suggest-haskell-docs-imports t)
 
 (add-to-list 'exec-path "~/.cabal/bin/")
 (setenv "PATH" (concat "~/.cabal/bin:/usr/local/bin" (getenv "PATH")))
 
 (add-to-list 'exec-path "/usr/bin/local/") ; For GHC
-
-(autoload 'ghc-init "ghc" nil t)
-(autoload 'ghc-debug "ghc" nil t)
-(add-hook 'haskell-mode-hook 'ghc-init)
-
 
 (provide 'init-haskell)

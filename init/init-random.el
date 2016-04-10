@@ -88,6 +88,11 @@
 (add-hook 'jonprl-mode-hook 'yas-minor-mode)
 (add-hook 'jonprl-mode-hook 'eldoc-mode)
 
+(require-package 'rvm)
+(require-package 'inf-ruby)
+(rvm-use-default)
+(add-hook 'ruby-mode 'inf-ruby-mode)
+
 ;; My stuff
 (require-package 'wiki-summary)
 
