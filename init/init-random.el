@@ -77,6 +77,7 @@
 (setq yas-triggers-in-field t)
 
 ;; JonPRL
+(add-to-list 'load-path (expand-file-name my-redprl-location))
 (require-package 'jonprl-mode)
 (add-hook 'jonprl-mode-hook 'yas-minor-mode)
 (add-hook 'jonprl-mode-hook 'eldoc-mode)

@@ -29,7 +29,6 @@
 ;; Minor modes
 (try-require 'init-ace)        ; Some helpful packages for moving around
 (try-require 'init-company)    ; Autocompletion with less suck
-(try-require 'init-god)        ; Helpful for my wrists
 (try-require 'init-parens)     ; Pretty parens
 (try-require 'init-hippie)     ; Configure hippie
 (try-require 'init-delete)     ; Hungry delete mode
