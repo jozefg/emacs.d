@@ -1,7 +1,7 @@
 (setq auto-mode-alist (cons '("\\.v$" . coq-mode) auto-mode-alist))
 (autoload 'coq-mode "coq" "Major mode for editing Coq vernacular." t)
 
-(load-file "/usr/share/emacs24/site-lisp/proofgeneral/generic/proof-site.el")
+(load "~/.emacs.d/lisp/PG/generic/proof-site")
 (setq coq-prog-name "/usr/local/bin/coqtop")
 
 

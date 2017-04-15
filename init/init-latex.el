@@ -1,6 +1,7 @@
 ;; auctex is under the name auctex on elpa but provides
 ;; the symbol tex. No clue why..
 (require-package 'auctex 'tex)
+(require-package 'auctex-latexmk)
 
 (setq TeX-auto-save t)
 (setq TeX-parse-self t)
@@ -10,10 +11,13 @@
 (add-hook 'LaTeX-mode-hook 'turn-on-reftex)
 (setq TeX-PDF-mode t)
 
+(auctex-latexmk-setup)
 
 ;; Previews are nice
 (require-package 'latex-preview-pane)
-(add-hook 'LaTeX-mode-hook 'latex-preview-pane-mode)
+;(add-hook 'LaTeX-mode-hook 'latex-preview-pane-mode)
+
+(setq auctex-latexmk-inherit-TeX-PDF-mode t)
 
 ;; Pass shell-escape everywhere
 ;(custom-set-variables

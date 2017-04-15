@@ -2,7 +2,6 @@
 (defvar my-keys-minor-mode-map (make-keymap) "my-keys-minor-mode keymap.")
 
 ;; Normal keybindings I override to be things I prefer
-(define-key my-keys-minor-mode-map (kbd "<escape>") 'god-local-mode)
 (define-key my-keys-minor-mode-map (kbd "C-;")      'ace-jump-mode)
 (define-key my-keys-minor-mode-map (kbd "C-,")      'company-complete)
 (define-key my-keys-minor-mode-map (kbd "C-.")      'er/expand-region)

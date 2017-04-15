@@ -10,13 +10,7 @@
  '(agda2-highlight-primitive-type-face ((t (:foreground "DeepSkyBlue1"))))
  '(agda2-highlight-record-face ((t (:foreground "deep sky blue")))))
 
-;; Load path and default faces
-(setq-default agda2-include-dirs
-              `("." ,(expand-file-name "~/agda-stdlib/src")))
-
-
 (put 'erase-buffer 'disabled nil)
 (put 'upcase-region 'disabled nil)
-
 
 (provide 'init-agda)

@@ -22,7 +22,7 @@
       haskell-align-imports-pad-after-name t
       haskell-doc-show-global-types t
       haskell-process-show-debug-tips nil
-      haskell-process-type 'cabal-repl
+      haskell-process-type 'stack-ghci
       haskell-process-suggest-haskell-docs-imports t)
 
 (add-to-list 'exec-path "~/.cabal/bin/")
