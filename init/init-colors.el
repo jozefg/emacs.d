@@ -6,9 +6,9 @@
 (setq color-theme-is-global t)
 (color-theme-initialize)
 
-(load-theme 'gotham t)
+;(load-theme 'gotham t)
 ;;(load-theme 'moe-dark t)
-;;(load-theme 'monokai t)
+(load-theme 'monokai t)
 
 ;; If we're living in the terminal, we really don't want
 ;; a color theme.

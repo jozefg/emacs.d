@@ -9,7 +9,8 @@
   "clear the eshell buffer."
   (interactive)
   (let ((inhibit-read-only t))
-    (erase-buffer)))
+    (erase-buffer)
+    (recenter-top-bottom 0)))
 
 (defalias 'ff 'find-file)
 (defalias 'ffo 'find-file-other-window)

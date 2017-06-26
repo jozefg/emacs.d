@@ -89,6 +89,8 @@
 (add-hook 'jonprl-mode-hook 'yas-minor-mode)
 (add-hook 'jonprl-mode-hook 'eldoc-mode)
 
+(require-package 'redprl)
+
 (require-package 'rvm)
 (require-package 'inf-ruby)
 (rvm-use-default)

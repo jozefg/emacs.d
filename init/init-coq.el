@@ -2,7 +2,7 @@
 (autoload 'coq-mode "coq" "Major mode for editing Coq vernacular." t)
 
 (load "~/.emacs.d/lisp/PG/generic/proof-site")
-(setq coq-prog-name "/usr/local/bin/coqtop")
+(setq coq-prog-name "/home/jozefg/.opam/4.04.0/bin/coqtop")
 
 
 (custom-set-variables
