@@ -1,5 +1,6 @@
 (require-package 'haskell-mode)
 (require-package 'hindent)
+(require-package 'intero)
 
 ;; haskell-mode drags in a log of extra modes
 (require 'haskell-cabal)
@@ -13,12 +14,13 @@
 (add-hook 'haskell-mode-hook 'turn-on-haskell-doc-mode)
 (add-hook 'haskell-mode-hook 'interactive-haskell-mode)
 (add-hook 'haskell-mode-hook #'hindent-mode)
+(add-hook 'haskell-mode-hook 'intero-mode)
 
 ; Default configurations
 (setq haskell-font-lock-symbols t
       haskell-process-suggest-remove-import-lines t
       haskell-process-auto-import-loaded-modules t
-      haskell-process-log nil ; Set to t to debug issue
+      haskell-process-log t ; Set to t to debug issue
       haskell-align-imports-pad-after-name t
       haskell-doc-show-global-types t
       haskell-process-show-debug-tips nil
