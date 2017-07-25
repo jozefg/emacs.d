@@ -17,7 +17,7 @@
 (add-hook 'haskell-mode-hook 'intero-mode)
 
 ; Default configurations
-(setq haskell-font-lock-symbols t
+(setq haskell-font-lock-symbols nil
       haskell-process-suggest-remove-import-lines t
       haskell-process-auto-import-loaded-modules t
       haskell-process-log t ; Set to t to debug issue

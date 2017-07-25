@@ -3,7 +3,7 @@
 
 ;; Normal keybindings I override to be things I prefer
 (define-key my-keys-minor-mode-map (kbd "C-;")      'ace-jump-mode)
-(define-key my-keys-minor-mode-map (kbd "C-,")      'company-complete)
+(define-key my-keys-minor-mode-map (kbd "M-/")      'company-complete)
 (define-key my-keys-minor-mode-map (kbd "C-.")      'er/expand-region)
 (define-key my-keys-minor-mode-map (kbd "C-a")      'smart-beginning-of-line)
 (define-key my-keys-minor-mode-map (kbd "C-j")      'backward-char) ; ex-Vimmers hate me
@@ -55,7 +55,10 @@
 (define-key my-keys-minor-mode-map (kbd "C-c n")   'highlight-symbol-next)
 (define-key my-keys-minor-mode-map (kbd "C-c m i") 'jump-to-mailbox)
 (define-key my-keys-minor-mode-map (kbd "C-c m u") 'mu4e-update-mail-and-index)
-
+(define-key my-keys-minor-mode-map (kbd "C-c o a") 'org-agenda)
+(define-key my-keys-minor-mode-map (kbd "C-c o b") 'org-switchb)
+(define-key my-keys-minor-mode-map (kbd "C-c o c") 'org-capture)
+(define-key my-keys-minor-mode-map (kbd "C-c o l") 'org-store-link)
 (define-key my-keys-minor-mode-map (kbd "C-c p")   'highlight-symbol-prev)
 (define-key my-keys-minor-mode-map (kbd "C-c s q") 'query-replace-regexp)
 (define-key my-keys-minor-mode-map (kbd "C-c s r") 'replace-regexp)
