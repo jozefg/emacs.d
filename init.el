@@ -70,28 +70,3 @@
 ;; And the rest
 (try-require 'init-random)     ; Random packages with no configuration
 (try-require 'init-smiles)     ; Just stupid fun stuff
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(coq-compile-before-require nil)
- '(magit-use-overlays nil)
- '(package-selected-packages
-   (quote
-    (intero haskell-mode yaml-mode wrap-region wiki-summary w3m utop tuareg toml-mode sml-mode smex smart-mode-line slime rvm rust-mode redprl racket-mode pyflakes pydoc purescript-mode pep8 paredit pandoc-mode org-present olivetti ocp-indent nyan-mode neotree multiple-cursors monokai-theme monky moe-theme merlin markdown-mode magit lua-mode lorem-ipsum latex-preview-pane js2-mode js-comint jonprl-mode inf-ruby idris-mode ido-ubiquitous hungry-delete hindent highlight-symbol highlight-parentheses gotham-theme god-mode go-mode git-gutter geiser flymake-rust flycheck-package flx-ido f expand-region evil elm-mode elein delim-kill corral company-math company-ghc color-theme cljsbuild-mode cider auctex-latexmk anzu ag ace-window ace-jump-zap 2048-game)))
- '(proof-splash-enable nil)
- '(proof-three-window-enable t)
- '(proof-three-window-mode-policy (quote hybrid))
- '(proof-toolbar-enable nil))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(agda2-highlight-datatype-face ((t (:foreground "deep sky blue" :weight bold))))
- '(agda2-highlight-function-face ((t (:foreground "deep sky blue"))))
- '(agda2-highlight-postulate-face ((t (:foreground "cyan"))))
- '(agda2-highlight-primitive-face ((t (:foreground "cyan"))))
- '(agda2-highlight-primitive-type-face ((t (:foreground "DeepSkyBlue1"))))
- '(agda2-highlight-record-face ((t (:foreground "deep sky blue")))))

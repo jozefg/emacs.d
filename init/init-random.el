@@ -82,6 +82,8 @@
 (add-hook 'jonprl-mode-hook 'yas-minor-mode)
 (add-hook 'jonprl-mode-hook 'eldoc-mode)
 
+(require-package 'cubicaltt)
+
 (setq jonprl-path "~/jonprl/compiler/bin/jonprl")
 (add-to-list 'exec-path "/home/jozefg/jonprl/compiler/bin/")
 (setenv "PATH" (concat "/home/jozefg/jonprl/compiler/bin:" (getenv "PATH")))

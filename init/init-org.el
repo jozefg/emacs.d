@@ -10,7 +10,9 @@
 (setq org-agenda-files (concat org-directory "/agenda-files.org"))
 
 (setq org-capture-templates
-      '(("t" "Todo" entry (file+headline "~/Dropbox/org/notes.org" "Tasks")
+      '(("a" "Appointment" entry (file+datetree "~/Dropbox/org/appointments.org")
+         "* %?\n %i\n %a")
+        ("t" "Todo" entry (file+headline "~/Dropbox/org/notes.org" "Tasks")
          "* TODO %?\n %i\n %a")
         ("j" "Journal" entry (file+datetree "~/Dropbox/org/journal.org")
          "* %?\nEntered on %U\n %i\n %a")))

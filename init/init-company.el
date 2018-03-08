@@ -15,5 +15,7 @@
 ;; turned on and off all at once.
 (require-package 'company-ghc)
 (require-package 'company-math)
+(require-package 'company-auctex)
+(company-auctex-init)
 
 (provide 'init-company)
