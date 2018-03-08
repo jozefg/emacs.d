@@ -27,6 +27,9 @@
 ;; Shorten the prompts to y or n.
 (defalias 'yes-or-no-p 'y-or-n-p)
 
+;; Request permission before closing emacs.
+(setq confirm-kill-emacs 'y-or-n-p)
+
 ;; Never use dialog boxes
 (setq use-dialog-box nil)
 
