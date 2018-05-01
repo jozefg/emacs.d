@@ -30,6 +30,9 @@
 ;; Request permission before closing emacs.
 (setq confirm-kill-emacs 'y-or-n-p)
 
+;; Allow tramp to save passwords
+(setq password-cache-expiry nil)
+
 ;; Never use dialog boxes
 (setq use-dialog-box nil)
 
