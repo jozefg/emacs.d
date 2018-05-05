@@ -13,3 +13,5 @@ bookmarks
 backups/
 smex-items
 .mc-lists.el
+lisp/*
+network-security.data
