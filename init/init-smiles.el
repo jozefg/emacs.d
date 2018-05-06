@@ -35,7 +35,7 @@
         (image-url  nil))
     (with-current-buffer new-buffer
       (while (not (looking-at "[a-zA-Z0-9]*[0-9][a-zA-Z0-9]*"))
-        (search-forward "href=\"/r/aww/"))
+        (search-forward-regexp "href=\"/r/aww/"))
       (setq image-url (strip-text-properties (match-string 0))))
     (kill-buffer new-buffer)
     (let ((full-url (concat "http://www.imgur.com/r/aww/" image-url)))
