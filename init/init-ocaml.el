@@ -114,4 +114,9 @@
 (opam-auto-tools-setup)
 ;; ## end of OPAM user-setup addition for emacs / base ## keep this line
 
+(add-hook
+ 'tuareg-mode-hook
+ (lambda ()
+   (add-hook 'before-save-hook 'ocp-indent-buffer nil t)))
+
 (provide 'init-ocaml)
