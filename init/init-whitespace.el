@@ -8,6 +8,12 @@
 ;; No trailing space either!
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
+(defun toggle-deleting-trailing-whitespace ()
+  (interactive)
+  (if (= (length before-save-hook) 0)
+      (add-hook 'before-save-hook 'delete-trailing-whitespace)
+    (setq before-save-hook nil)))
+
 (setq whitespace-line-column 80) ; This is the default value, but I tweak a lot
 (setq whitespace-style '(face tabs lines-tail))
 
