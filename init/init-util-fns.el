@@ -46,10 +46,12 @@
 (defun smart-beginning-of-line ()
   "Moves to first character that's not whitespace"
   (interactive "^")
-  (let ((oldpos (point)))
-    (back-to-indentation)
-    (and (= oldpos (point))
-         (beginning-of-line))))
+  (if (and (eq major-mode 'latex-mode) (not auto-fill-function) (boundp 'visual-line-mode))
+      (beginning-of-visual-line)
+    (let ((oldpos (point)))
+      (back-to-indentation)
+      (and (= oldpos (point))
+           (beginning-of-line)))))
 
 (defun rename-file-with-buffer (new-name)
   "Rename a buffer and it's underlying file to a new name"

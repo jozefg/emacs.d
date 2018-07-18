@@ -98,6 +98,10 @@
 (rvm-use-default)
 (add-hook 'ruby-mode 'inf-ruby-mode)
 
+;; which-key
+(require-package 'which-key)
+(which-key-mode)
+
 ;; My stuff
 (require-package 'wiki-summary)
 
