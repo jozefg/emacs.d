@@ -1,4 +1,6 @@
-(add-to-list 'default-frame-alist '(font . "Source Code Pro"))
+;; Set default font
+(add-to-list 'default-frame-alist
+             '(font . "Source Code Pro"))
 
 ;; Helpful function to blow up font for presentations
 (defun presentation-sized-font ()
