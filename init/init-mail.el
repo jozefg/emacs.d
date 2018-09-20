@@ -21,6 +21,7 @@
    user-mail-address my-email
    user-full-name  my-name)
 
+
 (require 'smtpmail)
 (setq message-send-mail-function 'smtpmail-send-it
    starttls-use-gnutls t

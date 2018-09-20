@@ -1,8 +1,6 @@
 ;; ## added by OPAM user-setup for emacs / base ## 2cfdcafda6d58f1dfe93a46e434ff502 ## you can edit, but keep this line
-(provide 'opam-user-setup)
-
 ;; Base configuration for OPAM
-
+(require-package 'tuareg)
 (defun opam-shell-command-to-string (command)
   "Similar to shell-command-to-string, but returns nil unless the process
   returned 0 (shell-command-to-string ignores return value)"

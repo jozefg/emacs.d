@@ -1,0 +1,129 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("/home/jozefg/work/coq-nbe-for-mltt/Nbe/" . "LogicalRelations/")
+ ("/home/jozefg/work/coq-nbe-for-mltt/" . "Nbe/")
+ ("/home/jozefg/work/iris-with-linearity/" . "iron-coq/")
+ ("/home/jozefg/work/iris-with-linearity/iron-coq/theories/heap_lang/" . "lib/")
+ ("/home/jozefg/work/iris-with-linearity/iron-coq/theories/" . "heap_lang/")
+ ("/home/jozefg/work/iris-with-linearity/iron-coq/" . "theories/")
+ ("/home/" . "jozefg/")
+ ("/home/jozefg/Dropbox/homework/" . "teaching/")
+ ("/home/jozefg/Dropbox/" . "homework/")
+ ("/home/jozefg/.opam/4.06.1/" . "bin/")
+ ("/home/jozefg/work/blott/src/" . "bin/")
+ ("/home/jozefg/work/blott/" . "test/")
+ ("/home/jozefg/.opam/" . "4.06.1/")
+ ("/home/jozefg/" . "work/")
+ ("/home/jozefg/work/gctt-with-box/" . "nbe/")
+ ("/home/jozefg/work/" . "blott/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "/home/jozefg/work/"
+ "/home/jozefg/work/gctt-with-box/nbe/"
+ "/home/jozefg/work/blott/"
+ "/home/jozefg/work/coq-nbe-for-mltt/Nbe/LogicalRelations/"
+ "/home/jozefg/work/coq-nbe-for-mltt/Nbe/Syntax/"
+ "/home/jozefg/work/coq-nbe-for-mltt/"
+ "/home/jozefg/work/iris-with-linearity/iron-coq/theories/heap_lang/lib/"
+ "/home/jozefg/work/iris-with-linearity/iron-coq/theories/heap_lang/"
+ "/home/jozefg/work/iris-with-linearity/iron-coq/theories/iron_logic/"
+ "/home/jozefg/work/iris-with-linearity/iron-coq/"
+ "/home/jozefg/.emacs.d/"
+ "/home/jozefg/work/iris-with-linearity/popl-2019/"
+ "/home/jozefg/"
+ "/home/jozefg/Dropbox/homework/teaching/"
+ "/home/jozefg/work/blott/test/"
+ "/home/jozefg/.i3/"
+ "/home/jozefg/work/blott/src/bin/"
+ "/home/jozefg/.ssh/"
+ "/home/jozefg/Dropbox/"
+ "/home/jozefg/Downloads/twelf/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ "the-more-detailed-email.md"
+ "papers.org"
+ "per-model.tex"
+ "soundness.tex"
+ "main.tex"
+ "normalize_lib.opam"
+ "blott.opam"
+ "Def.v"
+ "Inversion.v"
+ "_CoqProject"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("/home/jozefg/work/gctt-with-box/nbe/" (23458 35654 515681 483000) "soundness.tex" "per-model.tex" "main.tex" "main.pdf" "main.out" "nbe-refs.bib" "main.bbl" "main.fls" "determinism.tex" "auto/" "algorithm.tex" "main.log" "completeness.tex" "README.md" "main.blg" "main.aux" "main.fdb_latexmk" "syntax.tex" "./" "../")
+
+ ("/home/jozefg/work/" (23457 14450 273792 370000) "research/" "iris-case-studies/" "iris-with-linearity/" "papers.org" "blott/" "gctt-with-box/" "iris-coq/" "coq-nbe-for-mltt/" "./" "../" "coq-stdpp/")
+
+ ("/home/jozefg/work/coq-nbe-for-mltt/Nbe/LogicalRelations/" (23457 14444 49757 898000) "FundamentalTheorem.v" "ProofIrrelevance.v" "ClosedUnderConversion/" "ConvertibleToReification/" "ConvertibleToReification.v" "Lift.v" "ClosedUnderConversion.v" "Inversion.v" "ClosedUnderPer.v" "FundamentalTheorem/" "_CoqProject" "Def.v" "./" "../" "IdentityEnvironment.v" "ContextConversion.v" "ClosedUnderPer/")
+
+ ("/home/jozefg/work/coq-nbe-for-mltt/Nbe/" (23457 14730 947397 940000) "Utils/" "CompletenessOfNbe.v" "Model/" "Model.v" "Syntax/" "Domain/" ".Utils.aux" "CodeExtraction/" "Utils.vo" "Domain.v" "Utils.glob" "SoundnessOfNbe.v" "CodeExtraction.v" "SoundnessOfJudgements.v" "Utils.v" "LogicalRelations/" "_CoqProject" "LogicalRelations.v" "./" "../" "Final.v" "Syntax.v" "Final/" "SoundnessOfJudgements/")
+
+ ("/home/jozefg/work/coq-nbe-for-mltt/" (23457 14725 335365 21000) "Makefile.conf" ".git/" "README.md" "Nbe/" "_CoqProject" "Makefile" "./" "Code/" ".coqdeps.d" "../" "CoqMakefile.conf")
+
+ ("/home/jozefg/work/coq-nbe-for-mltt/Nbe/Syntax/" (23457 14648 694918 354000) "SystemN_equiv.v" ".Validity.aux" "SystemN_PreliminaryContextConversion.v" "System.glob" "CxtShift.v" "Validity.glob" "SimplePreliminaryContextConversion.v" "SystemN_SimplePreliminaryContextConversion.v" ".SystemN_wfind.aux" "SystemN_wfind.glob" ".SystemN_Validity.aux" "SystemN.v" "SystemN_PreliminaryContextConversion.glob" "LogRelTmSyntaxStuff.v" "System.v" "SystemN_wfind.vo" ".SimplePreliminaryContextConversion.aux" "Def.vo" "SystemN_equiv.vo" "Inversion.v" "SystemN_SimplePreliminaryContextConversion.glob" "SbInversion.v" "SystemN.glob" "Def.glob" "SystemN_Validity.v" "Inversion.vo" "SystemN_ContextConversion.v" "Validity.v" ".SystemN.aux" "SystemN.vo" ".SystemN_equiv.aux" ".SystemN_PreliminaryContextConversion.aux" "SystemN_PreliminaryContextConversion.vo" "_CoqProject" "Def.v" ".Def.aux" "./" "SystemN_Validity.glob" "SystemN_wfind.v" "SystemN_SimplePreliminaryContextConversion.vo" "Inversion.glob" "../" ".SystemN_SimplePreliminaryContextConversion.aux" ".System.aux" ".Inversion.aux" "SystemN_equiv.glob" "SimplePreliminaryContextConversion.glob" "System.vo" "ContextConversion.v" "SimplePreliminaryContextConversion.vo")
+
+ ("/home/jozefg/work/coq-nbe-for-mltt/Nbe/Utils/" (23457 14444 53757 921000) "ArithFuncs.v" "TreeShape_MeasureFacts.v" "Notations.v" "Tactics.v" "MuMeasure.v" "_CoqProject" "./" "../" "TreeShape/" "TreeShape.v")
+
+ ("/home/jozefg/" (23457 5509 903118 502000) "writing/" "Desktop/" ".opam/" ".local/" ".lesshst" "work/" ".gnome/" ".sudo_as_admin_successful" ".gitconfig" ".Xmodmap" ".ghc/" "examples.desktop" ".cabal/" ".bash_logout" ".ssh/" ".viminfo" "Templates/" ".ICEauthority" "Downloads/" ".pki/" ".thunderbird/" ".bashrc" ".dropbox-dist/" ".wget-hsts" ".cache/" ".gnupg/" ".ocp/" ".emacs.d/" ".ocamlinit" ".fonts/" "twelf/" ".i3/" ".bash_history" "./" ".mozilla/" ".dropbox/" "../" ".profile" ".config/" "Dropbox/")
+
+ ("/home/jozefg/work/iris-with-linearity/iron-coq/theories/heap_lang/lib/" (23457 4838 570903 383000) ".message_passing_example.aux" "resource_transfer_par.vo" "message_passing.glob" "spin_lock.vo" "resource_transfer_fork.v" ".par.aux" "queue.vo" "bag.v" ".bag.aux" "resource_transfer_sts.glob" ".resource_transfer_par.aux" "spin_lock_track.v" ".queue.aux" "spawn.vo" "spin_lock_track.vo" "resource_transfer_sts.vo" "bag.glob" ".resource_transfer_fork.aux" "spawn.v" "par.v" "par.glob" "queue.v" "spin_lock_track.glob" "message_passing.v" "message_passing_example.glob" ".list.aux" ".spin_lock_track.aux" "#reviewer_88a_example.v#" "resource_transfer_fork.glob" "par.vo" ".#reviewer_88a_example.v" "reviewer_88a_example.v" "bag.vo" "queue.glob" ".spawn.aux" "message_passing_example.vo" ".message_passing.aux" "./" "spawn.glob" "resource_transfer_fork.vo" "resource_transfer_sts.v" "../" "resource_transfer_par.glob" "list.glob" ".spin_lock.aux" ".resource_transfer_sts.aux" "list.vo" "list.v" "message_passing_example.v" "spin_lock.v" "message_passing.vo" "spin_lock.glob" "resource_transfer_par.v")
+
+ ("/home/jozefg/.emacs.d/" (23457 4262 891151 209000) "eshell/" ".git/" "smex-items" "network-security.data" "nyan-imgs/" "doodles/" "init/" "ido.last" "session.10327fb6b27b6da04d153684559130538500000013210063" "elpa/" "backup/" "bin/" "opam-user-setup.el" "README.md" "./" "session.107d7183c7787c971e153684635896452000000262450060" "../" "auto-save-list/" ".gitignore" "init.el")
+
+ ("/home/jozefg/.emacs.d/init/" (23457 3215 600358 962000) "init-helm.el" "init-elisp.el" "init-delete.el" "init-package.el" "init-browser.el" "init-personal.el" "init-coq.el" "init-eshell.el" "init-mail.el" "init-clojure.el" "init-parens.el" "init-gpg.el" "init-agda.el" "init-markdown.el" "init-interact.el" "init-font.el" "init-server.el" "init-org.el" "init-rust.el" "init-util-fns.el" "init-startup.el" "init-hippie.el" "init-idris.el" "init-haskell.el" "init-twelf.el" "init-my-keys.el" "init-sml.el" "init-latex.el" "init-backups.el" "init-python.el" "init-tree.el" "init-company.el" "init-colors.el" "init-racket.el" "init-whitespace.el" "init-ocaml.el" "init-vcs.el" "init-js.el" "./" "init-surround.el" "init-random.el" "../" "init-ag.el" "init-smiles.el" "init-god.el" "init-journal.el" "init-ace.el" "init-ido.el")
+
+ ("/home/jozefg/work/iris-with-linearity/iron-coq/" (23457 1156 947468 83000) "theories/" "Makefile.coq.conf" "README" "_CoqProject" "Makefile" "./" "Makefile.coq" ".coqdeps.d" "awk.Makefile" "../")
+
+ ("/home/jozefg/work/iris-with-linearity/iron-coq/theories/iron_logic/" (23457 32 133339 222000) "iron.v" ".adequacy.aux" ".iron.aux" "iron.vo" "weakestpre.glob" "adequacy.v" ".lifting.aux" "lifting.v" "fcinv.v" "weakestpre.vo" "weakestpre.v" ".fcinv.aux" "lifting.vo" "fcinv.glob" "adequacy.glob" "fcinv.vo" ".weakestpre.aux" "adequacy.vo" "./" "lifting.glob" "iron.glob" "../")
+
+ ("/home/jozefg/work/blott/src/bin/" (23451 45798 274709 673000) "dune" "main.ml" "./" "../" ".merlin")
+
+ ("/home/jozefg/work/blott/test/" (23456 49400 233347 15000) "misc.blott" "force.blott" "top-level-transparent.blott" "stream-of-nats.blott" "top-level-constant.blott" "foo.blott" "fib.blott" "id.blott" "./" "../")
+
+ ("/home/jozefg/work/blott/" (23455 61032 802165 646000) ".git/" "normalize_lib.install" "normalize_lib.opam" "dune-project" "src/" "blott.install" "blott.opam" "README.md" "Makefile" "./" "_build/" "../" ".gitignore" "test/")
+
+ ("/home/jozefg/Dropbox/homework/teaching/" (23455 61028 734140 574000) "assignment-7.log" "assignment-6.log" "assignment-7.aux" "auto/" "assignment-6.tex" "assignment-6.pdf" "assignment-7.pdf" "assignment-7.tex" "./" "../" "assignment-6.aux")
+
+ ("/home/jozefg/work/iris-with-linearity/iron-coq/theories/heap_lang/" (23457 87 549624 146000) "proofmode.glob" ".adequacy.aux" "lang.v" ".notation.aux" "heap.vo" "notation.v" "adequacy.v" ".lifting.aux" ".lang.aux" ".heap.aux" "lang.vo" "lifting.v" ".proofmode.aux" "lib/" "heap.glob" "tactics.glob" "lang.glob" "lifting.vo" "proofmode.vo" "adequacy.glob" "tactics.v" "adequacy.vo" ".tactics.aux" "./" "tactics.vo" "lifting.glob" "heap.v" "../" "notation.vo" "proofmode.v" "notation.glob")
+
+ ("/home/jozefg/work/iris-with-linearity/iron-coq/theories/" (23450 28752 576613 819000) "bi/" "iron_logic/" "heap_lang/" "./" "algebra/" "../" "proofmode/")
+
+ ("/home/jozefg/work/iris-with-linearity/" (23450 28752 580613 983000) "iris-coq-diff.patch" ".git/" "TODO.txt" "talks/" "iris-fork/" "README.md" "archive/" "popl-2019/" "./" "iron-coq/" "../" ".gitignore" "artifact-README.md" "generate_artifact.py")
+
+ ("/home/" (23450 44937 95720 189000) "jozefg/" "./" "../")
+
+ ("/home/jozefg/work/iris-with-linearity/popl-2019/" (23456 60066 201533 765000) "ACM-Reference-Format.bst" "paper.tex" "acmart.cls" "pftools.sty" "iris.sty" "paper.bib" "macros.tex" "reviews.md" "locallabel.sty" "./" "comments_robbert.md" "../")
+
+ ("/home/jozefg/Dropbox/homework/" (23450 29003 637259 249000) "teaching/" "catlog/" "./" "../")
+
+ ("/home/jozefg/Dropbox/" (23451 41409 709972 51000) ".dropbox.cache/" "github-recovery-codes.txt" "lapse.md" "notebook.gpg" "passport.pdf" "signed-lease.pdf" "homework/" "papers/" "serial.md" "org/" "./" "Gratzer/" ".dropbox" "../" "approval-letter.pdf")
+
+ ("/home/jozefg/.i3/" (23451 39196 545739 880000) "i3-status" "./" "config" "../")
+
+ ("/home/jozefg/.opam/4.06.1/bin/" (23451 45870 555184 180000) "ocamlobjinfo.opt" "ocamlmerlin-server" "ocp-build" "ocamlmktop.byte" "ocamlbuild.native" "ocamlc" "mkcamlp5.opt" "ocamldebug" "ocamldoc" "ocamldep.opt" "ocamldoc.opt" "ocamlbuild" "camlp5o" "lambda-term-actions" "ocamlprof" "ocpp5" "cudf-parse-822" "ocamllex" "ocamlcp" "ocamllex.byte" "ocamlfind" "mkcamlp5" "utop-full" "menhir" "dune" "ocamllex.opt" "ocamlc.byte" "ocamldep" "ocamlprof.opt" "ocamlrund" "bdump" "ocamlopt" "ocp-pp.byte" "ocp-indent" "safe_camlp4" "ocamlmerlin" "ocamloptp.byte" "camlp5r" "ocamlc.opt" "ocamloptp.opt" "ocamlprof.byte" "ocamlobjinfo" "ocamlopt.byte" "ocp-autoconf" "cppo" "ydump" "ocamlmktop.opt" "cudf-check" "ocamlcp.opt" "ocamlmklib.byte" "ocamldep.byte" "camlp5r.opt" "ocamlcmt" "ocp-build.byte" "ocp-pp" "./" "ocamlmktop" "ocamlmklib.opt" "ocaml" "ocamlmklib" "../" "ocamlobjinfo.byte" "utop" "ocp-autoconf.byte" "ocamlyacc" "camlp5o.opt" "jbuilder" "ocamlrun" "ocamlopt.opt" "ocamloptp" "camlp5" "ocamlcp.byte" "ocamlbuild.byte" "camlp5sch")
+
+ ("/home/jozefg/.opam/4.06.1/" (23451 44030 566798 951000) "doc/" "man/" "sbin/" ".opam-switch/" "lib/" "etc/" "share/" "bin/" "./" "../")
+
+ ("/home/jozefg/.opam/" (23451 44111 619335 839000) "config.lock" "4.06.1/" "log/" "system/" "download-cache/" "repo/" "archives/" "opam-init/" "lock" "./" "config" "../")
+
+ ("/home/jozefg/work/blott/src/" (23451 41532 846605 486000) "lib/" "bin/" "./" "../")
+
+ ("/home/jozefg/.ssh/" (23450 18351 50601 999000) "known_hosts" "id_rsa.pub" "./" "../" "id_rsa")
+
+ ("/home/jozefg/Downloads/twelf/" (19844 45680 0 0) "doc/" "examples-delphin/" "emacs/" "tex/" "delphin.sml" "LICENSE" "delphin.cm" "examples-clp/" ".cvsignore" "examples/" "src/" "README" "build/" "bin/" "sources.cm" "server.cm" "Makefile" "./" "../" "vim/")
+
+ ("/home/jozefg/work/gctt-with-box/" (23450 18367 246744 553000) "GCTT_examples.tex" ".git/" "nbe/" "Pointed right adjoint.pdf" "outdated/" "./" "GCTT_proposal.tex" "coq/" "../" ".gitignore" "Fitch_with_exch.tex")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t
