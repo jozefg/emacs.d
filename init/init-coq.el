@@ -1,8 +1,9 @@
+(require-package 'proof-general 'proof)
+
 (setq auto-mode-alist (cons '("\\.v$" . coq-mode) auto-mode-alist))
 (autoload 'coq-mode "coq" "Major mode for editing Coq vernacular." t)
 
-(load "~/.emacs.d/lisp/PG/generic/proof-site")
-(setq coq-prog-name "/home/jozefg/.opam/4.06.0/bin/coqtop")
+(setq coq-prog-name "/home/jozefg/.opam/4.06.1/bin/coqtop")
 
 
 (custom-set-variables

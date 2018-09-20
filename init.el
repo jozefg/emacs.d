@@ -70,27 +70,3 @@
 ;; And the rest
 (try-require 'init-random)     ; Random packages with no configuration
 (try-require 'init-smiles)     ; Just stupid fun stuff
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(coq-compile-before-require nil)
- '(package-selected-packages
-   (quote
-    (tuareg proof-general nyan-mode 2048-game wiki-summary which-key inf-ruby rvm redprl cubicaltt jonprl-mode corral slime evil multiple-cursors olivetti anzu highlight-symbol git-gutter purescript-mode elm-mode toml-mode expand-region pandoc-mode geiser lua-mode org-present lorem-ipsum idris-mode sml-mode flymake-rust flymake-easy rust-mode racket-mode pep8 pydoc pyflakes markdown-mode latex-preview-pane js-comint js2-mode intero hindent paredit flycheck-package neotree magit monky ag hungry-delete highlight-parentheses company-math company-ghc company ace-window ace-jump-zap delim-kill wrap-region f s smex ido-ubiquitous flx-ido smart-mode-line dash gotham-theme moe-theme monokai-theme color-theme)))
- '(proof-splash-enable nil)
- '(proof-three-window-enable t)
- '(proof-three-window-mode-policy (quote hybrid))
- '(proof-toolbar-enable nil))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(agda2-highlight-datatype-face ((t (:foreground "deep sky blue" :weight bold))))
- '(agda2-highlight-function-face ((t (:foreground "deep sky blue"))))
- '(agda2-highlight-postulate-face ((t (:foreground "cyan"))))
- '(agda2-highlight-primitive-face ((t (:foreground "cyan"))))
- '(agda2-highlight-primitive-type-face ((t (:foreground "DeepSkyBlue1"))))
- '(agda2-highlight-record-face ((t (:foreground "deep sky blue")))))
