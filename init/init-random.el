@@ -29,8 +29,9 @@
 ;; Expand region is lovely
 (require-package 'expand-region)
 
-;; Toml for Rust
-(require-package 'toml-mode)
+;; Rust
+(require-package 'cargo)
+(require-package 'rust-mode)
 
 ;; Elm mode
 (require-package 'elm-mode)
@@ -101,6 +102,9 @@
 ;; which-key
 (require-package 'which-key)
 (which-key-mode)
+
+;; lean support
+(require-package 'lean-mode)
 
 ;; My stuff
 (require-package 'wiki-summary)

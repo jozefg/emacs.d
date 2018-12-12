@@ -70,3 +70,31 @@
 ;; And the rest
 (try-require 'init-random)     ; Random packages with no configuration
 (try-require 'init-smiles)     ; Just stupid fun stuff
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(coq-compile-before-require nil)
+ '(package-selected-packages
+   (quote
+    (cargo wrap-region wiki-summary which-key tuareg toml-mode sml-mode smex smart-mode-line slime rvm rust-mode redprl racket-mode pyflakes pydoc purescript-mode proof-general pep8 paredit pandoc-mode org-present olivetti nyan-mode neotree multiple-cursors monokai-theme monky moe-theme markdown-mode magit lua-mode lorem-ipsum lean-mode latex-preview-pane js2-mode js-comint jonprl-mode intero inf-ruby idris-mode ido-ubiquitous hungry-delete hindent highlight-symbol highlight-parentheses gotham-theme git-gutter geiser flymake-rust flycheck-package flx-ido expand-region evil elm-mode delim-kill cubicaltt corral company-math company-ghc company-auctex color-theme auctex-latexmk anzu ag ace-window ace-jump-zap 2048-game)))
+ '(proof-splash-enable nil)
+ '(proof-three-window-enable t)
+ '(proof-three-window-mode-policy (quote hybrid))
+ '(proof-toolbar-enable nil))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(agda2-highlight-catchall-clause-face ((t (:background "dim gray"))))
+ '(agda2-highlight-coverage-problem-face ((t (:background "magenta"))))
+ '(agda2-highlight-datatype-face ((t (:foreground "deep sky blue" :weight bold))))
+ '(agda2-highlight-function-face ((t (:foreground "deep sky blue"))))
+ '(agda2-highlight-postulate-face ((t (:foreground "cyan"))))
+ '(agda2-highlight-primitive-face ((t (:foreground "cyan"))))
+ '(agda2-highlight-primitive-type-face ((t (:foreground "DeepSkyBlue1"))))
+ '(agda2-highlight-record-face ((t (:foreground "deep sky blue"))))
+ '(agda2-highlight-unsolved-constraint-face ((t (:background "dark orange"))))
+ '(agda2-highlight-unsolved-meta-face ((t (:background "dark orange")))))

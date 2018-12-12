@@ -1,4 +1,4 @@
-(require-package 'proof-general 'proof)
+;; (require-package 'proof-general 'proof)
 
 (setq auto-mode-alist (cons '("\\.v$" . coq-mode) auto-mode-alist))
 (autoload 'coq-mode "coq" "Major mode for editing Coq vernacular." t)

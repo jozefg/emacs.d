@@ -12,7 +12,9 @@
 (add-hook 'LaTeX-mode-hook 'auto-fill-mode)
 (add-hook 'LaTeX-mode-hook 'LaTeX-math-mode)
 (add-hook 'LaTeX-mode-hook 'turn-on-reftex)
+(add-hook 'LaTeX-mode-hook 'TeX-source-correlate-mode)
 
+(setq TeX-source-correlate-method 'synctex)
 (setq TeX-PDF-mode t)
 (setq reftex-plug-into-AUCTeX t)
 
