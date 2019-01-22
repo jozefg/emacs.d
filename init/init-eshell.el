@@ -16,6 +16,13 @@
                 (erase-buffer)
                 (recenter-top-bottom 0)))))
 
+(setq eshell-prompt-function
+      (lambda nil
+        (concat
+         (propertize (eshell/pwd) 'face `(:foreground "light blue"))
+         " $ ")))
+(setq eshell-highlight-prompt nil)
+
 (defalias 'ff 'find-file)
 (defalias 'ffo 'find-file-other-window)
 

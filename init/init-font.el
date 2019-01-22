@@ -1,6 +1,6 @@
 ;; Set default font
 (add-to-list 'default-frame-alist
-             '(font . "Source Code Pro"))
+             '(font . "Go Mono"))
 
 ;; Helpful function to blow up font for presentations
 (defun presentation-sized-font ()

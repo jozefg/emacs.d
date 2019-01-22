@@ -1,6 +1,6 @@
 (require-package 'haskell-mode)
 (require-package 'hindent)
-(require-package 'intero)
+;; (require-package 'intero)
 
 ;; haskell-mode drags in a log of extra modes
 (require 'haskell-cabal)
@@ -14,7 +14,7 @@
 (add-hook 'haskell-mode-hook 'turn-on-haskell-doc-mode)
 (add-hook 'haskell-mode-hook 'interactive-haskell-mode)
 (add-hook 'haskell-mode-hook #'hindent-mode)
-(add-hook 'haskell-mode-hook 'intero-mode)
+;; (add-hook 'haskell-mode-hook 'intero-mode)
 
 ; Default configurations
 (setq haskell-font-lock-symbols nil

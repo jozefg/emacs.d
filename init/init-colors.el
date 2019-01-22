@@ -1,4 +1,6 @@
 (require-package 'color-theme)
+(require-package 'poet-theme)
+(require-package 'dracula-theme)
 (require-package 'monokai-theme)
 (require-package 'moe-theme)
 (require-package 'gotham-theme)
@@ -6,9 +8,11 @@
 (setq color-theme-is-global t)
 (color-theme-initialize)
 
-;(load-theme 'gotham t)
-;;(load-theme 'moe-dark t)
-(load-theme 'monokai t)
+;; (load-theme 'gotham t)
+;; (load-theme 'moe-dark t)
+;; (load-theme 'monokai t)
+;; (load-theme 'poet-dark t)
+(load-theme 'dracula t)
 
 ;; If we're living in the terminal, we really don't want
 ;; a color theme.
