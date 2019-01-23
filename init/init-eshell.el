@@ -19,7 +19,7 @@
 (setq eshell-prompt-function
       (lambda nil
         (concat
-         (propertize (eshell/pwd) 'face `(:foreground "light blue"))
+         (propertize (abbreviate-file-name (eshell/pwd)) 'face `(:foreground "light blue"))
          " $ ")))
 (setq eshell-highlight-prompt nil)
 
