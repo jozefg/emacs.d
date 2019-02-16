@@ -81,7 +81,7 @@
  '(org-journal-time-format "")
  '(package-selected-packages
    (quote
-    (wgrep-ag poet-theme dracula-theme cargo wrap-region wiki-summary which-key tuareg toml-mode sml-mode smex smart-mode-line slime rvm rust-mode redprl racket-mode pyflakes pydoc purescript-mode proof-general pep8 paredit pandoc-mode org-present olivetti nyan-mode neotree multiple-cursors monokai-theme monky moe-theme markdown-mode magit lua-mode lorem-ipsum lean-mode latex-preview-pane js2-mode js-comint jonprl-mode intero inf-ruby idris-mode ido-ubiquitous hungry-delete hindent highlight-symbol highlight-parentheses gotham-theme git-gutter geiser flymake-rust flycheck-package flx-ido expand-region evil elm-mode delim-kill cubicaltt corral company-math company-ghc company-auctex color-theme auctex-latexmk anzu ag ace-window ace-jump-zap 2048-game)))
+    (company-coq wgrep-ag poet-theme dracula-theme cargo wrap-region wiki-summary which-key tuareg toml-mode sml-mode smex smart-mode-line slime rvm rust-mode redprl racket-mode pyflakes pydoc purescript-mode proof-general pep8 paredit pandoc-mode org-present olivetti nyan-mode neotree multiple-cursors monokai-theme monky moe-theme markdown-mode magit lua-mode lorem-ipsum lean-mode latex-preview-pane js2-mode js-comint jonprl-mode intero inf-ruby idris-mode ido-ubiquitous hungry-delete hindent highlight-symbol highlight-parentheses gotham-theme git-gutter geiser flymake-rust flycheck-package flx-ido expand-region evil elm-mode delim-kill cubicaltt corral company-math company-ghc company-auctex color-theme auctex-latexmk anzu ag ace-window ace-jump-zap 2048-game)))
  '(proof-splash-enable nil)
  '(proof-three-window-enable t)
  '(proof-three-window-mode-policy (quote hybrid))
@@ -101,6 +101,8 @@
  '(agda2-highlight-record-face ((t (:foreground "deep sky blue"))))
  '(agda2-highlight-unsolved-constraint-face ((t (:background "dark orange"))))
  '(agda2-highlight-unsolved-meta-face ((t (:background "dark orange")))))
+ ;; '(markdown-code-face ((t (:inherit fixed-pitch :background "purple4" :foreground "white"))))
+ ;; '(markdown-pre-face ((t (:inherit fixed-pitch :background "purple4" :foreground "white")))))
 
 (put 'erase-buffer 'disabled nil)
 (put 'upcase-region 'disabled nil)
