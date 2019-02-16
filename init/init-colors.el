@@ -10,9 +10,9 @@
 
 ;; (load-theme 'gotham t)
 ;; (load-theme 'moe-dark t)
-;; (load-theme 'monokai t)
+(load-theme 'monokai t)
 ;; (load-theme 'poet-dark t)
-(load-theme 'dracula t)
+;; (load-theme 'dracula t)
 
 ;; If we're living in the terminal, we really don't want
 ;; a color theme.

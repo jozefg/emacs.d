@@ -63,7 +63,8 @@
 (define-key my-keys-minor-mode-map (kbd "C-c s q") 'query-replace-regexp)
 (define-key my-keys-minor-mode-map (kbd "C-c s r") 'replace-regexp)
 (define-key my-keys-minor-mode-map (kbd "C-c s s") 'replace-string)
-(define-key my-keys-minor-mode-map (kbd "C-c v")   'magit-status)
+(define-key my-keys-minor-mode-map (kbd "C-c v v") 'magit-status)
+(define-key my-keys-minor-mode-map (kbd "C-c v d") ''magit-dispatch-popup)
 
 (global-set-key (kbd "RET") 'newline-and-indent)
 (put 'downcase-region 'disabled nil)
