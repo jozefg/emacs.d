@@ -46,7 +46,6 @@
 (try-require 'init-vcs)        ; Configuration for all things VCS
 (try-require 'init-gpg)        ; For encrypting stuffs
 (try-require 'init-org)        ; Setup org mode with nicities
-; (try-require 'init-mail)       ; Setup mu4e and smtpmail for gmail
 (try-require 'init-tree)       ; Setup a directory tree
 
 ;; Language specifics
@@ -70,27 +69,20 @@
 ;; And the rest
 (try-require 'init-random)     ; Random packages with no configuration
 (try-require 'init-smiles)     ; Just stupid fun stuff
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(coq-compile-before-require nil)
- '(org-journal-dir "/home/jozefg/Dropbox/journal/")
- '(org-journal-file-format "%Y%m%d.org")
- '(org-journal-time-format "")
  '(package-selected-packages
    (quote
-    (company-coq wgrep-ag poet-theme dracula-theme cargo wrap-region wiki-summary which-key tuareg toml-mode sml-mode smex smart-mode-line slime rvm rust-mode redprl racket-mode pyflakes pydoc purescript-mode proof-general pep8 paredit pandoc-mode org-present olivetti nyan-mode neotree multiple-cursors monokai-theme monky moe-theme markdown-mode magit lua-mode lorem-ipsum lean-mode latex-preview-pane js2-mode js-comint jonprl-mode intero inf-ruby idris-mode ido-ubiquitous hungry-delete hindent highlight-symbol highlight-parentheses gotham-theme git-gutter geiser flymake-rust flycheck-package flx-ido expand-region evil elm-mode delim-kill cubicaltt corral company-math company-ghc company-auctex color-theme auctex-latexmk anzu ag ace-window ace-jump-zap 2048-game)))
+    (markdown-mode+ opam dune utop company-coq wgrep-ag poet-theme dracula-theme cargo wrap-region wiki-summary which-key tuareg toml-mode sml-mode smex smart-mode-line slime rvm rust-mode redprl racket-mode pyflakes pydoc purescript-mode proof-general pep8 paredit pandoc-mode org-present olivetti nyan-mode neotree multiple-cursors monokai-theme monky moe-theme markdown-mode magit lua-mode lorem-ipsum lean-mode latex-preview-pane js2-mode js-comint jonprl-mode intero inf-ruby idris-mode ido-ubiquitous hungry-delete hindent highlight-symbol highlight-parentheses gotham-theme git-gutter geiser flymake-rust flycheck-package flx-ido expand-region evil elm-mode delim-kill cubicaltt corral company-math company-ghc company-auctex color-theme auctex-latexmk anzu ag ace-window ace-jump-zap 2048-game)))
  '(proof-splash-enable nil)
  '(proof-three-window-enable t)
- '(proof-three-window-mode-policy (quote hybrid))
- '(proof-toolbar-enable nil))
+ '(proof-three-window-mode-policy (quote hybrid)))
 (custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
  '(agda2-highlight-catchall-clause-face ((t (:background "dim gray"))))
  '(agda2-highlight-coverage-problem-face ((t (:background "magenta"))))
  '(agda2-highlight-datatype-face ((t (:foreground "deep sky blue" :weight bold))))
@@ -100,9 +92,17 @@
  '(agda2-highlight-primitive-type-face ((t (:foreground "DeepSkyBlue1"))))
  '(agda2-highlight-record-face ((t (:foreground "deep sky blue"))))
  '(agda2-highlight-unsolved-constraint-face ((t (:background "dark orange"))))
- '(agda2-highlight-unsolved-meta-face ((t (:background "dark orange")))))
- ;; '(markdown-code-face ((t (:inherit fixed-pitch :background "purple4" :foreground "white"))))
- ;; '(markdown-pre-face ((t (:inherit fixed-pitch :background "purple4" :foreground "white")))))
+ '(agda2-highlight-unsolved-meta-face ((t (:background "dark orange"))))
+ '(markdown-code-face ((t (:inherit fixed-pitch :background "#091f2e" :foreground "#e0e0e0"))))
+ '(markdown-header-face-1 ((t (:inherit markdown-header-face :background "#091f2e" :foreground "#e0e0e0" :height 1.3))))
+ '(markdown-header-face-2 ((t (:inherit markdown-header-face :background "#0a3749" :foreground "#e0e0e0" :height 1.2))))
+ '(markdown-header-face-3 ((t (:inherit markdown-header-face :background "#245361" :foreground "#e0e0e0" :height 1.15))))
+ '(markdown-inline-code-face ((t (:inherit fixed-pitch :background "#091f2e"))))
+ '(markdown-pre-face ((t (:inherit fixed-pitch :background "#091f2e")))))
 
 (put 'erase-buffer 'disabled nil)
 (put 'upcase-region 'disabled nil)
+
+;; ## added by OPAM user-setup for emacs / base ## 56ab50dc8996d2bb95e7856a6eddb17b ## you can edit, but keep this line
+(require 'opam-user-setup "~/.emacs.d/opam-user-setup.el")
+;; ## end of OPAM user-setup addition for emacs / base ## keep this line

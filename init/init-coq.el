@@ -7,6 +7,6 @@
 (add-hook 'coq-mode-hook #'company-coq-mode)
 (setq company-coq-prettify-symbols nil)
 
-(setq coq-prog-name "/home/jozefg/.opam/4.06.1/bin/coqtop")
+(setq coq-prog-name "/home/jozefg/.opam/4.07.1/bin/coqtop")
 
 (provide 'init-coq)

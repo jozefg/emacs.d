@@ -5,9 +5,8 @@
 (add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.md\\'"       . markdown-mode))
 
-;; Some helpful functions for going from
-;; filled paragraphs to a system where we don't
-;; want manual break. Like Word or Libre Office
+;; Some helpful functions for going from filled paragraphs to a system where we don't want manual
+;; break. Like Word or Libre Office
 (defun unfill-paragraph ()
   (interactive "")
   (let ((fill-column most-positive-fixnum))
