@@ -6,7 +6,7 @@
 
 (setq TeX-auto-save t)
 (setq TeX-parse-self t)
-(setq TeX-engine 'luatex)
+(setq-default TeX-engine 'default)
 (add-hook 'LaTeX-mode-hook 'turn-on-reftex)
 (add-hook 'LaTeX-mode-hook 'visual-line-mode)
 (add-hook 'LaTeX-mode-hook 'flyspell-mode)

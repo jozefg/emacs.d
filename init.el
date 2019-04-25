@@ -75,14 +75,76 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(company-coq-prettify-symbols nil)
  '(coq-compile-before-require nil)
+ '(coq-prog-name "/home/jozefg/.opam/4.07.1/bin/coqtop" t)
+ '(coq-variable-highlight-enable nil)
  '(package-selected-packages
    (quote
-    (markdown-mode+ opam dune utop company-coq wgrep-ag poet-theme dracula-theme cargo wrap-region wiki-summary which-key tuareg toml-mode sml-mode smex smart-mode-line slime rvm rust-mode redprl racket-mode pyflakes pydoc purescript-mode proof-general pep8 paredit pandoc-mode org-present olivetti nyan-mode neotree multiple-cursors monokai-theme monky moe-theme markdown-mode magit lua-mode lorem-ipsum lean-mode latex-preview-pane js2-mode js-comint jonprl-mode intero inf-ruby idris-mode ido-ubiquitous hungry-delete hindent highlight-symbol highlight-parentheses gotham-theme git-gutter geiser flymake-rust flycheck-package flx-ido expand-region evil elm-mode delim-kill cubicaltt corral company-math company-ghc company-auctex color-theme auctex-latexmk anzu ag ace-window ace-jump-zap 2048-game)))
+    (use-package smartparens markdown-mode+ opam dune utop company-coq wgrep-ag poet-theme dracula-theme cargo wrap-region wiki-summary which-key tuareg toml-mode sml-mode smex smart-mode-line slime rvm rust-mode redprl racket-mode pyflakes pydoc purescript-mode proof-general pep8 paredit pandoc-mode org-present olivetti nyan-mode neotree multiple-cursors monokai-theme monky moe-theme markdown-mode magit lua-mode lorem-ipsum lean-mode latex-preview-pane js2-mode js-comint jonprl-mode intero inf-ruby idris-mode ido-ubiquitous hungry-delete hindent highlight-symbol highlight-parentheses gotham-theme git-gutter geiser flymake-rust flycheck-package flx-ido expand-region elm-mode delim-kill cubicaltt corral company-math company-ghc company-auctex color-theme auctex-latexmk anzu ag ace-window ace-jump-zap 2048-game)))
  '(proof-splash-enable nil)
  '(proof-three-window-enable t)
- '(proof-three-window-mode-policy (quote hybrid)))
+ '(proof-three-window-mode-policy (quote hybrid))
+ '(safe-local-variable-values
+   (quote
+    ((eval let
+           ((unimath-topdir
+             (expand-file-name
+              (locate-dominating-file buffer-file-name "UniMath"))))
+           (setq fill-column 100)
+           (make-local-variable
+            (quote coq-use-project-file))
+           (setq coq-use-project-file nil)
+           (make-local-variable
+            (quote coq-prog-args))
+           (setq coq-prog-args
+                 (\`
+                  ("-emacs" "-noinit" "-indices-matter" "-type-in-type" "-w" "-notation-overridden" "-Q"
+                   (\,
+                    (concat unimath-topdir "UniMath"))
+                   "UniMath")))
+           (make-local-variable
+            (quote coq-prog-name))
+           (setq coq-prog-name
+                 (concat unimath-topdir "sub/coq/bin/coqtop"))
+           (make-local-variable
+            (quote before-save-hook))
+           (add-hook
+            (quote before-save-hook)
+            (quote delete-trailing-whitespace))
+           (modify-syntax-entry 39 "w")
+           (modify-syntax-entry 95 "w")
+           (if
+               (not
+                (memq
+                 (quote agda-input)
+                 features))
+               (load
+                (concat unimath-topdir "emacs/agda/agda-input")))
+           (if
+               (not
+                (member
+                 (quote
+                  ("chimney" "╝"))
+                 agda-input-user-translations))
+               (progn
+                 (setq agda-input-user-translations
+                       (cons
+                        (quote
+                         ("chimney" "╝"))
+                        agda-input-user-translations))
+                 (setq agda-input-user-translations
+                       (cons
+                        (quote
+                         ("==>" "⟹"))
+                        agda-input-user-translations))
+                 (agda-input-setup)))
+           (set-input-method "Agda"))))))
 (custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
  '(agda2-highlight-catchall-clause-face ((t (:background "dim gray"))))
  '(agda2-highlight-coverage-problem-face ((t (:background "magenta"))))
  '(agda2-highlight-datatype-face ((t (:foreground "deep sky blue" :weight bold))))
@@ -93,12 +155,16 @@
  '(agda2-highlight-record-face ((t (:foreground "deep sky blue"))))
  '(agda2-highlight-unsolved-constraint-face ((t (:background "dark orange"))))
  '(agda2-highlight-unsolved-meta-face ((t (:background "dark orange"))))
+ '(coq-button-face ((t (:background "black"))))
  '(markdown-code-face ((t (:inherit fixed-pitch :background "#091f2e" :foreground "#e0e0e0"))))
  '(markdown-header-face-1 ((t (:inherit markdown-header-face :background "#091f2e" :foreground "#e0e0e0" :height 1.3))))
  '(markdown-header-face-2 ((t (:inherit markdown-header-face :background "#0a3749" :foreground "#e0e0e0" :height 1.2))))
  '(markdown-header-face-3 ((t (:inherit markdown-header-face :background "#245361" :foreground "#e0e0e0" :height 1.15))))
  '(markdown-inline-code-face ((t (:inherit fixed-pitch :background "#091f2e"))))
- '(markdown-pre-face ((t (:inherit fixed-pitch :background "#091f2e")))))
+ '(markdown-italic-face ((t nil)))
+ '(markdown-list-face ((t (:foreground "spring green"))))
+ '(markdown-pre-face ((t (:inherit fixed-pitch :background "#091f2e"))))
+ '(markdown-url-face ((t (:inherit fixed-pitch :foreground "green")))))
 
 (put 'erase-buffer 'disabled nil)
 (put 'upcase-region 'disabled nil)

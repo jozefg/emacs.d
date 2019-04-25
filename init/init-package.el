@@ -24,4 +24,6 @@
         (end-of-buffer)
         (insert "Couldn't load " (symbol-name package) "\n")))))
 
+(require-package 'use-package)
+
 (provide 'init-package)
