@@ -39,13 +39,12 @@
 (define-key my-keys-minor-mode-map (kbd "C-c a r") 'ag-regexp)
 (define-key my-keys-minor-mode-map (kbd "C-c c")   'compile)
 (define-key my-keys-minor-mode-map (kbd "C-c e")   'eshell)
-(define-key my-keys-minor-mode-map (kbd "C-c f i") 'get-init-file)
-(define-key my-keys-minor-mode-map (kbd "C-c f p") 'find-file-at-point)
+(define-key my-keys-minor-mode-map (kbd "C-c i") 'get-init-file)
 (define-key my-keys-minor-mode-map (kbd "C-c g l") 'ace-jump-line-mode)
 (define-key my-keys-minor-mode-map (kbd "C-c g n") 'goto-line)
 (define-key my-keys-minor-mode-map (kbd "C-c g o") 'occur)
-(define-key my-keys-minor-mode-map (kbd "C-c k b") 'kill-braces)
-(define-key my-keys-minor-mode-map (kbd "C-c k f") 'delete-frame)
+;; (define-key my-keys-minor-mode-map (kbd "C-c k b") 'kill-braces)
+;; (define-key my-keys-minor-mode-map (kbd "C-c k f") 'delete-frame)
 ;; (define-key my-keys-minor-mode-map (kbd "C-c k p") 'kill-parens)
 ;; (define-key my-keys-minor-mode-map (kbd "C-c l f") 'forward-sexp)
 ;; (define-key my-keys-minor-mode-map (kbd "C-c l j") 'backward-sexp)
@@ -77,32 +76,31 @@
 (define-key my-keys-minor-mode-map (kbd "M-<down>") 'sp-backward-down-sexp)
 (define-key my-keys-minor-mode-map (kbd "M-<up>") 'sp-backward-up-sexp)
 
-(define-key my-keys-minor-mode-map (kbd "C-c d f") 'sp-forward-sexp)
-(define-key my-keys-minor-mode-map (kbd "C-c d j") 'sp-backward-sexp)
+(define-key my-keys-minor-mode-map (kbd "C-c f") 'sp-forward-sexp)
+(define-key my-keys-minor-mode-map (kbd "C-c j") 'sp-backward-sexp)
 
 (define-key my-keys-minor-mode-map (kbd "C-c d n") 'sp-next-sexp)
 (define-key my-keys-minor-mode-map (kbd "C-c d p") 'sp-previous-sexp)
-
 (define-key my-keys-minor-mode-map (kbd "C-c d s") 'sp-forward-symbol)
 (define-key my-keys-minor-mode-map (kbd "C-C d l") 'sp-backward-symbol)
+(define-key my-keys-minor-mode-map (kbd "C-c d w") 'sp-copy-sexp)
+(define-key my-keys-minor-mode-map (kbd "C-c d t") 'sp-transpose-hybrid-sexp)
+(define-key my-keys-minor-mode-map (kbd "C-c k") 'sp-change-enclosing)
 
-(define-key my-keys-minor-mode-map (kbd "C-c d y f") 'sp-forward-slurp-sexp)
-(define-key my-keys-minor-mode-map (kbd "C-c d b f") 'sp-forward-barf-sexp)
-(define-key my-keys-minor-mode-map (kbd "C-c d y b") 'sp-backward-slurp-sexp)
-(define-key my-keys-minor-mode-map (kbd "C-c d b b") 'sp-backward-barf-sexp)
+(define-key my-keys-minor-mode-map (kbd "C-c y f") 'sp-forward-slurp-sexp)
+(define-key my-keys-minor-mode-map (kbd "C-c b f") 'sp-forward-barf-sexp)
+(define-key my-keys-minor-mode-map (kbd "C-c y b") 'sp-backward-slurp-sexp)
+(define-key my-keys-minor-mode-map (kbd "C-c b b") 'sp-backward-barf-sexp)
 
 (define-key my-keys-minor-mode-map (kbd "C-M-t") 'sp-transpose-sexp)
 (define-key my-keys-minor-mode-map (kbd "C-c d k") 'sp-kill-sexp)
 (define-key my-keys-minor-mode-map (kbd "C-k") 'sp-kill-hybrid-sexp)
 (define-key my-keys-minor-mode-map (kbd "M-k") 'sp-backward-kill-sexp)
-(define-key my-keys-minor-mode-map (kbd "C-c d w") 'sp-copy-sexp)
 
 (define-key my-keys-minor-mode-map (kbd "M-<backspace>") 'backward-kill-word)
 (define-key my-keys-minor-mode-map (kbd "M-[" ) 'sp-backward-unwrap-sexp)
 (define-key my-keys-minor-mode-map (kbd "M-]" ) 'sp-unwrap-sexp)
 
-(define-key my-keys-minor-mode-map (kbd "C-c d t") 'sp-transpose-hybrid-sexp)
-(define-key my-keys-minor-mode-map (kbd "C-c d c") 'sp-change-enclosing)
 
 (define-key my-keys-minor-mode-map (kbd "C-c (") 'wrap-with-parens)
 (define-key my-keys-minor-mode-map (kbd "C-c [") 'wrap-with-brackets)
@@ -111,7 +109,6 @@
 (define-key my-keys-minor-mode-map (kbd "C-c \"") 'wrap-with-double-quotes)
 (define-key my-keys-minor-mode-map (kbd "C-c _" ) 'wrap-with-underscores)
 (define-key my-keys-minor-mode-map (kbd "C-c `") 'wrap-with-back-quotes)
-(define-key my-keys-minor-mode-map (kbd "<backspace") 'sp-backward-delete-char)
 
 (define-minor-mode my-keys-minor-mode
   "A minor mode so that my key settings override annoying major modes."
