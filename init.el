@@ -38,108 +38,43 @@
 
 ;; Tools in Emacs
 (try-require 'init-ag)         ; Ag in emacs
-(try-require 'init-vcs)        ; Configuration for all things VCS
-(try-require 'init-gpg)        ; For encrypting stuffs
+;; (try-require 'init-vcs)        ; Configuration for all things VCS
+;; (try-require 'init-gpg)        ; For encrypting stuffs
 (try-require 'init-org)        ; Setup org mode with nicities
-(try-require 'init-tree)       ; Setup a directory tree
+;; (try-require 'init-tree)       ; Setup a directory tree
 
 ;; Language specifics
 (try-require 'init-elisp)      ; Random utilities for elisp
 (try-require 'init-haskell)    ; Haskell
-(try-require 'init-js)         ; js-comint mode
+;; (try-require 'init-js)         ; js-comint mode
 (try-require 'init-latex)      ; Configure latex, preview pane
 (try-require 'init-markdown)   ; Configure markdown
 (try-require 'init-ocaml)      ; Nicer key bindings for Tuareg
 (try-require 'init-python)     ; Python
-(try-require 'init-racket)     ; Racket for when I'm nostalgic
-(try-require 'init-rust)       ; Setup rust with a few helper keys
+;; (try-require 'init-racket)     ; Racket for when I'm nostalgic
+;; (try-require 'init-rust)       ; Setup rust with a few helper keys
 (try-require 'init-sml)        ; Setup sml with some helpers for 15-150
 
 ;; Theorem provers
 (try-require 'init-agda)       ; Setup Agda paths & highlighting
 (try-require 'init-coq)        ; Proof General & Coq
 (try-require 'init-idris)      ; Setup Idris + Helm integration
-(try-require 'init-twelf)      ; Just shell out to load twelf-init.el
+;; (try-require 'init-twelf)      ; Just shell out to load twelf-init.el
 
 ;; And the rest
 (try-require 'init-random)     ; Random packages with no configuration
 (try-require 'init-smiles)     ; Just stupid fun stuff
 
 (custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
  '(company-coq-prettify-symbols nil)
  '(coq-compile-before-require nil)
  '(coq-prog-name "/home/jozefg/.opam/4.07.1/bin/coqtop" t)
  '(coq-variable-highlight-enable nil)
- '(package-selected-packages
-   (quote
-    (use-package smartparens markdown-mode+ opam dune utop company-coq wgrep-ag poet-theme dracula-theme cargo wrap-region wiki-summary which-key tuareg toml-mode sml-mode smex smart-mode-line slime rvm rust-mode redprl racket-mode pyflakes pydoc purescript-mode proof-general pep8 paredit pandoc-mode org-present olivetti nyan-mode neotree multiple-cursors monokai-theme monky moe-theme markdown-mode magit lua-mode lorem-ipsum lean-mode latex-preview-pane js2-mode js-comint jonprl-mode intero inf-ruby idris-mode ido-ubiquitous hungry-delete hindent highlight-symbol highlight-parentheses gotham-theme git-gutter geiser flymake-rust flycheck-package flx-ido expand-region elm-mode delim-kill cubicaltt corral company-math company-ghc company-auctex color-theme auctex-latexmk anzu ag ace-window ace-jump-zap 2048-game)))
  '(proof-splash-enable nil)
  '(proof-three-window-enable t)
- '(proof-three-window-mode-policy (quote hybrid))
- '(safe-local-variable-values
-   (quote
-    ((eval let
-           ((unimath-topdir
-             (expand-file-name
-              (locate-dominating-file buffer-file-name "UniMath"))))
-           (setq fill-column 100)
-           (make-local-variable
-            (quote coq-use-project-file))
-           (setq coq-use-project-file nil)
-           (make-local-variable
-            (quote coq-prog-args))
-           (setq coq-prog-args
-                 (\`
-                  ("-emacs" "-noinit" "-indices-matter" "-type-in-type" "-w" "-notation-overridden" "-Q"
-                   (\,
-                    (concat unimath-topdir "UniMath"))
-                   "UniMath")))
-           (make-local-variable
-            (quote coq-prog-name))
-           (setq coq-prog-name
-                 (concat unimath-topdir "sub/coq/bin/coqtop"))
-           (make-local-variable
-            (quote before-save-hook))
-           (add-hook
-            (quote before-save-hook)
-            (quote delete-trailing-whitespace))
-           (modify-syntax-entry 39 "w")
-           (modify-syntax-entry 95 "w")
-           (if
-               (not
-                (memq
-                 (quote agda-input)
-                 features))
-               (load
-                (concat unimath-topdir "emacs/agda/agda-input")))
-           (if
-               (not
-                (member
-                 (quote
-                  ("chimney" "╝"))
-                 agda-input-user-translations))
-               (progn
-                 (setq agda-input-user-translations
-                       (cons
-                        (quote
-                         ("chimney" "╝"))
-                        agda-input-user-translations))
-                 (setq agda-input-user-translations
-                       (cons
-                        (quote
-                         ("==>" "⟹"))
-                        agda-input-user-translations))
-                 (agda-input-setup)))
-           (set-input-method "Agda"))))))
+ '(proof-three-window-mode-policy (quote hybrid)))
+
 (custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
  '(agda2-highlight-catchall-clause-face ((t (:background "dim gray"))))
  '(agda2-highlight-coverage-problem-face ((t (:background "magenta"))))
  '(agda2-highlight-datatype-face ((t (:foreground "deep sky blue" :weight bold))))

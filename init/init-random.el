@@ -11,14 +11,14 @@
 (require-package 'org-present)
 
 ;; For JavaScript
-(require-package 'js2-mode)
+;; (require-package 'js2-mode)
 
 ;; Lua is sometimes nice
-(require-package 'lua-mode)
+;; (require-package 'lua-mode)
 
 ;; Make scheme coding much more fun
-(require-package 'geiser)
-(add-hook 'scheme-mode 'geiser-mode)
+;; (require-package 'geiser)
+;; (add-hook 'scheme-mode 'geiser-mode)
 
 ;; Pandoc!
 (require-package 'pandoc-mode)
@@ -29,16 +29,12 @@
 ;; Expand region is lovely
 (require-package 'expand-region)
 
-;; Rust
-(require-package 'cargo)
-(require-package 'rust-mode)
-
 ;; Elm mode
-(require-package 'elm-mode)
+;; (require-package 'elm-mode)
 
 ;; Purescript mode
-(require-package 'purescript-mode)
-(add-hook 'purescript-mode-hook 'purescript-identation-mode)
+;; (require-package 'purescript-mode)
+;; (add-hook 'purescript-mode-hook 'purescript-identation-mode)
 
 ;; Git gutter
 (require-package 'git-gutter)
@@ -54,50 +50,50 @@
 (global-anzu-mode 1)
 
 ;; For writing
-(require-package 'olivetti)
+;; (require-package 'olivetti)
 
 ;; Multiple cursors ala Sublime
-(require-package 'multiple-cursors)
+;; (require-package 'multiple-cursors)
 
 ;; For funsies
-(require-package 'evil)
+;; (require-package 'evil)
 
 ;; For CL
-(require-package 'slime)
-(setq inferior-lisp-program "/usr/bin/clisp")
+;; (require-package 'slime)
+;; (setq inferior-lisp-program "/usr/bin/clisp")
 
 ;; Nicer parenthesis handling
 (require-package 'corral)
 (setq corral-preserve-point t)
 
 ;; Restore window configurations
-(winner-mode)
+;; (winner-mode)
 
 ;; Yasnippet
 (require-package 'yasnippet)
 (setq yas-triggers-in-field t)
 
 ;; JonPRL
-(add-to-list 'load-path (expand-file-name my-redprl-location))
-(require-package 'jonprl-mode)
-(add-hook 'jonprl-mode-hook 'yas-minor-mode)
-(add-hook 'jonprl-mode-hook 'eldoc-mode)
+;; (add-to-list 'load-path (expand-file-name my-redprl-location))
+;; (require-package 'jonprl-mode)
+;; (add-hook 'jonprl-mode-hook 'yas-minor-mode)
+;; (add-hook 'jonprl-mode-hook 'eldoc-mode)
 
-(require-package 'cubicaltt)
+;; (require-package 'cubicaltt)
 
-(setq jonprl-path "~/jonprl/compiler/bin/jonprl")
-(add-to-list 'exec-path "/home/jozefg/jonprl/compiler/bin/")
-(setenv "PATH" (concat "/home/jozefg/jonprl/compiler/bin:" (getenv "PATH")))
+;; (setq jonprl-path "~/jonprl/compiler/bin/jonprl")
+;; (add-to-list 'exec-path "/home/jozefg/jonprl/compiler/bin/")
+;; (setenv "PATH" (concat "/home/jozefg/jonprl/compiler/bin:" (getenv "PATH")))
 
-(add-hook 'jonprl-mode-hook 'yas-minor-mode)
-(add-hook 'jonprl-mode-hook 'eldoc-mode)
+;; (add-hook 'jonprl-mode-hook 'yas-minor-mode)
+;; (add-hook 'jonprl-mode-hook 'eldoc-mode)
 
-(require-package 'redprl)
+;; (require-package 'redprl)
 
-(require-package 'rvm)
-(require-package 'inf-ruby)
-(rvm-use-default)
-(add-hook 'ruby-mode 'inf-ruby-mode)
+;; (require-package 'rvm)
+;; (require-package 'inf-ruby)
+;; (rvm-use-default)
+;; (add-hook 'ruby-mode 'inf-ruby-mode)
 
 ;; which-key
 (require-package 'which-key)

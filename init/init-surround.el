@@ -1,29 +1,9 @@
-;; I really like surround mode in Vim, These packages are cobbled
-;; together to emulate the features I liked.
-
-; We can now highlight a region and hit
-; an opening delimeter to wrap it.
-;; (require-package 'wrap-region)
-;; (wrap-region-global-mode t)
-
-; Next is kill-delim which let's me kill
-; delimited groups of things
-;; (require-package 'delim-kill)
-
-;; (defun kill-parens ()
-;;   (interactive "")
-;;   (delim-kill ?( ?) (point) nil))
-
-;; (defun kill-braces ()
-;;   (interactive "")
-;;   (delim-kill ?{ ?} (point) nil))
-
+;; Now it's smartparens
 (require-package 'smartparens)
 (require 'smartparens-config)
 (eval-after-load 'auctex '(require 'smartparens-latex))
+(smartparens-global-strict-mode)
 (show-smartparens-global-mode t)
-(add-hook 'prog-mode-hook 'turn-on-smartparens-strict-mode)
-(add-hook 'text-mode-hook 'turn-on-smartparens-strict-mode)
 
 (dolist (key '([remap delete-char]
                [remap delete-forward-char]))
@@ -72,23 +52,5 @@ respectively."
             (single-quote . "'")
             (double-quote . "\"")
             (back-quote . "`")))
-
-;; (sp-local-pair '(tex-mode plain-tex-mode latex-mode LaTeX-mode)
-;;                "``" "''"
-;;                :trigger "\""
-;;                :unless '(sp-latex-point-after-backslash
-;;                          sp-point-before-word-p
-;;                          sp-point-after-word-p)
-;;                :pre-handlers  '(sp-latex-pre-slurp-handler)
-;;                :post-handlers '(sp-latex-skip-double-quote))
-
-;; (sp-local-pair '(tex-mode plain-tex-mode latex-mode LaTeX-mode)
-;;                "`" "'"
-;;                :trigger "'"
-;;                :unless '(sp-latex-point-after-backslash
-;;                          sp-point-before-word-p
-;;                          sp-point-after-word-p)
-;;                :pre-handlers  '(sp-latex-pre-slurp-handler)
-;;                :post-handlers '(sp-latex-skip-double-quote))
 
 (provide 'init-surround)

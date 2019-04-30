@@ -1,4 +1,4 @@
-;; (require-package 'proof-general 'proof)
+(require-package 'proof-general)
 (require-package 'company-coq)
 
 (setq auto-mode-alist (cons '("\\.v$" . coq-mode) auto-mode-alist))

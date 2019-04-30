@@ -94,8 +94,6 @@
 
 (define-key my-keys-minor-mode-map (kbd "C-M-t") 'sp-transpose-sexp)
 (define-key my-keys-minor-mode-map (kbd "C-c d k") 'sp-kill-sexp)
-(define-key my-keys-minor-mode-map (kbd "C-k") 'sp-kill-hybrid-sexp)
-(define-key my-keys-minor-mode-map (kbd "M-k") 'sp-backward-kill-sexp)
 
 (define-key my-keys-minor-mode-map (kbd "M-<backspace>") 'backward-kill-word)
 (define-key my-keys-minor-mode-map (kbd "M-[" ) 'sp-backward-unwrap-sexp)
