@@ -1,12 +1,12 @@
-(require-package 'color-theme)
+;; (require-package 'color-theme)
 (require-package 'poet-theme)
 (require-package 'dracula-theme)
 (require-package 'monokai-theme)
 (require-package 'moe-theme)
 (require-package 'gotham-theme)
 
-(setq color-theme-is-global t)
-(color-theme-initialize)
+;; (setq color-theme-is-global t)
+;; (color-theme-initialize)
 
 ;; (load-theme 'gotham t)
 ;; (load-theme 'moe-dark t)

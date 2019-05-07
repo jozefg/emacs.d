@@ -2,7 +2,7 @@
 (require-package 'smartparens)
 (require 'smartparens-config)
 (eval-after-load 'auctex '(require 'smartparens-latex))
-(smartparens-global-strict-mode)
+(smartparens-global-mode)
 (show-smartparens-global-mode t)
 
 (dolist (key '([remap delete-char]
