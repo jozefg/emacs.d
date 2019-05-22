@@ -66,15 +66,26 @@
 (try-require 'init-smiles)     ; Just stupid fun stuff
 
 (custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
  '(company-coq-prettify-symbols nil)
  '(coq-compile-before-require nil)
  '(coq-prog-name "/home/jozefg/.opam/4.07.1/bin/coqtop" t)
  '(coq-variable-highlight-enable nil)
+ '(package-selected-packages
+   (quote
+    (eshell-prompt-extras aweshell wiki-summary which-key wgrep-ag utop use-package tuareg sml-mode smex smartparens smart-mode-line slime rvm redprl racket-mode pyflakes pydoc purescript-mode proof-general poet-theme pep8 paredit pandoc-mode org-present opam olivetti nyan-mode neotree multiple-cursors monokai-theme monky moe-theme magit lua-mode lorem-ipsum lean-mode latex-preview-pane js2-mode js-comint jonprl-mode inf-ruby idris-mode ido-ubiquitous hungry-delete hindent highlight-symbol highlight-parentheses gotham-theme git-gutter geiser flymake-rust flycheck-package flx-ido expand-region evil elm-mode dune dracula-theme cubicaltt corral company-ghc company-coq company-auctex color-theme cargo auctex-latexmk anzu ag ace-window ace-jump-zap 2048-game)))
  '(proof-splash-enable nil)
  '(proof-three-window-enable t)
  '(proof-three-window-mode-policy (quote hybrid)))
 
 (custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
  '(agda2-highlight-catchall-clause-face ((t (:background "dim gray"))))
  '(agda2-highlight-coverage-problem-face ((t (:background "magenta"))))
  '(agda2-highlight-datatype-face ((t (:foreground "deep sky blue" :weight bold))))

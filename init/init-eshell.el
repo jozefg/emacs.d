@@ -1,3 +1,4 @@
+(require-package 'eshell-prompt-extras)
 (setenv "EDITOR" "emacsclient")
 (setenv "PAGER" "cat")
 (setenv "GPGKEY" my-gpg-key)
@@ -16,6 +17,10 @@
               (let ((inhibit-read-only t))
                 (erase-buffer)
                 (recenter-top-bottom 0)))))
+(with-eval-after-load "esh-opt"
+  (autoload 'epe-theme-lambda "eshell-prompt-extras")
+  (setq eshell-highlight-prompt nil
+        eshell-prompt-function 'epe-theme-lambda))
 
 (setq eshell-prompt-function
       (lambda nil
