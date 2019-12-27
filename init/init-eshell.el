@@ -17,17 +17,11 @@
               (let ((inhibit-read-only t))
                 (erase-buffer)
                 (recenter-top-bottom 0)))))
+
 (with-eval-after-load "esh-opt"
   (autoload 'epe-theme-lambda "eshell-prompt-extras")
   (setq eshell-highlight-prompt nil
         eshell-prompt-function 'epe-theme-lambda))
-
-(setq eshell-prompt-function
-      (lambda nil
-        (concat
-         (propertize (abbreviate-file-name (eshell/pwd)) 'face `(:foreground "light blue"))
-         " $ ")))
-(setq eshell-highlight-prompt nil)
 
 (defalias 'ff 'find-file)
 (defalias 'ffo 'find-file-other-window)

@@ -4,6 +4,7 @@
 (require-package 'monokai-theme)
 (require-package 'moe-theme)
 (require-package 'gotham-theme)
+(require-package 'zerodark-theme)
 
 ;; (setq color-theme-is-global t)
 ;; (color-theme-initialize)
@@ -11,6 +12,7 @@
 ;; (load-theme 'gotham t)
 ;; (load-theme 'moe-dark t)
 (load-theme 'monokai t)
+;; (load-theme 'zerodark t)
 ;; (load-theme 'poet-dark t)
 ;; (load-theme 'dracula t)
 
