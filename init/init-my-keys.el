@@ -17,11 +17,6 @@
 (define-key my-keys-minor-mode-map (kbd "M-j")      'backward-word) ; For symmetry
 (define-key my-keys-minor-mode-map (kbd "M-w")      'clipboard-kill-ring-save)
 (define-key my-keys-minor-mode-map (kbd "M-z")      'ace-jump-zap-up-to-char)
-(define-key my-keys-minor-mode-map (kbd "M-0")      'corral-parentheses-forward)
-(define-key my-keys-minor-mode-map (kbd "M-9")      'corral-parentheses-backward)
-
-(when (eq using-helm-or-ido 'ido)
-  (define-key my-keys-minor-mode-map (kbd "M-x") 'smex))
 
 ;; Overview of the C-c prefix
 ;; C-c a * - Ag things
@@ -30,29 +25,17 @@
 ;; C-c g * - Go places
 ;; C-c l * - Move in a lisp like fashion (by balanced expression)
 ;; C-c k * - Kill things structurally
-;; C-c m * - Mu4e things
 ;; C-c o * - Org utilities
 ;; C-c s * - Substitute text
-;; C-c v   - Version control for mercurial
 (define-key my-keys-minor-mode-map (kbd "C-c a d") 'ag-dired-regexp)
 (define-key my-keys-minor-mode-map (kbd "C-c a p") 'ag-project-regexp)
 (define-key my-keys-minor-mode-map (kbd "C-c a r") 'ag-regexp)
-(define-key my-keys-minor-mode-map (kbd "C-c c")   'compile)
 (define-key my-keys-minor-mode-map (kbd "C-c e")   'eshell)
 (define-key my-keys-minor-mode-map (kbd "C-c i") 'get-init-file)
 (define-key my-keys-minor-mode-map (kbd "C-c g l") 'ace-jump-line-mode)
 (define-key my-keys-minor-mode-map (kbd "C-c g n") 'goto-line)
 (define-key my-keys-minor-mode-map (kbd "C-c g o") 'occur)
-;; (define-key my-keys-minor-mode-map (kbd "C-c k b") 'kill-braces)
-;; (define-key my-keys-minor-mode-map (kbd "C-c k f") 'delete-frame)
-;; (define-key my-keys-minor-mode-map (kbd "C-c k p") 'kill-parens)
-;; (define-key my-keys-minor-mode-map (kbd "C-c l f") 'forward-sexp)
-;; (define-key my-keys-minor-mode-map (kbd "C-c l j") 'backward-sexp)
-;; (define-key my-keys-minor-mode-map (kbd "C-c l n") 'down-list)
-;; (define-key my-keys-minor-mode-map (kbd "C-c l p") 'up-list)
 (define-key my-keys-minor-mode-map (kbd "C-c n")   'highlight-symbol-next)
-(define-key my-keys-minor-mode-map (kbd "C-c m i") 'jump-to-mailbox)
-(define-key my-keys-minor-mode-map (kbd "C-c m u") 'mu4e-update-mail-and-index)
 (define-key my-keys-minor-mode-map (kbd "C-c o a") 'org-agenda)
 (define-key my-keys-minor-mode-map (kbd "C-c o b") 'org-switchb)
 (define-key my-keys-minor-mode-map (kbd "C-c o c") 'org-capture)
@@ -61,8 +44,6 @@
 (define-key my-keys-minor-mode-map (kbd "C-c s q") 'query-replace-regexp)
 (define-key my-keys-minor-mode-map (kbd "C-c s r") 'replace-regexp)
 (define-key my-keys-minor-mode-map (kbd "C-c s s") 'replace-string)
-(define-key my-keys-minor-mode-map (kbd "C-c v v") 'magit-status)
-(define-key my-keys-minor-mode-map (kbd "C-c v d") ''magit-dispatch-popup)
 
 (global-set-key (kbd "RET") 'newline-and-indent)
 (put 'downcase-region 'disabled nil)
@@ -98,15 +79,6 @@
 (define-key my-keys-minor-mode-map (kbd "M-<backspace>") 'backward-kill-word)
 (define-key my-keys-minor-mode-map (kbd "M-[" ) 'sp-backward-unwrap-sexp)
 (define-key my-keys-minor-mode-map (kbd "M-]" ) 'sp-unwrap-sexp)
-
-
-(define-key my-keys-minor-mode-map (kbd "C-c (") 'wrap-with-parens)
-(define-key my-keys-minor-mode-map (kbd "C-c [") 'wrap-with-brackets)
-(define-key my-keys-minor-mode-map (kbd "C-c {") 'wrap-with-braces)
-(define-key my-keys-minor-mode-map (kbd "C-c '") 'wrap-with-single-quotes)
-(define-key my-keys-minor-mode-map (kbd "C-c \"") 'wrap-with-double-quotes)
-(define-key my-keys-minor-mode-map (kbd "C-c _" ) 'wrap-with-underscores)
-(define-key my-keys-minor-mode-map (kbd "C-c `") 'wrap-with-back-quotes)
 
 (define-minor-mode my-keys-minor-mode
   "A minor mode so that my key settings override annoying major modes."

@@ -1,6 +1,10 @@
 ;; Set default font
-(add-to-list 'default-frame-alist
-             '(font . "Go Mono"))
+(set-face-attribute
+ 'default nil
+ :family "Source Code Pro"
+ :height 120
+ :weight 'normal
+ :width 'normal)
 
 ;; Helpful function to blow up font for presentations
 (defun presentation-sized-font ()

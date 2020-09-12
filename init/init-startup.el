@@ -1,6 +1,6 @@
 ;; Personals
-(setq user-full-name my-name)
-(setq user-mail-address my-email)
+(setq user-full-name "Daniel Gratzer")
+(setq user-mail-address "gratzer@cs.au.dk")
 
 ;; Configure Emacs's initial configuration
 (setq inhibit-startup-message t)    ; No startup banner

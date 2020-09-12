@@ -1,7 +1,6 @@
 (require-package 'eshell-prompt-extras)
 (setenv "EDITOR" "emacsclient")
 (setenv "PAGER" "cat")
-(setenv "GPGKEY" my-gpg-key)
 (setenv "TROUPE" "/home/jozefg/Downloads/build/Troupe")
 (setenv "PATH" (concat "/home/jozefg/Downloads/build/Troupe/bin:/home/jozefg/.nix-profile/bin:/home/jozefg/.local/bin:" (getenv "PATH")))
 (setenv "LD_LIBRARY_PATH" (concat "/usr/local/lib:" (getenv "LD_LIBRARY_PATH")))
