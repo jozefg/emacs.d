@@ -2,6 +2,10 @@
 (setq user-full-name "Daniel Gratzer")
 (setq user-mail-address "gratzer@cs.au.dk")
 
+;; Launch the emacs server
+(unless (server-running-p)
+  (server-start))
+
 ;; Configure Emacs's initial configuration
 (setq inhibit-startup-message t)    ; No startup banner
 (setq initial-scratch-message nil)  ; No message in scratch buffer
