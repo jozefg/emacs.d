@@ -2,6 +2,9 @@
 (add-hook 'org-mode-hook 'auto-fill-mode)
 (add-hook 'org-mode-hook 'flyspell-mode)
 
+(require 'epa-file)
+(epa-file-enable)
+
 (setq org-log-done 'time)
 
 (setq org-directory "~/Dropbox/org")

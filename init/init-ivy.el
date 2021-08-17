@@ -6,10 +6,12 @@
 (setq ivy-use-virtual-buffers t)
 (setq ivy-count-format "(%d/%d) ")
 
-(setq ivy-minibuffer-match-face-1 'nil)
-
+(setq ivy-minibuffer-faces 'nil)
+(setq swiper-faces '(swiper-match-face-1 swiper-match-face-4 swiper-match-face-3 swiper-match-face-2))
+(setq swiper-background-faces 'nil)
 
 (global-set-key (kbd "C-s") 'swiper-isearch)
+(global-set-key (kbd "C-r") 'swiper-isearch-backward)
 (global-set-key (kbd "M-x") 'counsel-M-x)
 (global-set-key (kbd "C-x C-f") 'counsel-find-file)
 (global-set-key (kbd "M-y") 'counsel-yank-pop)

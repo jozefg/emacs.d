@@ -28,7 +28,8 @@
       haskell-process-suggest-haskell-docs-imports t)
 
 (add-to-list 'exec-path "~/.cabal/bin/")
-(setenv "PATH" (concat "~/.cabal/bin:/usr/local/bin" (getenv "PATH")))
+(add-to-list 'exec-path "~/.ghcup/bin/")
+(setenv "PATH" (concat "~/.ghcup/bin:~/.cabal/bin:/usr/local/bin" (getenv "PATH")))
 
 (add-to-list 'exec-path "/usr/bin/local/") ; For GHC
 

@@ -1,13 +1,11 @@
-(package-initialize)
-
 (add-to-list 'load-path (expand-file-name "init" user-emacs-directory))
 
 ;; Package management, needed elsewhere
 (require 'init-package)        ; Packaging
 
-;; General utilities
+;; ;; General utilities
 (try-require 'init-backups)    ; Configure how emacs autosaves/backups work
-(try-require 'init-browser)    ; Configure Emacs to use chrome
+(try-require 'init-browser)    ; Configure Emacs to use firefox
 (try-require 'init-colors)     ; Pretty color theme
 (try-require 'init-eshell)     ; Setup eshell
 (try-require 'init-font)       ; Source Code Pro
@@ -25,7 +23,7 @@
 (try-require 'init-company)    ; Autocompletion with less suck
 (try-require 'init-parens)     ; Pretty parens
 (try-require 'init-delete)     ; Hungry delete mode
-(try-require 'init-whitespace) ; Judgemental highlighting!
+(try-require 'init-whitespace) ; Judgmental highlighting!
 
 ;; Tools in Emacs
 (try-require 'init-ag)         ; Ag in emacs
@@ -43,11 +41,11 @@
 ;; Theorem provers
 (try-require 'init-agda)       ; Setup Agda paths & highlighting
 (try-require 'init-coq)        ; Proof General & Coq
-(try-require 'init-idris)      ; Setup Idris + Helm integration
+;; (try-require 'init-idris)      ; Setup Idris + Helm integration
 
 ;; And the rest
 (try-require 'init-random)     ; Random packages with no configuration
-(try-require 'init-smiles)     ; Just stupid fun stuff
+;; (try-require 'init-smiles)     ; Just stupid fun stuff
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -56,35 +54,13 @@
  ;; If there is more than one, they won't work right.
  '(company-coq-prettify-symbols nil)
  '(coq-compile-before-require nil)
- '(coq-prog-name "/home/jozefg/.opam/4.07.1/bin/coqtop" t)
+ '(coq-prog-name "/home/jozefg/.opam/default/bin/coqtop" t)
  '(coq-variable-highlight-enable nil)
  '(package-selected-packages
-   (quote
-    (counsel ivy company-lsp zerodark-theme solarized-theme eshell-prompt-extras aweshell wiki-summary which-key wgrep-ag utop use-package tuareg sml-mode smex smartparens smart-mode-line slime rvm redprl racket-mode pyflakes pydoc purescript-mode proof-general poet-theme pep8 paredit pandoc-mode org-present opam olivetti nyan-mode neotree multiple-cursors monokai-theme monky moe-theme magit lua-mode lorem-ipsum lean-mode latex-preview-pane js2-mode js-comint jonprl-mode inf-ruby idris-mode ido-ubiquitous hungry-delete hindent highlight-symbol highlight-parentheses gotham-theme git-gutter geiser flymake-rust flycheck-package flx-ido expand-region evil elm-mode dune dracula-theme cubicaltt corral company-ghc company-coq company-auctex color-theme cargo auctex-latexmk anzu ag ace-window ace-jump-zap 2048-game)))
+   '(merlin-company undo-tree company-lean pg counsel ivy company-lsp zerodark-theme solarized-theme eshell-prompt-extras aweshell wiki-summary which-key wgrep-ag utop use-package tuareg sml-mode smex smartparens smart-mode-line slime rvm redprl racket-mode pyflakes pydoc purescript-mode proof-general poet-theme pep8 paredit pandoc-mode org-present opam olivetti nyan-mode neotree multiple-cursors monokai-theme monky moe-theme magit lua-mode lorem-ipsum lean-mode latex-preview-pane js2-mode js-comint jonprl-mode inf-ruby idris-mode ido-ubiquitous hungry-delete hindent highlight-symbol highlight-parentheses gotham-theme git-gutter geiser flymake-rust flycheck-package flx-ido expand-region evil elm-mode dune dracula-theme cubicaltt corral company-ghc company-coq company-auctex color-theme cargo auctex-latexmk anzu ag ace-window ace-jump-zap 2048-game))
  '(proof-splash-enable nil)
  '(proof-three-window-enable t)
- '(proof-three-window-mode-policy (quote hybrid))
- '(safe-local-variable-values
-   (quote
-    ((eval setenv "TEXINPUTS" ".::$TEXMF/tex/::../styles::../latex-pl-syntax")
-     (eval push
-           (quote
-            ("\\ceq" . 8776))
-           prettify-symbols-alist)
-     (eval push
-           (quote
-            ("\\cleq" . 8828))
-           prettify-symbols-alist)
-     (eval push
-           (quote
-            ("\\To" . 8658))
-           prettify-symbols-alist)
-     (TeX-view-program-selection
-      (output-pdf "atril"))
-     (TeX-view-program-list
-      ("atril" "atril --page-index=%(outpage) %o"))
-     (ispell-dictionary . "british")
-     (reftex-default-bibliography "~/Dropbox/Documents_Dropbox/BIBTEX/lescanne.bib,~/Dropbox/Documents_Dropbox/BIBTEX/eureca.bib")))))
+ '(proof-three-window-mode-policy 'hybrid))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -115,6 +91,9 @@
 (put 'erase-buffer 'disabled nil)
 (put 'upcase-region 'disabled nil)
 
-;; ## added by OPAM user-setup for emacs / base ## 56ab50dc8996d2bb95e7856a6eddb17b ## you can edit, but keep this line
+;; ;; ## added by OPAM user-setup for emacs / base ## 56ab50dc8996d2bb95e7856a6eddb17b ## you can edit, but keep this line
 (require 'opam-user-setup "~/.emacs.d/opam-user-setup.el")
-;; ## end of OPAM user-setup addition for emacs / base ## keep this line
+;; ;; ## end of OPAM user-setup addition for emacs / base ## keep this line
+
+(load-file (let ((coding-system-for-read 'utf-8))
+                (shell-command-to-string "agda-mode locate")))

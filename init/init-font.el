@@ -1,8 +1,10 @@
 ;; Set default font
+(set-frame-font "Fira Code")
+(set-face-font 'default "Fira Code")
 (set-face-attribute
  'default nil
- :family "Source Code Pro"
- :height 120
+ :family "Fira Code"
+ :height 140
  :weight 'normal
  :width 'normal)
 

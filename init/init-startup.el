@@ -3,8 +3,7 @@
 (setq user-mail-address "gratzer@cs.au.dk")
 
 ;; Launch the emacs server
-(unless (server-running-p)
-  (server-start))
+(server-start)
 
 ;; Configure Emacs's initial configuration
 (setq inhibit-startup-message t)    ; No startup banner
@@ -19,7 +18,7 @@
 (require-package 'smart-mode-line)
 
 (setq sml/no-confirm-load-theme t) ; Shhhh
-(sml/apply-theme 'respectful)
+(sml/apply-theme 'dark)
 (sml/setup) ; Pretty modeline
 
 ;; Ensure that Emacs doesn't pause often for GC

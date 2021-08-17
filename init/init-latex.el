@@ -7,6 +7,7 @@
 (setq TeX-auto-save t)
 (setq TeX-parse-self t)
 (setq-default TeX-engine 'default)
+
 (add-hook 'LaTeX-mode-hook 'turn-on-reftex)
 (add-hook 'LaTeX-mode-hook 'visual-line-mode)
 (add-hook 'LaTeX-mode-hook 'flyspell-mode)
@@ -18,6 +19,9 @@
 (setq TeX-source-correlate-method 'synctex)
 (setq TeX-PDF-mode t)
 (setq reftex-plug-into-AUCTeX t)
+(setq TeX-interactive-mode nil)
+
+(add-hook 'TeX-mode-hook (lambda () (setq TeX-command-extra-options "-shell-escape")))
 
 (define-key reftex-mode-map (kbd "C-c g g") 'reftex-goto-label)
 
@@ -28,9 +32,5 @@
 ;(add-hook 'LaTeX-mode-hook 'latex-preview-pane-mode)
 
 (setq auctex-latexmk-inherit-TeX-PDF-mode t)
-
-;; Pass shell-escape everywhere
-;(custom-set-variables
-; '(pdf-latex-command "~/.emacs.d/bin/latex"))
 
 (provide 'init-latex)

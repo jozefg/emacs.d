@@ -1,5 +1,6 @@
-;; Can't leave home without it
-(require-package 'cl)
+;; Sensible undo modes
+(require-package 'undo-tree)
+(global-undo-tree-mode)
 
 ;; Delete highlighted regions like normal editors
 (delete-selection-mode 1)
@@ -43,6 +44,7 @@
 
 ;; lean support
 (require-package 'lean-mode)
+(require-package 'company-lean)
 
 ;; My stuff
 (require-package 'wiki-summary)
