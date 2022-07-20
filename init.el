@@ -16,6 +16,7 @@
 ;; Make Emacs more like home
 (try-require 'init-util-fns)   ; Some useful functions I bind to keys
 (try-require 'init-surround)   ; surround like mimicking
+(try-require 'init-flyspell)   ; Just tweaking flyspell
 (try-require 'init-my-keys)    ; The minor mode for all my key shortcuts
 
 ;; Minor modes
@@ -41,11 +42,9 @@
 ;; Theorem provers
 (try-require 'init-agda)       ; Setup Agda paths & highlighting
 (try-require 'init-coq)        ; Proof General & Coq
-;; (try-require 'init-idris)      ; Setup Idris + Helm integration
 
 ;; And the rest
 (try-require 'init-random)     ; Random packages with no configuration
-;; (try-require 'init-smiles)     ; Just stupid fun stuff
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
