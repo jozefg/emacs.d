@@ -31,7 +31,7 @@
 (define-key my-keys-minor-mode-map (kbd "C-c a p") 'ag-project-regexp)
 (define-key my-keys-minor-mode-map (kbd "C-c a r") 'ag-regexp)
 (define-key my-keys-minor-mode-map (kbd "C-c e")   'eshell)
-(define-key my-keys-minor-mode-map (kbd "C-c i") 'get-init-file)
+(define-key my-keys-minor-mode-map (kbd "C-c i")   'get-init-file)
 (define-key my-keys-minor-mode-map (kbd "C-c g l") 'ace-jump-line-mode)
 (define-key my-keys-minor-mode-map (kbd "C-c g n") 'goto-line)
 (define-key my-keys-minor-mode-map (kbd "C-c g o") 'occur)
@@ -44,6 +44,7 @@
 (define-key my-keys-minor-mode-map (kbd "C-c s q") 'query-replace-regexp)
 (define-key my-keys-minor-mode-map (kbd "C-c s r") 'replace-regexp)
 (define-key my-keys-minor-mode-map (kbd "C-c s s") 'replace-string)
+(define-key my-keys-minor-mode-map (kbd "C-c t")   'todotxt)
 
 (global-set-key (kbd "RET") 'newline-and-indent)
 (put 'downcase-region 'disabled nil)
